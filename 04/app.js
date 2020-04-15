@@ -1,29 +1,41 @@
-const n = [];
-
-while(n.length < 20)
-{
-    const num = Math.round(Math.random() * 200);
-    if(n.includes(num) && num>9 && num<201) 
-    {} 
-    else if (num>9 && num<201)
+function array(min, max){
+    const n = [];
+    for( ;n.length<20;)
     {
-        n.push(num); 
+        const num = Math.round((Math.random() * (max - min))+ min);
+        if(!n.includes(num))
+        {
+         n.push(num);
+        }
+        
     }
-       
+    return n;
 }
-console.log(n);
 
-n.sort(function(a, b)
-{
-    return a - b;
-}) 
-const newArray = n.slice(10, 20);
-
+const newArray = array(10, 200);
 console.log(newArray);
 
-const sum = newArray.reduce(
-    (accumulator, currentValue)=> accumulator + currentValue);
-console.log(sum);
+function sortArr(newArray){
+function compare(a, b)
+{
+    return a-b;
+}
+ return newArray.sort(compare).slice(10, 20);
+}
+const sortArray = sortArr(newArray);
 
-const getAverage = sum/newArray.length;
-console.log(getAverage);
+console.log(sortArray);
+
+function getAverage(sortArray)
+{
+    const sum= sortArray.reduce(
+        (accumulator, currentValue) => accumulator + currentValue);
+
+    const average = sum/sortArray.length;
+    return average;
+}
+
+const averageAll = getAverage(sortArray);
+console.log(averageAll);
+
+

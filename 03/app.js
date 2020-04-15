@@ -7,72 +7,61 @@ const c = randomNumber(min, max);
 
 console.log(typeof a, a, typeof b, b, typeof c, c);
 
-const sum = function getSum()
+function getSum(a, b, c)
 {
-    if(a<=b && a>=c && b>=c) 
+    if( a< b && a<c && b<c)
     {
-        result = a+b;
+        return b+c;
     }
-
-    if (a>=b && a>=c && b>=c)
+    if( b< a )
     {
-        result = a+b;
+        return c+a;
     }
-
-     if(a>=b && a>=c && b<=c)
+    
     {
-        result = a+c;
+        return b+a
     }
-
-    if(a>=b && a<=c && b<=c)
-    {
-        result = a+c;
-    }
-
-    if(a<=b && a<=c && b<=c)
-    {
-        result = c+b;
-    }
-
-    if(a<=b && a<=c && b>=c)
-    {
-        result = c+b;
-    }
-    return result;
 }
+const sum =getSum(a, b, c);
+console.log(sum);
 
-console.log(sum('result'));
-//console.log(typeof sum);
-const d = (sum('result'));
-//console.log(typeof d, d);
-
-const check = function isEven()
+const isEven = function(num)
 {
-    checkResult = (d % 2 === 0) ? true:false;
-    return checkResult;
+    if(typeof num !== 'number')
+    {
+        return null;
+    }
+    if(num % 2 === 0)
+    {
+        return true;
+    }
+    return false;
+    
 }
-console.log(check('checkResult'));
+console.log(isEven(sum))
 
-const info = function showInfo()
+function showInfo(num, isEvenValue)
 { 
-    switch(check('checkResult'))
+    switch(isEvenValue)
     {
+        case null:
+            console.log(num +' to nie liczba');
+            break;
 
         case true:
-            caseResult=('Argument jest liczbą parzystą');
+            console.log(num + ' Argument jest liczbą parzystą');
             break;
     
         case false:
-            caseResult=('Argument nie jest liczbą parzystą'); 
+            console.log(num + ' Argument nie jest liczbą parzystą'); 
             break;
 
         default:
-            caseResult=('null');
+            console.log(num + ' nie umiem określić argumentu');
             break;
     }
-    return caseResult;
 }
-console.log(info('caseResult'));
+console.log(sum, isEven(sum));
 
 function randomNumber(min, max) {
     return Math.round((Math.random() * max - min) + min);
