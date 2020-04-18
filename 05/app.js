@@ -1,6 +1,109 @@
 
-   function Student(initFirstName, initLastName, initClass) 
+   function Student(initFirstName, initLastName)
    {
+      this.firstName= initFirstName;
+      this.lastName= initLastName;
+      this.grades = {};
+      this.avg = {};
+   }
+
+   Student.prototype.addGrades = function(subject, grade)
+   {
+      console.log('addGrades', subject, grade);
+
+      if(this.grades[subject])
+      {
+         this.grades[subject].push(grade);
+      }
+      else{
+         this.grades= Object.assign(
+            {}, 
+            this.grades, 
+            {[subject]: [grade]})
+      }
+      
+
+   }
+
+   Student.prototype.getAverage = function(subject)
+   {
+      console.log('getAverage', subject);
+      //this.avg= this.grades[subject]
+      
+      this.avg= Object.assign(
+         {}, 
+         this.avg, 
+         this.grades[subject],)
+   
+
+      if(typeof subject !== 'undefind')
+      {
+         const arr = this.grades[subject];
+         const sum = arr.reduce((a, b)=> a+b)
+         console.log(sum)
+
+         function average()
+         {
+         const sumAvg = sum/arr.length;
+         return sumAvg.toFixed(2);
+         }
+        
+         
+         const gradeAvg = parseFloat(average());
+         console.log('średnia ocen wynosi: ' + gradeAvg);
+      }
+   
+      else
+      { 
+         const arr1 = this.grades[subject];
+      const sum1 = arr1.reduce((a, b)=> a+b)
+      console.log(sum)
+
+      function average1()
+      {
+      const sumAvgAll = sum1/arr1.length;
+      return sumAvgAll.toFixed(2);
+      }
+      const gradeAvgAll = parseFloat(average1());
+      console.log('średnia ocen wynosi: ' + gradeAvgAll);
+      }
+      //console.log('io')
+   
+   }
+   const st = new Student('Krzystzof', 'Kononowicz')
+   st.addGrades('maths', 1);
+   st.addGrades('maths', 2);
+   st.addGrades('maths', 1);
+   st.addGrades('maths', 2);
+   st.addGrades('maths', 3);
+   st.addGrades('maths', 2);
+   
+   st.addGrades('polish', 2);
+   st.addGrades('polish', 1);
+   st.addGrades('polish', 1);
+   st.addGrades('polish', 3);
+   st.addGrades('polish', 2);
+   st.addGrades('polish', 2);
+
+   st.addGrades('religion', 6);
+   st.addGrades('religion', 5);
+   st.addGrades('religion', 5);
+   st.addGrades('religion', 6);
+   st.addGrades('religion', 6);
+   st.addGrades('religion', 6);
+
+   st.getAverage('polish');
+   console.log(st);
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /*{
     const studentsSubject =
     [ 
     ['maths', gradesMaths= [1, 2, 1, 2, 3, 1]], 
@@ -119,9 +222,4 @@
    }
 
    const student1 =  new Student ('Krzysztof', 'Kononowicz', '2B');
-   student1.showFullName();
-
-   
-  
-   
-  
+   student1.showFullName();*/
