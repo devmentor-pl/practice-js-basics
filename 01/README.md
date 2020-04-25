@@ -5,7 +5,7 @@
 &nbsp;
 
 Dodaj do pliku HTML plik `app.js` i sprawdź w konsoli (Chrome -> F12) czy widzisz zawartość zmiennych.
-Następnie wykonać poniższe zadania:
+Następnie wykonaj poniższe zadania:
 - sprawdź jakiego typu są to zmienne - użyj `typeof`
 - wykonaj działania dla każdego operatora arytmetycznego jaki znasz. 
     - Każdy wynik zapisz do osobnej zmiennej

@@ -33,15 +33,32 @@ Struktura przechowywania danych w obiekcie może wyglądać mniej wiecej tak:
 }
 ```
 
-Aby rozróżnić czy mamy podać średnią dla 1 przedmiotu czy dla wszystkich wystarczy sprawdzić czy pierwszy parametr w funkcji `.getAverageGrade()` jest zdefiniowany (`undefined`).
+To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać mniej więcej tak:
+```
+/* ... */ {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.grades = {}
+}
+``` 
 
-Pamiętaj, że pobranie informacji o ocenach z konkretnego przedmiotu może się odbywać w ten sposób:
+Aby rozróżnić czy mamy podać średnią dla 1 przedmiotu czy dla wszystkich wystarczy sprawdzić czy pierwszy parametr w funkcji `.getAverageGrade()` jest zdefiniowany (różny od `undefined`).
+
+Zwróć uwagę, że pobranie informacji o ocenach z konkretnego przedmiotu może się odbywać w ten sposób:
 ```
 const subject = 'maths';
 const grades = this.grades[subject];
 ```
 
-Pamiętaj również, aby przy dodawaniu ocen sprawdzić czy dany przedmiot już istnieje. Jeśli nie to trzeba utworzyć odpowiednią właściwość z obiekcie i przypisać do niej pustą tablicę.
+Pamiętaj również, aby przy dodawaniu ocen sprawdzić czy dany przedmiot już istnieje. Jeśli nie to trzeba utworzyć odpowiednią właściwość z obiekcie i przypisać do niej pustą tablicę np.
+```
+if(typeof this.grades[subject] === 'undefined') {
+    this.grades[subject] = [];
+}
+
+this.grades[subject].push(grade);
+```
+
 
 Powodzenia!
 

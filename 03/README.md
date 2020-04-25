@@ -21,19 +21,34 @@ Dlatego teraz naszym zadaniem będzie przećwiczenie ich struktury. Mamy do napi
             - `false` jeśli jest nieparzysta
 - Funkcja trzecia `showInfo`:
     - ma przyjmowac 2 parametry
-        - pierwszy jest dowolny
+        - pierwszy to dowolna wartość
         - drugi to jedna z wartości: `null`, `true`, `false`
     - wykorzystując strukturę `switch` wyświetl w konsoli informacje:
         - jeśli drugi parametr to
-            - `null` => Podany argument nie jest liczbą
-            - `true` => Podany argument jest parzysty
-            - `false` => Podany argument jest nieparzysty
+            - `null` => Podany argument [tutaj jej wartość] nie jest liczbą
+            - `true` => Podany argument [tutaj jej wartość] jest parzysty
+            - `false` => Podany argument [tutaj jej wartość] jest nieparzysty
 
 Mając stworzone funkcje powinieneś je wykorzystać. W pierwszej kolejności oblicz sumę dla zmiennych `a`, `b`, `c` wykorzystując pierwszą funkcję. Wartość zapisz w zmiennej.
 
-Następnie wykorzystując durgą funkcję sprawdzić czy wartość zwrócona przez pierwszą funkcję jest parzysta. Wynik działania drugiej funkcji również zapisz do zmiennej.
+Następnie wykorzystując drugą funkcję sprawdzić czy wartość zwrócona przez pierwszą funkcję jest parzysta. Wynik działania drugiej funkcji również zapisz do zmiennej.
 
 Trzecią funkcję wykorzystaj do wyświetlenia odpowiedniego komunikatu w konsoli.
+
+Całość powinna wyglądać mniej więcej tak:
+
+```
+const a = 4;
+const b = 25;
+const c = 14;
+
+const sum = getSum(a, b, c);
+const even = isEven(sum);
+
+
+showInfo(sum, even);
+
+```
 
 
 
