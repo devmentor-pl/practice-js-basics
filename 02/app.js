@@ -54,4 +54,5 @@ const exponentiation = function () {
     }
     console.log(`${str} = ${result}`)
 }
+
 exponentiation()
