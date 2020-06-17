@@ -30,15 +30,28 @@
 //*petla while / drugie zadanie/ // *
 
 
-let a = 3;
-let n = 4;
+let a = 3; //podstawa
+let n = 4; //wykladnik
 let iter = 0;
+let result = 1;
+let str = '';
+
+
 const exponentiation = function () {
+
 
     while (iter < n) {
         iter++;
-        console.log(Math.pow(a, n))
-    }
+        result = result * a;
 
+
+        if (str === '') {
+            str = a;
+        } else {
+            str += '*' + a;
+        }
+
+    }
+    console.log(`${str} = ${result}`)
 }
 exponentiation()

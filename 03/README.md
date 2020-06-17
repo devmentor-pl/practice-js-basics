@@ -12,6 +12,7 @@ Dlatego teraz naszym zadaniem będzie przećwiczenie ich struktury. Mamy do napi
     - 3 parametry, którch wartość w ciele funkcji mają zostać przekonwertowane na liczby całkowite
     - z podanych 3 liczb mają być wybrane 2 największe
     - wartości 2 największych liczb mają zostać zsumowane i zwrócone przez funkcję
+
 - Funkcja druga o nazwie `isEven`:
     - ma mieć formę wyrażenia funkcyjnego
     - ma przyjmować przez parametr tylko liczbę

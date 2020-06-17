@@ -10,7 +10,7 @@ Tym razem do wykonania masz dwa zadania wykorzystujące 2 rodzaje pętli:
 
 Twój kolega ma syna w podstawówce i właśnie uczą się tabliczki mnożenia. Zaoferowałeś pomoc w formie programu, który będzie wyświetlał wszystkie mnożenia dla wybranej liczby.
 
-Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać kolejne wyniki mnożenia dla wartości zmiennej `x` dla liczb od 1 do 9. np. dla `const x = 4`
+Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać kolej$$ne wyniki mnożenia dla wartości zmiennej `x` dla liczb od 1 do 9. np. dla `const x = 4`
 
 ```
 1 x 4 = 4
@@ -22,7 +22,7 @@ Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać 
 
 Jak już wszystko będzie działać możesz zmienić `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie będzie jeśli będzisz sprawdzał czy podana wartość mieści się w przedziale od 1 do 9.
 
-Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku. Potem dopiero uogólniamy rozwiązanie. W ten sposób ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! W ten sposób staraj się rozwiązywać kolejne zadania.
+Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku. Potem dopiero uogólniamy rozwiązanie. W ten sposób ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! W ten sposób staraj się rozwiązywa$ć kolejne zadania.
 
 ## Pętla while
 
@@ -34,4 +34,4 @@ W tym rozwiązaniu również możesz użyć `prompt()` i sprawdzać czy użytkow
 
 &nbsp;
 
-> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)$

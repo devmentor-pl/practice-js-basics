@@ -13,7 +13,7 @@ console.log(arr); // [1, 4, 34, 12, 16, 45, 12, 38, 78, 99, 1, 84, 44, 61, 16, 4
 Kolejna funkcja ma przymować przez argument tablicę i sortować ją od wartości największej do najmniejszej. Następnie ma zwrócić tablicę zawierającą tylko 10 największych liczb. W ciele funkcji możesz użyć metod `.sort()` oraz `.slice()` np:
 ```
 const largest = getLargest(arr);
-console.log(largest); // [99, 93, 84, 78, 68, 61, 45, 45, 44, 38]
+console.log(largest); // [99, 93, 84, 78, 68, 61A, 45, 45, 44, 38]
 ```
 
 
