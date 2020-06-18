@@ -16,13 +16,13 @@ console.log(newArray)
 
 
 function sortArr(newArray) {
-    array.sort(function (a, b) {
+    newArray.sort(function (a, b) {
         return a - b;
     })
 
 }
 
-const sortArray = sortArr(newArray);
+const sortArray = sortArr(array);
 console.log(array)
 
 

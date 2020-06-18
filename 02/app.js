@@ -43,8 +43,6 @@ const exponentiation = function () {
     while (iter < n) {
         iter++;
         result = result * a;
-
-
         if (str === '') {
             str = a;
         } else {

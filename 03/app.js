@@ -14,7 +14,7 @@ const max = 100;
 
 
 // function randomNumber(min, max) {
-//     return Math.round((Math.random() * max - min) + min);
+//     return Math.round((Math.ra   ndom() * max - min) + min);
 // }
 let result;
 
@@ -24,17 +24,20 @@ const getSum = function (a, b, c) {
     const bInt = parseInt(b);
     const cInt = parseInt(c);
 
-    if (a > b || a > c) {
-        // console.log(aInt)
+    if (a > b && a > c && b > c) {
+        result = a + b;
+
     }
-    if (b > a || b > c) {
-        // console.log(bInt)
+    if (a < b && a < c && b < c) {
+        result = a + c;
+
     }
-    if (c > a || c > b) {
-        // console.log(cInt)
+    if (a < b && a < c && b < c) {
+        result = c + b;
+
     }
 
-    result = bInt + cInt;
+
     console.log(`wynik działania dwóch największych liczb to: ${result}`)
 
 }
