@@ -9,71 +9,92 @@ const max = 100;
 
 
 
-
-
-
-
 // function randomNumber(min, max) {
 //     return Math.round((Math.ra   ndom() * max - min) + min);
 // }
-let result;
+
 
 
 const getSum = function (a, b, c) {
+    let result;
+
     const aInt = parseInt(a);
     const bInt = parseInt(b);
     const cInt = parseInt(c);
 
-    if (a > b && a > c && b > c) {
-        result = a + b;
+
+
+    if (aInt > bInt && aInt > cInt) {
+        if (bInt > cInt) {
+            result = aInt + bInt;
+        } else {
+            result = aInt + cInt;
+        }
+
+    } else {
+        if (bInt > cInt) {
+            // b jest najwieksze
+            if (aInt > cInt) {
+                result = bInt + aInt;
+            } else {
+                result = bInt + cInt;
+            }
+        } else {
+            // c jest najwieksze
+            if (cInt > aInt) {
+                result = cInt + bInt;
+            } else {
+                result = cInt + aInt;
+            }
+
+        }
 
     }
-    if (a < b && a < c && b < c) {
-        result = a + c;
-
-    }
-    if (a < b && a < c && b < c) {
-        result = c + b;
-
-    }
 
 
-    console.log(`wynik działania dwóch największych liczb to: ${result}`)
+
+    console.log(`wynik działania dwóch największych liczb to: ${result}`);
+
+    return result;
 
 }
 
-getSum(20, 30, 100)
+const res = getSum(20, 30, 100);
+console.log(res);
 
 
 
 
 function isEven(x) {
     if (typeof (x) === "number" && x % 2 === 0) {
-        console.log(` ${x} jest typem number i jest parzysta`)
+        console.log(`${x} jest typem number i jest parzysta`)
         return true;
     } else if (typeof (x) === "number" && x % 2 !== 0) {
-        console.log(` ${x} jest typem number ale nie jest parzysta`)
+        console.log(`${x} jest typem number ale nie jest parzysta`)
         return false;
     } else {
         console.log(`${x} jest null`)
+        return null;
     }
 
 }
-isEven(result)
+const even = isEven(res);
+console.log(even);
 
 
 
 
 const showInfo = function (k, l) {
+
     switch (l) {
         case null:
-            console.log(`${l} jest typem  null`)
+            console.log(`${k} jest  null`)
             break;
         case true:
-            console.log(`${l} jest typem  true`)
+            console.log(`${k} jest  true`)
             break;
         case false:
-            console.log(`${l} jest typem false`)
+            console.log(`${k} jest false`)
             break;
 
 
@@ -85,4 +106,4 @@ const showInfo = function (k, l) {
 
 }
 
-showInfo(10, true)
+showInfo(res, even);
