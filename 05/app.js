@@ -50,11 +50,12 @@ Student.prototype.getAverageGrade = function (subject) {
 
         //console.log(grades, sum);
 
-        return sum / grades.length;
+        console.log(sum / grades.length);
+
 
     }
 
-
+    return 0;
 }
 const student0 = {
     firstName: 'Jan',
@@ -76,10 +77,8 @@ student2.addGrade('polish', 2);
 student2.addGrade('polish', 2);
 student2.addGrade('polish', 2);
 
+student1.getAverageGrade('maths');
+student1.getAverageGrade('polish');
 
-console.log(
-    student1.getAverageGrade('polish'),
-    student2.getAverageGrade('maths')
-);
 
 console.log(student1, student2);
