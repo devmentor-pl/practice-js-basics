@@ -13,11 +13,22 @@ const rest = b % 2;
 const increment = c++;
 const decrement = c--;
 
-console.log(sum > 20)
-console.log(concat > 20)
-console.log(diff > 20)
-console.log(multiply > 20)
-console.log(divide > 20)
-console.log(rest > 20)
-console.log(increment > 20)
-console.log(decrement > 20)
+
+const d = sum > 20
+const e = concat > 20
+const f = diff > 20
+const g = multiply > 20
+const h = divide > 20
+const i = rest > 20
+const j = increment > 20
+const k = decrement > 20
+
+
+console.log(typeof d)
+console.log(typeof e)
+console.log(typeof f)
+console.log(typeof g)
+console.log(typeof h)
+console.log(typeof i)
+console.log(typeof j)
+console.log(typeof k)

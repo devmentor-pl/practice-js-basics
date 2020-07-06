@@ -12,8 +12,8 @@ console.log(array);
 const getLargest = arr => {
     let n = 10;
     arr.sort((a, b) => b - a);
-    arr.slice(0, n);
-    return arr;
+    const first10 = arr.slice(0, n);
+    return first10;
 }
 const largest = getLargest(array);
 console.log(largest);

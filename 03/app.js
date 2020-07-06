@@ -49,7 +49,7 @@ console.log(even);
 const showInfo = (val1, val2) => {
 
     switch (val2) {
-        case val2 === null:
+        case null:
             console.log(`Podany argument ${val2} nie jest liczbą`);
             break;
         case val2 === true:

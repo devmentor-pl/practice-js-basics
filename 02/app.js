@@ -1,5 +1,5 @@
 /* rozwiązanie z pętlą for */
-const x = prompt('Podaj liczbę');
+const x = parseInt(prompt('Podaj liczbę'));
 if (x => 1 && x <= 9) {
     for (let i = 1; i <= 9; i++) {
         const result = i * x;
