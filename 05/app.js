@@ -14,13 +14,13 @@ Student.prototype.addGrade = function(subject, grade) {
 
 Student.prototype.getAverageGrade = function(subject) {
     if (typeof this.grades[subject] !== 'undefined') {
-
         const avg = arr => arr.reduce((a, b) => a + b) / arr.length;
         const getAvg = avg(this.grades[subject]);
+        console.log(subject)
         console.log(this.grades)
-        console.log(`Average for ${this.grades.subject} is ${getAvg}`)
-    } else {
-        this.grades[subject] = [];
+        console.log(`Average for ${this.grades[subject]} is ${getAvg}`);
+
+        return getAvg;
     }
 }
 
