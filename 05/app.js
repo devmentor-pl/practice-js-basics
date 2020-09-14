@@ -29,7 +29,7 @@ Student.prototype.getAverageGrade = (function (sub) {
     return (arr.reduce((a, b) => a + b) / arr.length).toFixed(2)
   } else if (typeof this.grades[sub] === 'undefined') {
     console.log('This subject does not exist on the list')
-  } else if (!this.grades[sub].length > 0) {
+  } else if (this.grades[sub].length === 0) {
     console.log('There are no grades in this subject')
   } else {
     const grades = this.grades[sub];
