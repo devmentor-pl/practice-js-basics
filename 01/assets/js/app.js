@@ -12,10 +12,12 @@ const multiply = (aNum*10 * b)/10;
 const divide = (b !== 0) ? (aNum / b) : 'You cannot divide by 0';
 const returnRest = (aNum !== 0) ? (b*10 % (aNum*10))/10 : 'You cannot divide by 0';
 
-// DO WYJAŚNIENIA -> "invalid assignment to const 'aNum'"
-// const incr = aNum++;
-// const decr = b--;
-// console.log('inkrementacja' + incr, 'dekrementacja' + decr)
+// increment and decrement operators
+let i = aNum;
+let incr = ++i;
+let d = b;
+let decr = --d;
+console.log('inkrementacja: ' + incr, 'dekrementacja: ' + decr)
 
 console.log('dodawanie ' + add, 'odejmowanie ' + subtract, 'mnożenie ' + multiply, 'dzielenie ' + divide, 'reszta z dzielenia ' + returnRest);
 
