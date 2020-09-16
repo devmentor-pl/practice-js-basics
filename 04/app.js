@@ -1,10 +1,14 @@
 const createArr = (min, max) => {
-  let arr = [];
+  if (typeof min === "undefined" || typeof max === "undefined") {
+    return 'You did not choose any numbers'
+  } else {
+    let arr = [];
   for (i = 0; i < 20; i++) {
     let num = Math.round(Math.random() * (max - min)) + min;
     arr.push(num)
   }
-  return arr
+    return arr
+  }
 }
 
 const getLargest = (arr) => {
@@ -12,9 +16,9 @@ const getLargest = (arr) => {
 }
 
 const getAvg = (arr) => {
-  return arr.reduce((a, b) => a + b) / arr.length
+  return arr.reduce((a, b) => a + b, 0) / arr.length
 }
 
-const newArr = createArr(1, 3);
-console.log(`Here are our numbers: ${newArr} and their arithmetic average is...`)
+const newArr = createArr(10, 200);
+console.log(`Here are our numbers: ${newArr}`)
 console.log(getAvg(getLargest(newArr)));
