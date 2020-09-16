@@ -32,7 +32,7 @@ function showInfo(toCheck, checker) {
 }
 
 function randomNumber(min, max) {
-    return Math.round((Math.random() * max - min) + min);
+    return Math.round(Math.random() * (max - min)) + min;
 }
 
 const sum = getSum(a, b, c);
