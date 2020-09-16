@@ -25,7 +25,7 @@ const results = [add, subtract, multiply, divide, returnRest]
 
 for(res of results) {
   console.log(checkEquality(res, 20))
-} //skąd mi się bierze "gratisowe" undefined, gdy jedna ze zmiennych równa się 0?
+}
 
 function checkEquality(num, x) {
   if(typeof num === 'number') {
@@ -36,5 +36,5 @@ function checkEquality(num, x) {
     } else {
       return `${num} is less than ${x}`
     }
-  } else {console.log('You tried to divide by 0 somewhere there!')}
+  } else { return 'You tried to divide by 0 somewhere there!' }
 }
