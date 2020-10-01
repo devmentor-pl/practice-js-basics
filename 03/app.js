@@ -1,12 +1,12 @@
 const min = 1;
 const max = 100;
 
-//const a = randomNumber(min, max);//
-//const b = randomNumber(min, max);//
-//const c = randomNumber(min, max);//
-const a = "1";
-const b = "3";
-const c = "2";
+const a = randomNumber(min, max);//
+const b = randomNumber(min, max);//
+const c = randomNumber(min, max);//
+//const a = "1";
+//const b = "3";
+//const c = "2";
 const tab = [a,b,c];
 
 console.log(a, b, c);
