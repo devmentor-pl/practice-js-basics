@@ -14,8 +14,6 @@ function multiplyX(num) {
         let result = 0;
         result = i * num;
         console.log(i + ' x ' + num + ' = ' + result);
-
-
     }
 }
 
@@ -34,8 +32,6 @@ function pow(a, n) {
     }
 
     console.log(resultArray.join(' * ') + " = " + resultPow);
-
-    return;
 }
 
 
