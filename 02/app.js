@@ -2,9 +2,10 @@ const x = parseInt(prompt('Podaj liczbę całkowitą do mnożenia (1-9)'));
 const a = parseInt(prompt('Podaj podstawę potęgowania (1-9)'));
 const n = parseInt(prompt('Podaj wykładnik potęgowania'));
 
-checkX(x);
-
-
+if (checkX(x)) {
+    multiplyX(x);
+    pow(a, n);
+}
 
 
 function multiplyX(num) {
@@ -38,9 +39,6 @@ function pow(a, n) {
 function checkX(num) {
     if (!(num > 0 && num < 10) || !(a > 0 && a < 10)) {
         alert('Podaj liczbę z przedziału od 1 do 9');
-        return;
-    } else {
-        multiplyX(num);
-        pow(a, n);
-    }
+        return false;
+    } else return true;
 }
