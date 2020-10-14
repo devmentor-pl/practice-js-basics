@@ -12,8 +12,7 @@ function multiplyX(num) {
 
     /* rozwiązanie z pętlą for */
     for (let i = 1; i <= num; i++) {
-        let result = 0;
-        result = i * num;
+        let result = i * num;
         console.log(i + ' x ' + num + ' = ' + result);
     }
 }
