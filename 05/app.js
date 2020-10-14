@@ -20,10 +20,13 @@ Student.prototype.getAverage = function (subject) {
     let sum = 0;
     let avg = 0;
     if (typeof this.grades[subject] === 'undefined') {
-        this.allGrades.forEach(function (element) {
-            sum += element;
-        })
-        avg = sum / this.allGrades.length
+        let all = [];
+        for (const subject in this.grades) {
+            all = all.concat(this.grades[subject]);
+        }
+        avg = all.reduce(function (a, b) {
+            return ((a + b) / all.length)
+        });
         console.log('Suma wszystkich ocen tego studenta to: ' + avg);
     } else {
         this.grades[subject].forEach(element => {
