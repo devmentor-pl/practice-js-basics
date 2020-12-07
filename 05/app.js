@@ -11,15 +11,10 @@ Student.prototype.showFullName = function () {
 
 
 Student.prototype.addGrade = function (subject, grade) {
-    this.grades = subject;
-    this.grades[subject] = [];
-
-
     if (typeof this.grades[subject] === 'undefined') {
         this.grades[subject] = [];
     }
-
-    this.grades[subject].push(grade); // tu jest jakiś błąd !!!!
+    this.grades[subject].push(grade);
 }
 
 
@@ -31,26 +26,48 @@ Student.prototype.getAverageGrade = function (subject) {
         });
         const resultAvgGrade = resultSum / this.grades[subject].length;
         return resultAvgGrade;
-    } else { // to jest do przerobienia całe else
-        const values = Object.values(this.grades); // zwraca wszystkie wartości danego obiektu w formie tablicy
-        const totalSum =
-            values.reduce(function (a, b) {
-                return a + b;
-            }, 0);
+    } else if (typeof subject === 'undefined') {
 
-        const resultAvgGrade = totalSum / this.grades;
-        return resultAvgGrade;
+        const valuesArr = Object.values(this.grades);
 
+        let resultSumAll = 0;
+        let resultAvgAll = 0;
+        for (let i = 0; i < valuesArr.length; i++) {
+
+            const resultSumItem = valuesArr[i].reduce(function (a, b) {
+                return (a + b);
+            });
+            const resultAvgItem = resultSumItem / valuesArr[i].length;
+            resultSumAll += resultAvgItem;
+
+            resultAvgAll = resultSumAll / valuesArr.length;
+        }
+        return resultAvgAll;
+
+    } else {
+        return null;
     }
 }
 
+const student1 = new Student('Jan', 'Kowalski');
+student1.addGrade('maths', 4);
+student1.addGrade('maths', 4);
+student1.addGrade('maths', 1);
+student1.addGrade('english', 5);
+student1.addGrade('english', 5);
+student1.addGrade('polish', 3);
+student1.addGrade('polish', 3);
+student1.addGrade('polish', 3);
+const avgMathsSt1 = student1.getAverageGrade('maths');
+const avgEnglishSt1 = student1.getAverageGrade('english');
+const avgPolishSt1 = student1.getAverageGrade('polish');
+const avgAllSt1 = student1.getAverageGrade();
 
-const student = new Student('Jan', 'Kowalski');
-student.addGrade('maths', 4);
-student.addGrade('maths', 6);
-student.addGrade('english', 3);
 
+console.log(student1);
+console.log('Średnia z Matematyki ' + student1.firstName + ' ' + student1.lastName + ': ' + avgMathsSt1);
+console.log('Średnia z Angielskiego ' + student1.firstName + ' ' + student1.lastName + ': ' + avgEnglishSt1);
+console.log('Średnia z Polskiego ' + student1.firstName + ' ' + student1.lastName + ': ' + avgPolishSt1);
 
-
-
+console.log('Średnia z wszystkich przedmiotów: ' + avgAllSt1);
 
