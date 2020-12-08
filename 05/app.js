@@ -28,22 +28,37 @@ Student.prototype.getAverageGrade = function (subject) {
         return resultAvgGrade;
     } else if (typeof subject === 'undefined') {
 
-        const valuesArr = Object.values(this.grades);
+        let arrAll = [];
+        Object.values(this.grades).forEach(function (item) {     // stworzenie tablicy jednowymiarowej
+            arrAll = arrAll.concat(item);
+        });
 
-        let resultSumAll = 0;
-        let resultAvgAll = 0;
-        for (let i = 0; i < valuesArr.length; i++) {
+        const resultSum = arrAll.reduce(function (a, b) {
+            return (a + b);
+        });
+        const resultAvg = resultSum / arrAll.length;
+        return resultAvg;
 
-            const resultSumItem = valuesArr[i].reduce(function (a, b) {
-                return (a + b);
-            });
-            const resultAvgItem = resultSumItem / valuesArr[i].length;
-            resultSumAll += resultAvgItem;
 
-            resultAvgAll = resultSumAll / valuesArr.length;
-        }
-        return resultAvgAll;
 
+        /* średnia obliczona przez Dawid Pietraszko - wcześniej sprawdzona !!!
+
+                const valuesArr = Object.values(this.grades);
+        
+                let resultSumAll = 0;
+                let resultAvgAll = 0;
+                for (let i = 0; i < valuesArr.length; i++) {
+        
+                    const resultSumItem = valuesArr[i].reduce(function (a, b) {
+                        return (a + b);
+                    });
+                    const resultAvgItem = resultSumItem / valuesArr[i].length;
+                    resultSumAll += resultAvgItem;
+        
+                    resultAvgAll = resultSumAll / valuesArr.length;
+                }
+                return resultAvgAll;
+        */
     } else {
         return null;
     }
@@ -64,10 +79,34 @@ const avgPolishSt1 = student1.getAverageGrade('polish');
 const avgAllSt1 = student1.getAverageGrade();
 
 
+const student2 = new Student('Marek', 'Nowak');
+student2.addGrade('maths', 2);
+student2.addGrade('maths', 3);
+student2.addGrade('maths', 4);
+student2.addGrade('english', 4);
+student2.addGrade('english', 4);
+student2.addGrade('polish', 5);
+student2.addGrade('polish', 5);
+student2.addGrade('polish', 2);
+const avgMathsSt2 = student2.getAverageGrade('maths');
+const avgEnglishSt2 = student2.getAverageGrade('english');
+const avgPolishSt2 = student2.getAverageGrade('polish');
+const avgAllSt2 = student2.getAverageGrade();
+
+
+
 console.log(student1);
 console.log('Średnia z Matematyki ' + student1.firstName + ' ' + student1.lastName + ': ' + avgMathsSt1);
 console.log('Średnia z Angielskiego ' + student1.firstName + ' ' + student1.lastName + ': ' + avgEnglishSt1);
 console.log('Średnia z Polskiego ' + student1.firstName + ' ' + student1.lastName + ': ' + avgPolishSt1);
 
-console.log('Średnia z wszystkich przedmiotów: ' + avgAllSt1);
+console.log('Średnia z wszystkich przedmiotów: ' + avgAllSt2);
+
+
+console.log(student2);
+console.log('Średnia z Matematyki ' + student2.firstName + ' ' + student2.lastName + ': ' + avgMathsSt2);
+console.log('Średnia z Angielskiego ' + student2.firstName + ' ' + student2.lastName + ': ' + avgEnglishSt2);
+console.log('Średnia z Polskiego ' + student2.firstName + ' ' + student2.lastName + ': ' + avgPolishSt2);
+
+console.log('Średnia z wszystkich przedmiotów: ' + avgAllSt2);
 
