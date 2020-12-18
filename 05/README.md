@@ -22,42 +22,6 @@ const avgMath = function Student(name, secondName) {
     this.secondNAme;
     this.grades = {}
 }
-
-Student.prototype.addGrade = function(subject, grade) {
-    if(typeof this.grades[subject] === 'undefined') {
-        this.grades[subject] = [];
-    }
-
-    this.grades[subject].push(grade);
-}
-
-
-Student.prototype.getAverage = function(grade) {
-    // Average for all grades
-    if(typeof grade === 'undefined') {
-      let allGrades = [];
-      
-        for(const key in this.grades) {
-            allGrades = allGrades.concat(this.grades[key]);
-        }
-     const sumGrades = allGrades.reduce(function(a, b) {
-        return a + b
-      });
-      
-      return sumGrades / allGrades.length;
-    } else {
-      console.log(this.grades[grade]);
-    }
-}
-
-const student = new Student('Jan', 'Kowalski');
-console.log(student)
-student.addGrade('maths', 4);
-student.addGrade('maths', 6);
-student.addGrade('english', 3);
-student.getAverage('math');
-student.getAverage(); // 5
-const avg = student.getAverageGrade(); // 4.33
 ```
 
 Struktura przechowywania danych w obiekcie może wyglądać mniej wiecej tak:
