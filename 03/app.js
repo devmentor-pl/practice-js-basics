@@ -7,8 +7,10 @@ const max = 100;
 
 // console.log(a, b, c);
 
-const isEven = checkEven;//nie czaję, czy to tak powinno być. Kiedy od razu przypisywałam funkcję anonimową,
-//to musiała być wyżej (chyba) i to (chyba) zaśmiecało kod
+const isEven = function (value) {
+    if(typeof(value) !== 'number') return null;
+    return value % 2 === 0;
+}
 
 const a = 4;
 const b = 25;
@@ -16,7 +18,6 @@ const c = 14;
 
 const sum = getSum(a, b, c);
 const even = isEven(sum);
-
 
 showInfo(sum, even);
 
@@ -35,11 +36,6 @@ function showInfo(anything, boolValue) {
             console.log(`Hej, coś tu mnie próbujesz oszukać :<`);
             break;
     }
-}
-
-function checkEven(value) {
-    if(typeof(value) !== 'number') return null;
-    return value % 2 === 0;
 }
 
 function getSum(a, b, c) {
