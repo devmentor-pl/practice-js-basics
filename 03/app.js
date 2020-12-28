@@ -16,3 +16,10 @@ console.log(a, b, c);
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
+
+
+function getSum() {
+    const a = parseInt();
+    const b = parseInt();
+    const c = parseInt();
+}
