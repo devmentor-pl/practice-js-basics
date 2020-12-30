@@ -1,5 +1,6 @@
-/* rozwiązanie z pętlą for 
-const x = prompt('Podaj liczbę!');
+/* rozwiązanie z pętlą for */
+
+/*const x = prompt('Podaj liczbę!');
 
 
 for (let i = 1; i < 10; i++) {
@@ -12,9 +13,19 @@ for (let i = 1; i < 10; i++) {
 /* rozwiązanie z pętlą while */
 
 const a = prompt('Podaj liczbę');
-const b = prompt('Podaj wykładnik potęgi');
+const n = prompt('Podaj wykładnik potęgi');
 
-let wykladnik = b;
-let out = Math.pow(a, b);
+let text = '';
+let i = 1;
+while (i <= n) {
+        console.log('...', i);
 
-console.log(out);
+        if (i === 1) {
+                text = a;
+        } else {
+                text = text + ' * ' + a;
+        }
+
+        i++;
+}
+console.log(text + ' = ' + Math.pow(a, n));
