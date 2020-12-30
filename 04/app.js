@@ -1,63 +1,51 @@
-//notE RNG to skrót od wyrażenia „random number generator”
+const getRandomArray = function(min, max){
+    if(min < max && typeof min === "number" && typeof max === "number"){
+        let randomArray = [];
 
-const arrRNG = createArrRNG;
-
-const topMaxRNo = fnSortCutArr;
-
-
-
-
-
-
-
-
-     
-//?dev to zagnieżdzenie jest  okay? czy porypałem?
-//infO //?dev Cyt. "Kolejna funkcja ma *przymować* przez argument tablicę i sortować..."
-                            // zjadłeś sobie literke j ;)
-                // czy może jednak to było specjalnie ? Bo w XVI w. staropolskim sj znalazłem że to słówko oznacza odsyłacz/wariant xD Ale to po Staropolsku ;P 
-
-function createArrRNG(min, max){
-    if(min<max && typeof min === "number" && typeof max === "number"){
-        let arrRNG = [];
-
-        for(let i=0; arrRNG.length<20; i++){
-            let noRNG = Math.floor(Math.random()*(max-min+1)+min);
-            arrRNG.push(noRNG);
+        for(let i = 0; randomArray.length < 20; i++){
+            let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+            randomArray.push(randomNumber);
         };
-    return arrRNG;
+        return randomArray;
         
-    } else if(min>max){
+    } else if(min > max){
         alert("Pierwsza wartość wejściowa musi być większa od drugiej");
-        } else if (min === max){
-            alert("Dane muszą mieć różną wartość");
-            } else {
-                alert("Nieprawidłowe dane wejściowe");
-                }
-}
-
-function fnSortCutArr(arr){
-    if(Array.isArray(arr) && arr.length > 10){
-
-        let arrSort = [arr.sort(function(x, y){
-            return y - x;
-        })];
-     //   arrSort.length = 10;    //?dev tak nie zadziała?
-                                //?ver Mega dziwnie się to wyświetla w konsoli - jest PrtSc
-        
-        let arrCut = arrSort.slice(0, 10);
-//?dev Kurcze coś tu robie źle nie wiem czemu mi się to nie odcina 
-
-        return arrCut;
-
+    } else if (min === max){
+        alert("Dane muszą mieć różną wartość");
     } else {
         alert("Nieprawidłowe dane wejściowe");
-    };
+    }
+};
+
+const getTenBiggest = function(arr){ 
+    const sorted = getSortedArray(arr);
+    const tenBigest = sorted.slice(0, 10);
+    return tenBigest;
+};
+
+const randomArray = getRandomArray(10, 200);
+console.log(randomArray);
+const tenBiggest = getTenBiggest(randomArray);
+console.log(tenBiggest);
+const average = getAverage(tenBiggest);
+console.log(average);
+
+
+
+                                                                            //notE if w jednej linii bez wąsy {}
+function getSortedArray(arr){
+    if(!Array.isArray(arr)) return alert("To nie jest tablica");
+    const sorted = arr.sort(function(x, y){
+        return y - x;
+    });
+    return sorted;
 }
 
-function averageSum(arr){
-    let sumArr = arr.reduce(function(prev, curr){
+function getAverage(arr){
+    let sum = arr.reduce(function(prev, curr){
         return prev + curr;
     });
+
+    return sum / arr.length;
 }
 //?dev tu mi już też coś zaczęło szwankować ;/ Ale nie wiem czemu 
