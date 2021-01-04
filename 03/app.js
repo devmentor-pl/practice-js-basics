@@ -8,18 +8,20 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 
-
-
-
-
-
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
 
 
-function getSum() {
-    const a = parseInt();
-    const b = parseInt();
-    const c = parseInt();
+function getSum(a, b, c) {
+    const aInt = Math.round(a);
+    const bInt = Math.round(b);
+    const cInt = Math.round(c);
+
+    //wybierz 2 najwieksze
+    const small =;
+    const large =;
+
+    if(a < b)
 }
+getSum(1.1, 2.1, 3.2);
