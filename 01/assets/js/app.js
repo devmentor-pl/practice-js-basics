@@ -1,10 +1,12 @@
+// Dodaj do pliku HTML plik `app.js` i sprawdź w konsoli (Chrome -> F12) czy widzisz zawartość zmiennych.
+
 const a = '4.2';
 const b = 9;
 
-
-
 console.log(a, b);
 
+
+// Dodaj do pliku HTML plik `app.js` i sprawdź w konsoli (Chrome -> F12) czy widzisz zawartość zmiennych.
 console.log(typeof a);
 console.log(typeof b);
 
