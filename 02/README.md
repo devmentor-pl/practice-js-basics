@@ -38,6 +38,6 @@ W tym rozwiązaniu również możesz użyć `prompt()` i sprawdzać czy użytkow
 
 &nbsp;
 
-> :arrow_left: [*poprzednie zadanie*](./../0[NUMER]) | [*następne zadanie*](./../0[NUMER]) :arrow_right:
+> :arrow_left: [*poprzednie zadanie*](./../01) | [*następne zadanie*](./../02) :arrow_right:
 
 > :no_entry: *Jeśli nie posiadasz materiałów do tego zadania, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)*
