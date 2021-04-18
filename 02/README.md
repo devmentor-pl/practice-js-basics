@@ -23,7 +23,7 @@ Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać 
 // ...
 ```
 
-Jak już wszystko będzie działać możesz zmienić `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie będzie jeśli będzisz sprawdzał czy podana wartość mieści się w przedziale od 1 do 9.
+Jak już wszystko będzie działać możesz zmienić `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idealnie będzie jeśli będzisz sprawdzał czy podana wartość mieści się w przedziale od 1 do 9.
 
 Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku. Potem dopiero uogólniamy rozwiązanie. W ten sposób ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! W ten sposób staraj się rozwiązywać kolejne zadania.
 
