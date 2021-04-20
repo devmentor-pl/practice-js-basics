@@ -30,7 +30,7 @@ const sum = getSum(a, b, c);
 // isEven
 
 const isEven = function (sum) {
-    if(sum === Number) {
+    if(typeof sum !== "number") {
         return null
     } else if (sum % 2 === 0) {
         return true

@@ -22,10 +22,10 @@ function getAvg (arr) {
 
     let sum = 0;
     arr.forEach(function(element) {
-        sum += element / 10;
+        sum += element;
     });
 
-    return sum;
+    return sum /= arr.length;
 }
 
 const arr = createArray(10, 200);

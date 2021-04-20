@@ -1,11 +1,12 @@
 
 /* rozwiązanie z pętlą for */
-const x = prompt("Podaj liczbę!");
+const x = parseInt(prompt("Podaj liczbę!"));
+let result = 0;
 
 if(x > 0 && x <= 9) {
    for(let i = 1; i <= 9; i++) {
     result = i * x;
-    console.log(result);
+    console.log(i + " * " + x + " = " + result);
     } 
 } else {alert("Podana liczba nie mieści się w przedziale 1-9")}
 

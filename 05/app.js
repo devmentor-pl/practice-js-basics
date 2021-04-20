@@ -5,7 +5,7 @@ function Student(firstName, lastName) {
 }
 
 Student.prototype.addGrade = function (subject, grade) {
-    if(typeof this.grades[subject] === 'undefined') {
+    if(typeof this.grades[subject] === "undefined") {
         this.grades[subject] = [];
     }
     
@@ -14,14 +14,14 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.getAverageGrade = function (subject) {
     
-    if(subject !== undefined) {
+    if(typeof subject !== "undefined") {
         let sum = 0;
         const grades = this.grades[subject];
         grades.forEach(function (element) {
-          return sum += element / grades.length;
+          return sum += element;
         });
 
-        return sum;
+        return sum /= grades.length;
 
     } else {
         const allGrades = [];
@@ -34,10 +34,10 @@ Student.prototype.getAverageGrade = function (subject) {
         }   
 
         allGrades.forEach(function (element) {
-            return total += element / allGrades.length;
+            return total += element;
         });
 
-        return total;
+        return total /= allGrades.length;
     }
 }
 
