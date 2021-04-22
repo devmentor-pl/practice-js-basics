@@ -25,7 +25,7 @@ function getAvg (arr) {
         sum += element;
     });
 
-    return sum /= arr.length;
+    return sum / arr.length;
 }
 
 const arr = createArray(10, 200);

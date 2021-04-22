@@ -21,7 +21,7 @@ Student.prototype.getAverageGrade = function (subject) {
           return sum += element;
         });
 
-        return sum /= grades.length;
+        return sum / grades.length;
 
     } else {
         const allGrades = [];
@@ -37,7 +37,7 @@ Student.prototype.getAverageGrade = function (subject) {
             return total += element;
         });
 
-        return total /= allGrades.length;
+        return total / allGrades.length;
     }
 }
 
