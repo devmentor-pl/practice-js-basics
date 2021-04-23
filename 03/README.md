@@ -8,12 +8,12 @@
 
 
 
-Funkcje to bardzo użyteczne rozwiązania, które możemy wieloktornie wykorzystywać w naszym programie i grupować kod, aby był on czytelniejszy. 
+Funkcje to bardzo użyteczne rozwiązania, które możemy wielokrotnie wykorzystywać w naszym programie i grupować kod, aby był on czytelniejszy. 
 
 Dlatego teraz naszym zadaniem będzie przećwiczenie ich struktury. Mamy do napisania 3 funkcje.
 
 - Funkcja pierwsza o nazwie `getSum`:
-    - 3 parametry, którch wartość w ciele funkcji mają zostać przekonwertowane na liczby całkowite
+    - 3 parametry, których wartość w ciele funkcji mają zostać przekonwertowane na liczby całkowite
     - z podanych 3 liczb mają być wybrane 2 największe
     - wartości 2 największych liczb mają zostać zsumowane i zwrócone przez funkcję
 - Funkcja druga o nazwie `isEven`:
