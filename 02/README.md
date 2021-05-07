@@ -7,13 +7,17 @@
 # `#02` JavaScript: Podstawy
 
 
-Tym razem do wykonania masz dwa zadania wykorzystujące 2 rodzaje pętli:
+Tym razem wykorzystasz dwa rodzaje pętli.
 
 ## Pętla for
 
-Twój kolega ma syna w podstawówce i właśnie uczą się tabliczki mnożenia. Zaoferowałeś pomoc w formie programu, który będzie wyświetlał wszystkie mnożenia dla wybranej liczby.
+Twój kolega ma syna w podstawówce i właśnie uczy go tabliczki mnożenia. Zaoferowałeś pomoc w formie programu, który pokaże wszystkie działania mnożenia dla wybranej liczby.
 
-Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać kolejne wyniki mnożenia dla wartości zmiennej `x` dla liczb od 1 do 9. np. dla `const x = 4`
+Za pomocą pętli `for` stwórz rozwiązanie, które będzie wyświetlać kolejne wyniki mnożenia.
+- Jednym iloczynem niech jest wartość zmiennej `x`, np. `const x = 4`.
+- W miejsce drugiego iloczynu wstaw kolejne cyfry od 1 do 9.
+
+Wyświetlane działania powinny prezentować się jak poniżej:
 
 ```
 1 x 4 = 4
@@ -23,17 +27,17 @@ Za pomocą pętli `for` masz napisać rozwiązanie, które będzie wyświetlać 
 // ...
 ```
 
-Jak już wszystko będzie działać możesz zmienić `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie będzie jeśli będzisz sprawdzał czy podana wartość mieści się w przedziale od 1 do 9.
+Jak już wszystko będzie działać, zmień `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie, jeśli za każdym razem sprawdzisz, czy podana przez użytkownika wartość mieści się w przedziale od 1 do 9.
 
-Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku. Potem dopiero uogólniamy rozwiązanie. W ten sposób ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! W ten sposób staraj się rozwiązywać kolejne zadania.
+Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku, a dopiero potem je uogólniamy. Tak ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! Postaraj się w ten sposób rozwiązywać kolejne zadania.
 
 ## Pętla while
 
-Pomyślałeś, że przy okazji zrobisz obliczenie potęgi w formie, która będzie mogła czegoś nauczyć potencjalnego użytkownika Twojego rozwiązania. 
+Pomyślałeś, że przy okazji stworzysz program do nauki potęgowania. 
 
-Dlatego jeśli `a = 3` (podstawa) oraz `n = 4` (wykładnik) to w konsoli powinno być widoczne: `3 * 3 * 3 * 3 = 81`.
+Niech działa on następująco: jeśli `a = 3` (podstawa) oraz `n = 4` (wykładnik) to w konsoli wyświetla się `3 * 3 * 3 * 3 = 81`
 
-W tym rozwiązaniu również możesz użyć `prompt()` i sprawdzać czy użytkownik wprowadził odpowiednie dane.
+W tym rozwiązaniu również możesz użyć `prompt()` i sprawdzać, czy użytkownik wprowadza odpowiednie dane.
 
 
 &nbsp;
