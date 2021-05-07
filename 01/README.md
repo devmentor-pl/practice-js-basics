@@ -6,16 +6,15 @@
 
 # `#01` JavaScript: Podstawy
 
-Dodaj do pliku HTML plik `app.js` i sprawdź w konsoli (Chrome -> F12) czy widzisz zawartość zmiennych.
+Do pliku HTML dodaj plik `app.js` i sprawdź w konsoli (Chrome -> F12), czy widzisz zawartość zmiennych.
 Następnie wykonaj poniższe zadania:
-- sprawdź jakiego typu są to zmienne - użyj `typeof`
-- wykonaj działania dla każdego operatora arytmetycznego jaki znasz. 
-    - Każdy wynik zapisz do osobnej zmiennej
-    - Sprawdź czy wyniki są prawidłowe
-        - Jeśli tak, nic nie rób
-        - Jeśli nie, rozwiąż problem
-- użyj instrukcji warunkowej, aby sprawdzić, który z wyników jest większy od 20, a który mniejszy
-    - wykonaj to w taki sposób, aby zmiana wartości podczas deklaracji dla `a` oraz `b` nie wpłynęła na poprawność działanie Twojego kodu 
+- Sprawdź, jakiego typu są to zmienne. Użyj `typeof`.
+- Wykonaj działania dla każdego operatora arytmetycznego, jaki znasz: 
+    - każdy wynik zapisz do osobnej zmiennej,
+    - sprawdź, czy wyniki są prawidłowe:
+        - jeśli tak, nic nie rób,
+        - jeśli nie, rozwiąż problem.
+- Użyj instrukcji warunkowej, aby sprawdzić, który z wyników jest większy od 20, a który mniejszy. Wykonaj to w taki sposób, aby zmiana wartości przechowywanych w zmiennych `a` i `b` nie wpłynęła na poprawność działania Twojego kodu. 
 
 
 &nbsp;
