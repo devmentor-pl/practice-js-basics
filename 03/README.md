@@ -8,38 +8,41 @@
 
 
 
-Funkcje to bardzo użyteczne rozwiązania, które możemy wieloktornie wykorzystywać w naszym programie i grupować kod, aby był on czytelniejszy. 
+Funkcje pozwalają na wielokrotne wykorzystanie kodu i grupowanie go, tak aby był bardziej czytelny. 
 
-Dlatego teraz naszym zadaniem będzie przećwiczenie ich struktury. Mamy do napisania 3 funkcje.
+Dlatego teraz przećwiczymy ich tworzenie na podstawie 3 funkcji.
 
-- Funkcja pierwsza o nazwie `getSum`:
-    - 3 parametry, którch wartość w ciele funkcji mają zostać przekonwertowane na liczby całkowite
-    - z podanych 3 liczb mają być wybrane 2 największe
-    - wartości 2 największych liczb mają zostać zsumowane i zwrócone przez funkcję
-- Funkcja druga o nazwie `isEven`:
-    - ma mieć formę wyrażenia funkcyjnego
-    - ma przyjmować przez parametr tylko liczbę
-        - jeśli parametrem jest inny typ wartości niż `number` to zwróć `null`
-        - jeśli jest to liczba to zwróć:
-            - `true` jeśli jest parzysta
-            - `false` jeśli jest nieparzysta
-- Funkcja trzecia `showInfo`:
-    - ma przyjmowac 2 parametry
-        - pierwszy to dowolna wartość
-        - drugi to jedna z wartości: `null`, `true`, `false`
-    - wykorzystując strukturę `switch` wyświetl w konsoli informacje:
-        - jeśli drugi parametr to
-            - `null` => Podany argument [tutaj jej wartość] nie jest liczbą
-            - `true` => Podany argument [tutaj jej wartość] jest parzysty
-            - `false` => Podany argument [tutaj jej wartość] jest nieparzysty
+1. Funkcja o nazwie `getSum`:
+    - przyjmuje 3 parametry. Ich wartość w ciele funkcji ma zostać przekonwertowana na liczby całkowite,
+    - z podanych 3 liczb wybierane są 2 największe,
+    - wartości tych 2 liczb są sumowane, a wynik jest zwracany przez funkcję.
 
-Mając stworzone funkcje powinieneś je wykorzystać. W pierwszej kolejności oblicz sumę dla zmiennych `a`, `b`, `c` wykorzystując pierwszą funkcję. Wartość zapisz w zmiennej.
+2. Funkcja o nazwie `isEven`:
+    - ma formę wyrażenia funkcyjnego,
+    - przyjmuje przez parametr tylko liczbę:
+        - jeśli parametrem jest inny typ wartości niż `number`, to zwróć `null`,
+        - jeśli jest to liczba, to zwróć:
+            - `true` - jeśli jest parzysta,
+            - `false` - jeśli jest nieparzysta.
+ 
+3. Funkcja o nazwie `showInfo`:
+    - przyjmuje 2 parametry:
+        - pierwszy to dowolna wartość,
+        - drugi to jedna z podanych wartości: `null`, `true`, `false`,
+    - wyświetla w konsoli podane niżej informacje i wykorzystuje do tego strukturę `switch`. Jeśli drugi parametr to:
+       - `null` => Podany argument [tutaj jej wartość] nie jest liczbą
+        - `true` => Podany argument [tutaj jej wartość] jest parzysty
+         - `false` => Podany argument [tutaj jej wartość] jest nieparzysty
 
-Następnie wykorzystując drugą funkcję sprawdzić czy wartość zwrócona przez pierwszą funkcję jest parzysta. Wynik działania drugiej funkcji również zapisz do zmiennej.
+Masz już stworzone funkcje, więc teraz czas je wykorzystać!
 
-Trzecią funkcję wykorzystaj do wyświetlenia odpowiedniego komunikatu w konsoli.
+W pierwszej kolejności oblicz sumę dla zmiennych `a`, `b`, `c`, wykorzystując pierwszą funkcję. Wartość zapisz w zmiennej.
 
-Całość powinna wyglądać mniej więcej tak:
+Następnie, wykorzystując drugą funkcję, sprawdź, czy wartość zwrócona przez pierwszą funkcję jest parzysta. Wynik działania drugiej funkcji również zapisz do zmiennej.
+
+Trzecią funkcję wykorzystaj do wyświetlenia odpowiedniego komunikatu w konsoli o wynikach otrzymanych powyżej.
+
+Powinno to wyglądać mniej więcej tak:
 
 ```
 const a = 4;
