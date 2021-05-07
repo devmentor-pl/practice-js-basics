@@ -5,16 +5,16 @@
 
 # JavaScript: Podstawy
 
-Stawiając pierwsze kroki w każdej dziedzinie należy najpierw poznać teorię, która pozwala lepiej interpretować zaistniałe sytuacje. Nie inaczej jest w programowaniu. Najpierw trzeba poznać strukturę języka i jego specyfikę, a dopiero potem zabrać się za jego wykorzystywanie.
+Stawiając pierwsze kroki w każdej dziedzinie, należy najpierw poznać teorię, która pozwala lepiej interpretować zaistniałe sytuacje. Nie inaczej jest w programowaniu. Najpierw trzeba poznać strukturę języka i jego specyfikę, a dopiero potem zabrać się za jego wykorzystywanie.
 
-Prezentowane zadania pozwolą sprawdzić czy poznałeś teorię JavaScript na odpowiedniem poziomie, aby móc przejść do trudniejszych zagadnień. Pamiętaj, że im dokładniej poznasz podstawy tym łatwiej będzie Ci zrozumieć trudniejsze zagadnienia. 
+Dzięki przedstawionym zadaniom sprawdzisz, czy poznałeś teorię JavaScript na odpowiedniem poziomie. Im dokładniej opanujesz podstawy, tym łatwiej będzie Ci zrozumieć trudniejsze zagadnienia. 
 
 
-Zanim przystąpisz do zadan powineneś przerobić:
+Zanim przystąpisz do zadań powineneś przerobić:
 
 - Deklaracje zmiennych przy pomocy `const` & `let`
 - Typy wartości i operatory
-- Instrukcję warunkowe oraz pętle
+- Instrukcje warunkowe oraz pętle
 - Tworzenie i wykorzystanie funkcji
 - Obsługę tablic oraz obiektów
 - Konstruktory oraz prototypy
@@ -35,7 +35,7 @@ Zanim przystąpisz do zadan powineneś przerobić:
 
 ## Jak prawidłowo wykonać zadania?
 
-Najpierw zrób tzw. [`fork`](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) (prawy, górny róg strony). W ten sposób utworzysz kopię tego repozytorium na Twoim koncie GitHub. 
+Najpierw zrób tzw. [`fork`](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) (prawy górny róg strony). W ten sposób utworzysz kopię tego repozytorium na Twoim koncie GitHub. 
 
 Teraz będziesz mógł wykonywać zadania na swoim repozytorium. Wystarczy, że skopiujesz pliki na swój komputer przy pomocy komendy [`git clone`](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
