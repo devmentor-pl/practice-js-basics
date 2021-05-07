@@ -6,16 +6,22 @@
 
 # `#05` JavaScript: Podstawy
 
-Tym razem Twoim zadaniem będzie utworzenie konstruktora, na podstawie którego będzie można tworzyć obiekt przechowujący informacje o studencie.
+Tym razem stworzysz konstruktor, na podstawie którego będzie można generować obiekt przechowujący informacje o studencie.
 
-Obiekt ma posiadać imię i nazwisko przekazywane podczas inicjalizacji (przy użyciu `new`).
+Wymagania:
+1. Obiekt posiada imię i nazwisko przekazywane podczas inicjalizacji (przy użyciu `new`).
 
-Konstruktor ma udostępniać metody (przez `prototype`), które pozwolą dodać ocenę z danego przedmiotu oraz pobrać średnią arytmetyczną z konkretnego przedmiotu lub ogólną.
+2. Konstruktor:
+- udostępnia metody (przez `prototype`),
+- metody te pozwalają:
+  - dodać ocenę z danego przedmiotu,
+  - obliczyć średnią arytmetyczną z konkretnego przedmiotu,
+  - obliczyć ogólną średnią arytmetyczną.
 
-Przykład użycia może wyglądać w ten sposób:
+Przykład użycia może wyglądać tak:
 
 ```
-const student = new Student('Jan', 'Kowalski);
+const student = new Student('Jan', 'Kowalski');
 student.addGrade('maths', 4);
 student.addGrade('maths', 6);
 student.addGrade('english', 3);
@@ -23,7 +29,7 @@ const avgMath = student.getAverageGrade('math'); // 5
 const avg = student.getAverageGrade(); // 4.33
 ```
 
-Struktura przechowywania danych w obiekcie może wyglądać mniej wiecej tak:
+Struktura danych w obiekcie może prezentować się następująco:
 ```
 {
     firstName: 'Jan',
@@ -35,7 +41,7 @@ Struktura przechowywania danych w obiekcie może wyglądać mniej wiecej tak:
 }
 ```
 
-To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać mniej więcej tak:
+To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać np. tak:
 ```
 /* ... */ {
     this.firstName = firstName;
@@ -44,7 +50,7 @@ To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać mniej
 }
 ``` 
 
-Aby rozróżnić czy mamy podać średnią dla 1 przedmiotu czy dla wszystkich wystarczy sprawdzić czy pierwszy parametr w funkcji `.getAverageGrade()` jest zdefiniowany (różny od `undefined`).
+Aby rozróżnić, czy mamy podać średnią dla 1 przedmiotu, czy dla wszystkich, wystarczy sprawdzić, czy pierwszy parametr funkcji `.getAverageGrade()` jest zdefiniowany (różny od `undefined`).
 
 Zwróć uwagę, że pobranie informacji o ocenach z konkretnego przedmiotu może się odbywać w ten sposób:
 ```
@@ -52,7 +58,7 @@ const subject = 'maths';
 const grades = this.grades[subject];
 ```
 
-Pamiętaj również, aby przy dodawaniu ocen sprawdzić czy dany przedmiot już istnieje. Jeśli nie to trzeba utworzyć odpowiednią właściwość z obiekcie i przypisać do niej pustą tablicę np.
+Pamiętaj również, aby przy dodawaniu ocen sprawdzić, **czy dany przedmiot już istnieje**. Jeśli nie, to trzeba utworzyć odpowiednią właściwość w obiekcie, przypisać do niej pustą tablicę i wstawić odpowiednią ocenę, np.
 ```
 if(typeof this.grades[subject] === 'undefined') {
     this.grades[subject] = [];
