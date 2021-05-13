@@ -24,24 +24,24 @@ getSum(getUserNumber, getMultiplySequence, getAddSequence);
 
 function getAddSequence(a,b) {
 
-    multiplySequence = "";
+    let addSequence = "";
     i=1;
 
     while( i < b ) {
-        multiplySequence += ( a + " + " );
+        addSequence += ( a + " + " );
         i++;
 
         if( i === b ) {
-            multiplySequence += (a + " =" );
+            addSequence += (a + " =" );
         }
       }
-       return multiplySequence;
+       return addSequence;
 }
 
 
 function getMultiplySequence(a,b) {
 
-    multiplySequence = "";
+    let multiplySequence = "";
     i=1;
 
     while( i < 2) {
@@ -91,7 +91,7 @@ function getPowSequence(a,n) {
 
     if( (a > 0 && a < 10) && (n > 0 && n < 10) ) {
 
-        powSequence = ""
+        let powSequence = ""
         i=1;
 
         while( i < n ) {
