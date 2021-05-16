@@ -1,5 +1,5 @@
 // 1
-const arr = createArray(1, 100);
+const arr = createArray(20, 200);
 console.log(arr);
 
 function createArray (min, max) {
@@ -12,9 +12,21 @@ function createArray (min, max) {
 
 // 2
 getLargestNumber = (array) => {
-        array.sort((a, b) => a - b);
+       return array.sort((a, b) => b - a).slice(0, 10)
 }
 
-console.log(getLargestNumber(arr));
+const arrayForAverage = getLargestNumber(arr);
+console.log(arrayForAverage);
+// 3
+
+getArithmeticAverage = (array) => {
+        let result = 0;
+        array.forEach(item => {
+                result = result + item;
+        })
+        return `wynik działania arytmetycznego wynosi ${result / 10}`;
+}
+
+console.log(getArithmeticAverage(arrayForAverage));
 
 
