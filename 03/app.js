@@ -51,14 +51,6 @@ function showInfo (x, y) {
 showInfo(sum, even)
 
 
-
-
-
-
-
-
-
-
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
