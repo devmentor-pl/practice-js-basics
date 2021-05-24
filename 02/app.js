@@ -14,12 +14,15 @@ for (let i = 0; i <= 9; i++) {
 
 /* rozwiązanie z pętlą while  */
 
-let a = 3;
-let x = 4;
-let i = 1;
-let sum = 3;
-while(i <= x) {
+let a = prompt('Podaj podstawę: ');
+let b = prompt('Podaj wykładnik: ');
+let j = 1;
+let sum = a;
+while(j <= b) {
     console.log(sum);
     sum = sum*a;
-    i++;
+    j++;
 }
+
+
+
