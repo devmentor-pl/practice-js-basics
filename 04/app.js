@@ -8,22 +8,23 @@ console.log('Średnia to', avg)
 
 function getAvg(x) {
 
-    const y = x;
-    console.log(y);
+    console.log(x);
 
-    const avg = (y.reduce(function (a, b) {
+    const avg = (x.reduce(function (a, b) {
+      
         return a + b;
-    }) / y.length);
+    }, 0) / x.length);
 
     return avg;
 }
+
 
 function getLargest(x) {
 
     const arrAlfa = x;
     const arrBeta = arrAlfa.sort(function (a, b) {
         return b - a;
-    }).slice(0, 10);
+    }) .slice(0, 10);
 
     return arrBeta;
 }
