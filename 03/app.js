@@ -19,7 +19,7 @@ function getSum(x, y, z) {
 
 
 const isEven = (num) => {
-    if (typeof num !== 'numbers') {
+    if (typeof num !== 'number') {
         return null
     } else if (num % 2 === 0) {
         return true

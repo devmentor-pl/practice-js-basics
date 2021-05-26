@@ -1,54 +1,43 @@
 
 /* rozwiązanie z pętlą for */
 
-const multiplication = function () {
-    const x = 4;
-    for (let i = 1; i <= 9; i++) {
-        let result = x * i;
-        console.log(`${x}  *  ${i}  =  ${result}`)
+const x = parseInt (prompt("Podaj liczbę")); {
+    if (x => 1 && x <=9) {
+        for (let i = 1; i <= 9; i++) {
+            let result = x * i;
+            console.log(`${x}  *  ${i}  =  ${result}`)
+    
     }
+} else {
+    console.log("Liczba musi mieścić się w przedziale od 1 do 9")
 }
-multiplication()
+}
 
 
 
 /* rozwiązanie z pętlą while  */
 
-const multiplication2 = function () {
-    const x = 4;
-    let i = 1;
-    while (i <= 9) {
-        let result = x * i;
-        console.log(`${x}  *  ${i}  =  ${result}`)
-        i++;
-    }
+let result = 1;
+let counter = 0;
+while ( counter < 4) {
+  result = result * 3;
+  counter = counter + 1;
+ 
 }
-multiplication2()
+       console.log(result);
 
-/* rozwiązanie z pętlą while dla prompt  */
+// rozwiązanie z prompt
 
-const x = prompt('Podaj liczbę')
-if (x >= 1 && x <= 9) {
-    for (i = 0; i <= 9; i++) {
-        const multiplication = x * i;
-        console.log(multiplication);
-    }
+const a = 3;
+const n = prompt('Podaj wykładnik');
+let result = 1;
+let counter = 0;
+while ( counter < n) {
+  result = result * 3;
+  counter= counter + 1;
+ 
 }
-else {
-    console.log("Źle! Proszę podać liczbę od 1 do 9")
-}
-
-
-/* rozwiązanie z pętlą while  */
-
-const a = prompt('Podaj liczbę');
-const n = prompt('Podaj liczbę');
-const result = a ** n;
-while (a > 0 && n > 0) {
-
-console.log(result);
-}
-
+       console.log(result);
 
 
 
