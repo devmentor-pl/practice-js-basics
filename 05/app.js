@@ -15,16 +15,17 @@ Student.prototype.addGrade = function(subject, grades) {
 
       if(typeof this.grades[subject] === 'undefined') {
           this.grades[subject] = [];
+      } 
           this.grades[subject].push(grades);
-
-      } else {
-          this.grades[subject].push(grades);
-      }
 }
 
 Student.prototype.getAverageGrade = function(subject) {
 
-    if( !( typeof this.grades[subject] === 'undefined' ) ) {
+    function sumGrades (a,b) {
+        return a + b;
+    }
+
+    if( subject === 'undefined' ) {
 
         let sum = 0;
         for(let i=0; i <= this.grades[subject].length -1; i++) {
@@ -45,14 +46,10 @@ Student.prototype.getAverageGrade = function(subject) {
             });
         }
 
-        const average = restOfGrades.reduce( function(a,b) {
-            return a + b;
-        })/restOfGrades.length
+        const average = restOfGrades.reduce(sumGrades) /restOfGrades.length;
         return average;
-  }
 }
-
-
+}
 
 
 const student = new Student('Jan', 'Kowalski');
@@ -64,4 +61,3 @@ student.addGrade('maths', 6);
 student.addGrade('english', 3);
 const avgMath = student.getAverageGrade('maths'); // 5
 const avg = student.getAverageGrade(); // 4.33
-
