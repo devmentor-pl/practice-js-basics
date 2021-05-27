@@ -20,7 +20,7 @@ Student.prototype.getAverage = function(subject) {
             for(let i = 0; i < gradeArr.length; i++) {
                 sum += gradeArr[i];
             }
-            return sum / gradeArr.length;
+            return (sum / gradeArr.length).toFixed(2);
         }
     } else {
         const allGrades = [];
@@ -34,7 +34,7 @@ Student.prototype.getAverage = function(subject) {
             });
         }
         console.log(allGrades);
-        return sum / allGrades.length;
+        return (sum / allGrades.length).toFixed(2);
     }
 }
 
@@ -60,6 +60,6 @@ console.log(student1);
 console.log(student2);
 
 console.log(student2.getAverage());
-
+console.log(student1.getAverage());
 
 
