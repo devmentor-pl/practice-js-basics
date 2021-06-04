@@ -11,25 +11,13 @@ function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
 
-function getSum(a, b, c) { // pewnie można było prościej :)
+function getSum(a, b, c) {
     if (a > b && a > c) {
-        if (b > c) {
-            return a + b;
-        } else {
-            return a + c;
-        }
+        return (b > c) ? (a + b) : (a + c);
     } else if (b > c) {
-        if (a > c) {
-            return a + b;
-        } else {
-            return b + c
-        }
+        return (a > c) ? (a + b) : (b + c);
     } else {
-        if (a > b) {
-            return a + c;
-        } else {
-            return b + c;
-        }
+        return (a > b) ? (a + c) : (b + c);
     }
 }
 const sum = getSum(a, b, c);
@@ -45,16 +33,16 @@ const isEven = function (num) {
 
 const even = isEven(sum);
 
-function showInfo(sum, even) {
-    switch (even) {
+function showInfo(num, par) {
+    switch (par) {
         case 'false':
-            console.log(`Podany argument ${sum} jest nieparzysty`);
+            console.log(`Podany argument ${num} jest nieparzysty`);
             break;
         case 'true':
-            console.log(`Podany argument ${sum} jest parzysty`);
+            console.log(`Podany argument ${num} jest parzysty`);
             break;
         default:
-            console.log(`Podany argument ${sum} nie jest liczbą`);
+            console.log(`Podany argument ${num} nie jest liczbą`);
             break;
     }
 }
