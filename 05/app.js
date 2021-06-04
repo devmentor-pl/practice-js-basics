@@ -35,22 +35,26 @@ Student.prototype.getAverageGrade = function (sub) {
 
 Student.prototype.getAverageGradeOfAll = function () {
     let counter = 0;
-    let sum = 0;
+    let sumAll = 0;
     for (const sub in this.grades) {
+        let sumOfSub = 0;
         for (const note of this.grades[sub]) {
-            sum += note;
+            sumOfSub += note;
             // sum += this.grades[sub][note];
             counter++;
-            return sum / counter;
         }
+        return (sumOfSub / counter).toFixed(2);
     }
-
+    // sumAll += sumOfSub;
+    // return sumAll;
 }
 
 
 student.addGrade('math', 4);
 student.addGrade('math', 6);
+student.addGrade('math', 3);
 student.addGrade('english', 5);
+student.addGrade('english', 3);
 student.addGrade('english', 3);
 console.log(student);
 console.log(student);
