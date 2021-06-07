@@ -18,16 +18,18 @@ try {
     if (isNaN(Number(a)) || (isNaN(Number(n)))) {
         throw new Error('Podano błędnie liczby');
     }
-    if (+n === 0) {
+    if (Number(n) === 0) {
         console.log('Każda liczba podniesiona do potęgi 0 wynosi 1')
     } else {
         let j = 1;
-        let par = ``;
+        let par = ``;4
         while (j < n) {
             j++;
             par = par + ` * ${a}`;
         }
         console.log(`${a}${par} = ${Math.pow(a,n)}`);
+        console.log(Number(n))
+
     }
 } catch (e) {
     console.log(e.message);
