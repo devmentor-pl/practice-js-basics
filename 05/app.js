@@ -22,7 +22,7 @@ Student.prototype.addGrade = function (sub, note) {
 }
 
 Student.prototype.getAverageGrade = function (sub) {
-    if (typeof this.grades[sub] === 'undefined') { // ----------------MYŚLAŁAM ŻE OSZALEJĘ!!!!!-------------
+    if (typeof sub === 'undefined') { // ----------------MYŚLAŁAM ŻE OSZALEJĘ!!!!!-------------
         let counter = 0;
         let sum = 0;
         for (const sub in this.grades) {
