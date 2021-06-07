@@ -24,10 +24,10 @@ const sum = getSum(a, b, c);
 
 
 const isEven = function (num) {
-    if (!(num * 1) && (+num !== 0)) {
+    if (isNaN(Number(num))) {
         return null;
     } else {
-        return !(num % 2) ? "true" : "false"
+        return !(num % 2) ? true : false;
     }
 }
 
@@ -35,10 +35,10 @@ const even = isEven(sum);
 
 function showInfo(num, par) {
     switch (par) {
-        case 'false':
+        case false:
             console.log(`Podany argument ${num} jest nieparzysty`);
             break;
-        case 'true':
+        case true:
             console.log(`Podany argument ${num} jest parzysty`);
             break;
         default:
