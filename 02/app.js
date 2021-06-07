@@ -1,7 +1,7 @@
 /* rozwiązanie z pętlą for */
 try {
     const x = prompt('Podaj liczbę');
-    if (!(x * 1) && +x !== 0) { // nie wiedziałam jak sprawdzić czy podabna wartość jest liczbą 
+    if (isNaN(Number(x))) { // czy podabna wartość jest liczbą ?
         throw new Error('Podano błędnie liczbę');
     }
     for (let i = 1; i <= 9; i++) {
@@ -15,7 +15,7 @@ try {
 try {
     const a = prompt('Podaj liczbę a - podstawę');
     const n = prompt('Podaj liczbę n - wykładnik');
-    if ((!(a * 1) && +a !== 0) || (!(n * 1) && +n !== 0)) {
+    if (isNaN(Number(a)) || (isNaN(Number(n)))) {
         throw new Error('Podano błędnie liczby');
     }
     if (+n === 0) {
