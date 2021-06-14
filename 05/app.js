@@ -20,15 +20,7 @@ Student.prototype.getAverageGrade = function(subject) {
             // console.log(element, this.grades[element]);
         });
         const average = subjectGrades.reduce(function(a,b){return a+b;}) /subjectGrades.length;
-        return average;
-    //     let sum = 0;
-    //     for(let i=0; i <= this.grades[subject].length -1; i++) {
-    //         sum = sum + this.grades[subject][i]
-    //         console.log(sum);
-    //     }
-    //     const average = sum / this.grades[subject].length;
-    //     return average;
-               
+        return average;  
     }
     else{
         const subjectGrades = [];
@@ -37,11 +29,6 @@ Student.prototype.getAverageGrade = function(subject) {
             this.grades[subject].forEach( function(element) {
                 subjectGrades.push(element);
             });
-        // const grades = [];
-        // for (const key in this.grades) {
-        //     this.grades[key].forEach(element => {grades.push(element);});
-        // };
-        // return grades.reduce((prev, curr) => prev + curr, 0)/grades.length;  
         const average = subjectGrades.reduce(function(a,b){return a+b;}) /subjectGrades.length;
         return average;
         };
