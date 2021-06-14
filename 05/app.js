@@ -43,3 +43,5 @@ stud1.addGrade('english', 3);
 // stud1.addGrade('english', 3);
 const avgMath = stud1.getAverageGrade('maths'); // 5
 const avg = stud1.getAverageGrade(); // 4.33
+
+// PS. Bazowałem na sprawdzonym rozwiązaniu laurazacharuk, które jednak okazało się błędne. :(
