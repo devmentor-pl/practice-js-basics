@@ -22,6 +22,16 @@ function getLargest(arr) {
 console.log(largest);
 
 
+function getAvr(largets) {
+    const sum = largest.reduce(((a, b) => a+b), 0);
+    return sum / largest.length;
+}
+
+
+
+const avr = getAvr();
+console.log(avr)
+
 
 
 
