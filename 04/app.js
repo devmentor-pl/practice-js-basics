@@ -22,6 +22,6 @@ function getLargest(arr) {
 function getAvg(arr) {
   const sum = arr.reduce(function (acc, curr) {
     return acc + curr;
-  });
+  }, 0);
   return sum / arr.length;
 }

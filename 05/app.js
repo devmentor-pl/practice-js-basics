@@ -14,23 +14,23 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.getAverageGrade = function (subject) {
   if (typeof subject !== "undefined") {
-    return getAverage(this.grades[subject]);
+    return this.getAverage(this.grades[subject]);
   } else {
     const subjectAvg = [];
-    for (key in this.grades) {
-      subjectAvg.push(getAverage(this.grades[key]));
+    for (const key in this.grades) {
+      subjectAvg.push(this.getAverage(this.grades[key]));
     }
-    return getAverage(subjectAvg);
+    return this.getAverage(subjectAvg);
   }
 };
 
-function getAverage(arr) {
+Student.prototype.getAverage = function (arr) {
   const sum = arr.reduce(function (acc, curr) {
     return acc + curr;
   });
 
   return sum / arr.length;
-}
+};
 
 const student1 = new Student("Jan", "Kowalski");
 

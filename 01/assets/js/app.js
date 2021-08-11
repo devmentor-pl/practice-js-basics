@@ -1,6 +1,8 @@
 const a = "4.2";
 const b = 9;
 
+const aInt = parseInt(a);
+
 console.log(typeof a);
 console.log(typeof b);
 
@@ -12,24 +14,24 @@ multipl = 52;
 div = 2;
 modulo = 0.6;
 
-if (sum !== parseInt(a) + b) {
-  sum = parseInt(a) + b;
+if (sum !== aInt + b) {
+  sum = aInt + b;
 }
 
-if (diff !== parseInt(a) - b) {
-  diff = parseInt(a) - b;
+if (diff !== aInt - b) {
+  diff = aInt - b;
 }
 
-if (multipl !== parseInt(a) * b) {
-  multipl = parseInt(a) * b;
+if (multipl !== aInt * b) {
+  multipl = aInt * b;
 }
 
-if (div !== parseInt(a) / b) {
-  div = parseInt(a) / b;
+if (div !== aInt / b) {
+  div = aInt / b;
 }
 
-if (modulo !== parseInt(a) % b) {
-  modulo = parseInt(a) % b;
+if (modulo !== aInt % b) {
+  modulo = aInt % b;
 }
 
 function isMoreThan20(el) {
