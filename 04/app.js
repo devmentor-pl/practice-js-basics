@@ -20,7 +20,7 @@ const biggestArr = getLargest(arr);
 console.log(biggestArr);
 
 function getAvg(arr) {
-	return arr.reduce((total, item) => (total += item)) / arr.length;
+	return arr.reduce((total, item) => (total += item), 0) / arr.length;
 }
 
 console.log(getAvg(biggestArr));
