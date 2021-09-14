@@ -13,11 +13,10 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.getAverageGrade = function (subject) {
 	if (typeof subject === 'undefined') {
+		const gradesObjValues = Object.values(this.grades);
 		return (
-			[]
-				.concat(...Object.values(this.grades))
-				.reduce((total, item) => (total += item)) /
-			[].concat(...Object.values(this.grades)).length
+			[].concat(...gradesObjValues).reduce((total, item) => (total += item)) /
+			[].concat(...gradesObjValues).length
 		);
 	}
 	const gradesList = this.grades[subject];
