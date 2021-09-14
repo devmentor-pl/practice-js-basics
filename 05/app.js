@@ -18,11 +18,12 @@ Student.prototype.getAverageGrade = function (subject) {
 			[].concat(...gradesObjValues).reduce((total, item) => (total += item)) /
 			[].concat(...gradesObjValues).length
 		);
+	} else if (this.grades[subject]) {
+		const gradesList = this.grades[subject];
+		return (
+			gradesList.reduce((total, item) => (total += item)) / gradesList.length
+		);
 	}
-	const gradesList = this.grades[subject];
-	return (
-		gradesList.reduce((total, item) => (total += item)) / gradesList.length
-	);
 };
 
 const student = new Student('Jakub', 'Pawłowski');
