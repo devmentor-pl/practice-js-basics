@@ -7,7 +7,7 @@ function multTable(num) {
 	const value = Number(num);
 	if (!nums.includes(value)) throw Error('Input must be between 1-9');
 	for (let i = 1; i < 10; i++) {
-		console.log(num * i);
+		console.log(value * i);
 	}
 }
 multTable(x);
