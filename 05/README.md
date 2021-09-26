@@ -22,8 +22,8 @@ Przykład użycia może wyglądać tak:
 
 ```
 const student = new Student('Jan', 'Kowalski');
-student.addGrade('maths', 4);
-student.addGrade('maths', 6);
+student.addGrade('math', 4);
+student.addGrade('math', 6);
 student.addGrade('english', 3);
 const avgMath = student.getAverageGrade('math'); // 5
 const avg = student.getAverageGrade(); // 4.33
@@ -35,7 +35,7 @@ Struktura danych w obiekcie może prezentować się następująco:
     firstName: 'Jan',
     lastName: 'Kowalski',
     grades: {
-        maths: [4, 6],
+        math: [4, 6],
         english: [3],
     }
 }
@@ -54,7 +54,7 @@ Aby rozróżnić, czy mamy podać średnią dla 1 przedmiotu, czy dla wszystkich
 
 Zwróć uwagę, że pobranie informacji o ocenach z konkretnego przedmiotu może się odbywać w ten sposób:
 ```
-const subject = 'maths';
+const subject = 'math';
 const grades = this.grades[subject];
 ```
 
