@@ -34,13 +34,13 @@ Student.prototype.getAverageGrade = function(subject) {
         let numberGrades = 0;
         for (const el in this.grades) {
 
-            if (subject === el) {
+            if (subject === el) { // if(typeof this.grades[subject] !== 'undefined')
 
-                this.grades[el].forEach(function(el) {
+                this.grades[el].forEach(function(el) { //  this.grades[subject].forEach
                     oneGradeTotal += el;
                 });
-                
-                // console.log (oneGradeTotal);
+                                                    //wychodzi liczba *2, nie do końca rozumiem
+                //  console.log (oneGradeTotal);
             }
             
             numberGrades = this.grades[subject].length;
@@ -62,7 +62,7 @@ Student.prototype.getAverageGrade = function(subject) {
             amountGrades += this.grades[element].length;
             this.grades[element].forEach(function(el) {
 
-                totalGradesNumber+= el;
+                totalGradesNumber+= el; //reduce
             });
         }
 

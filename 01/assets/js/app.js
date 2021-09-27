@@ -25,30 +25,47 @@ console.log(multiplication);
 console.log(division);
 console.log(modulo);
 
-// Nie do końca zrozumiałem to polecenie, mam nadzieję że jest w porządku. Jak coś to poprawię :D
 
 if (addition > 20) {
     console.log ('Dodawanie to wynik powyżej 20');
 }
 
-else if (subtraction > 20) {
+else {
+    console.log ('Dodawanie to wynik poniżej 20')
+}
+
+if (subtraction > 20) {
     console.log ('Odejmowanie to wynik powyżej 20');
 }
 
-else if (multiplication > 20) {
+else {
+    console.log ('Odejmowanie to wynik poniżej 20')
+}
+
+if (multiplication > 20) {
     console.log ('Mnożenie to wynik powyżej 20');
 }
 
-else if (division > 20) {
+else {
+    console.log ('Mnożenie to wynik poniżej 20');
+}
+
+
+if (division > 20) {
     console.log ('Dzielenie to wynik powyżej 20');
 }
 
-else if (modulo > 20) {
+else {
+    console.log ('Dzielenie to wynik poniżej 20');
+}
+
+if (modulo > 20) {
     console.log ('Modulo to wynik powyżej 20');
 }
 
 else {
-    console.log('Wyniki są poniżej 20');
+    console.log('Modulo to wynik poniżej 20');
 }
 
 
+// Chodziło o takie użycie wielokrotnego if'a? :)

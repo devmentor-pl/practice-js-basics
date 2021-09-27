@@ -1,22 +1,21 @@
 
 /* rozwiązanie z pętlą for */
 
-const x = prompt('Podaj liczbę!');
-const parsedX = parseInt(x);
+// const x = prompt('Podaj liczbę!');
+// const parsedX = parseInt(x);
 
-if (parsedX <= 9 && parsedX >= 1) {
+// if (parsedX <= 9 && parsedX >= 1) {
 
-    for (let i=1; i<=parsedX; i++) {
-        let result = 0;
+//     for (let i=1; i<=parsedX; i++) {
     
-        result = parsedX * [i];
+//         let result = parsedX * [i];
     
-        console.log([i] + ' x ' + parsedX + ' = ' + result);
-    }
-}
-else {
-    alert('Podana liczba nie mieści się w przedziale 1-9!')
-}
+//         console.log([i] + ' x ' + parsedX + ' = ' + result);
+//     }
+// }
+// else {
+//     alert('Podana liczba nie mieści się w przedziale 1-9!')
+// }
 
 
 /* rozwiązanie z pętlą while  */
@@ -28,13 +27,22 @@ const parsedN = parseInt(n);
 
 let sum = 1;
 let result = 1;
+let test = '';
 
 while (result <= parsedN) {
 
+    
+    sum = parsedA * sum;
+    result++;
+    
+    if (result <= parsedN) {
+        test += parsedA + ' * ';
+    }
+    else {
+        test += parsedA + ' = ';
+    }
 
-sum = parsedA * sum;
-result++;
-// console.log(sum);
 }
 
+console.log(test + sum);
 alert('Potęgowanie wynosi ' + sum);

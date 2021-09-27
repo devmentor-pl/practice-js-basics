@@ -12,28 +12,20 @@ function getSum(a, b, c) {
     const convertedA = parseInt(a);
     const convertedB = parseInt(b);
     const convertedC = parseInt(c); 
+    let array = [];
 
-    if (convertedA>=convertedB && convertedA>convertedC && convertedB>=convertedC) {
-        return convertedA+convertedB;
-    }
-    else if (convertedA>convertedB && convertedA>=convertedC && convertedC>=convertedB) {
-        return convertedA+convertedC;
-    }
-    else if (convertedB>convertedA && convertedB>=convertedC && convertedC>=convertedA) {
-        return convertedB+convertedC;
-    }
-    else if (convertedB>=convertedA && convertedB>convertedC && convertedA>=convertedC) {
-        return convertedB+convertedA;
-    }
-    else if (convertedC>=convertedA && convertedC>convertedB && convertedA>=convertedB) {
-        return convertedC+convertedA;
-    }
-    else if (convertedC>convertedA && convertedC>=convertedB && convertedB>=convertedA) {
-        return convertedC+convertedB
-    }
-    else {
-        console.log('Wszystkie cyfry są takie same');
-    }
+    array.push(convertedA, convertedB, convertedC);
+
+    console.log(array);
+
+    array.sort(function(a, b) {
+        return b-a;
+    });
+
+    let firstBiggestNumber = array[0];
+    let secondBiggestNumber = array[1];
+    
+    return firstBiggestNumber + secondBiggestNumber;
 
 }
 
@@ -75,10 +67,6 @@ console.log(sumNumbers);
 console.log(evenNumbers);
 
 showInfo(sumNumbers, evenNumbers);
-
-// const communicat =
- 
-// console.log(communicat);
 
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
