@@ -32,8 +32,12 @@ const tenNumbersArr = sort(randomArrNumbers);
 
 const avg = function average(array) {
 
-    let result = 1; // wcześniej 0
+    let result = 0;
     let arrayLength = array.length;
+
+    if (arrayLength === 0) {
+        return 0;
+    }
 
     array.forEach(function(el) {
         
