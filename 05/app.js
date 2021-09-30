@@ -1,3 +1,4 @@
+
 function Student (initFirsName, initLastName) {
     this.firstName = initFirsName;
     this.lastName = initLastName;
@@ -28,48 +29,40 @@ Student.prototype.showGrades = function() {
 
 Student.prototype.getAverageGrade = function(subject) {
 
-    if (subject !== undefined) {
+    if (typeof subject !== 'undefined') {
+        const subjectGrades = this.grades[subject];
 
-        let oneGradeTotal = 0;
-        let numberGrades = 0;
-        for (const el in this.grades) {
+        if (typeof subjectGrades !== 'undefined') {
 
-            if (subject === el) { // if(typeof this.grades[subject] !== 'undefined')
+            const sum = subjectGrades.reduce(function(acc, grade) {
+                return acc+grade;
+            },0);
 
-                this.grades[el].forEach(function(el) { //  this.grades[subject].forEach
-                    oneGradeTotal += el;
-                });
-                                                    //wychodzi liczba *2, nie do końca rozumiem
-                //  console.log (oneGradeTotal);
+        if (sum > 0) {
+                    
+            return sum / subjectGrades.length; 
+
             }
-            
-            numberGrades = this.grades[subject].length;
-            // console.log (this.grades[el].length);
+
+        return 0;
+
         }
-
-        let oneSubjectAvg = oneGradeTotal / numberGrades;
-        console.log(oneSubjectAvg);
-        // console.log(subject);
-
     }
+
     else {
-
-        let amountGrades = 0;
-        let totalGradesNumber = 0;
-         
+        let arr = [];
         for (const element in this.grades) {
-
-            amountGrades += this.grades[element].length;
-            this.grades[element].forEach(function(el) {
-
-                totalGradesNumber+= el; //reduce
+            const singleGrade = this.grades[element]; 
+            singleGrade.forEach(function(el) {
+                arr.push(el);
             });
         }
 
-        let avg = totalGradesNumber / amountGrades;
-        // console.log(amountGrades);
-        // console.log(totalGradesNumber);
-        console.log(avg);
+        let sum = arr.reduce(function(a, b){
+            return a+b;
+        },0);
+
+        return sum/arr.length;
     }
 }
 
@@ -86,11 +79,11 @@ secondStudent.addGrade('math', 5);
 secondStudent.addGrade('polish', 3);
 secondStudent.addGrade('math', 1);
 
-// firstStudent.showFullName();
-// firstStudent.showGrades();
+firstStudent.showFullName();
+firstStudent.showGrades();
 
-// secondStudent.showFullName();
-// secondStudent.showGrades();
+secondStudent.showFullName();
+secondStudent.showGrades();
 
-firstStudent.getAverageGrade('math');
-secondStudent.getAverageGrade('math');
+console.log(firstStudent.getAverageGrade('math'));
+console.log(secondStudent.getAverageGrade('math'));
