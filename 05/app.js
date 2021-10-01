@@ -62,7 +62,16 @@ Student.prototype.getAverageGrade = function(subject) {
             return a+b;
         },0);
 
-        return sum/arr.length;
+
+        if (arr.length<=0) {
+            return sum/arr.length+1;
+        }
+
+        else {
+            sum/arr.length;
+        }
+
+
     }
 }
 
