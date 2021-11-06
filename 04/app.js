@@ -1,5 +1,5 @@
 let arr = [];
-let sum = 0;
+let sum = 1;
 let avgResult = 0;
 
 function createArray(min, max) {

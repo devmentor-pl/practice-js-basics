@@ -10,15 +10,11 @@ console.log(a, b, c);
 // funkcja sumująca
 let sum = 0;
 function getSum(num1, num2, num3) {
-  if (num1 + num2 > num1 + num3 && num1 + num2 > num2 + num3) {
-    sum = num1 + num2;
-  }
-  if (num2 + num3 > num2 + num1 && num2 + num3 > num1 + num3) {
-    sum = num2 + num3;
-  }
-  if (num3 + num1 > num3 + num2 && num3 + num1 > num2 + num1) {
-    sum = num3 + num1;
-  }
+  const arr = [num1, num2, num3];
+  arr.sort(function (a, b) {
+    return b - a;
+  });
+  sum = arr[0] + arr[1];
   return sum;
 }
 
@@ -30,22 +26,25 @@ function isEven(number) {
   if (number % 2 !== 0) {
     console.log(false);
   }
-  return null;
+  if (number === null) {
+    console.log(null);
+  }
 }
 
 // funkcja showInfo
-
 function showInfo(value1, value2) {
-  switch (value1) {
-    case typeof value1 === "number":
-      value2 = null;
+  switch (value2) {
+    case typeof value2 === null:
+      value1 = null;
       break;
-    case value1 % 2 === 0:
-      value2 = true;
+    case value2 % 2 === 0:
+      value1 = true;
       break;
-    case value1 % 2 !== 0:
-      value2 = false;
+    case value2 % 2 !== 0:
+      value1 = false;
       break;
+    default:
+      return "Podany argument " + value1 + " nie jest liczbą";
   }
 }
 
@@ -54,8 +53,5 @@ function randomNumber(min, max) {
 }
 
 const sumResult = getSum(a, b, c);
-isEven(sum);
-showInfo(sum, isEven(sum));
-// console.log(showInfo);
-// console.log(sum);
-// console.log(isEven);
+const even = isEven(sumResult);
+showInfo(sumResult, even);
