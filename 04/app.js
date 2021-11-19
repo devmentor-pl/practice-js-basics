@@ -17,12 +17,11 @@ function sortArray(newArray){
 }
 
 function avgArray(value){
-    arrayLength = value.length;
     let sum = 0;
     value.forEach(function(element) {
         sum +=element;
     },0);
-    sum = sum / arrayLength;
+    sum = (sum / value.length);
     return sum;
 }
 
