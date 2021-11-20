@@ -12,7 +12,7 @@ console.log(a, b, c);
 function getSum(number1, number2, number3){
     //-------------1 rozwiązanie na piechotę-------------
     const array = [number1,number2,number3];
-    let newArray = array.map(numberParseInt);
+    let newArray = array.map(numberParseInt); // lub sort() i wtedy wybieramy 2 największe
     // console.log(newArray);
 
     let max1=0;

@@ -31,34 +31,27 @@
 // const a = 3;
 // const n = 4;
 
-const a = getNumberPow('Podaj liczbę z zakresu 0 - 9 - podstawa potęgi');
-const n = getNumberPow('Podaj liczbę z zakresu 0 - 9 - wykładnik potęgi');
+const a = getNumberPow('Podaj liczbe od 1-9');
+const n = getNumberPow('Podaj liczbe od 1-9');
 
-function getNumberPow(numberFromUserA,numberFromUserN){
-    const a = prompt(numberFromUserA)
-        if(checkNumberPow(a)){
-            return a;
-        }
-    const n = prompt(numberFromUserN)
-        if(checkNumberPow(n)){
-            return n;
-        }
+function getNumberPow(message){
+    const number = prompt(message);
+    if(checkNumber(number)){
+        return number;
+    }
+    return null;
 }
 
-function checkNumberPow(numb1, numb2){
-    if(numb1 >= 1 && numb1 <=9){
-        return true;
+function checkNumber(number){
+    const numberToCheck = number;
+    if(numberToCheck >= 1 && numberToCheck <=9){
+        return numberToCheck;
     }
-
-    if(numb2 >= 1 && numb2 <=9){
-        return true;
-    }
-
     else {
-    alert('Podano zla liczbe! Podaj liczbe z zakresu 1 - 9');
-    getNumberPow();
+        console.log('Podana złą liczbę');
     }
 }
+
 let result = 1;
 let j = 0
 
@@ -66,6 +59,7 @@ while(j < n){
     result *=a;
     j++;
 }
+
 console.log(a + ' do potęgi ' + n + ' = ' + result);
 
 
