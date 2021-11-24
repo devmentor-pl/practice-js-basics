@@ -13,36 +13,16 @@ const multiplyNumbers = convertedA * b;
 const divideNumbers = convertedA / b;
 const moduloNumbers = b % convertedA;
 
-
 console.log(
     addNumbers, subtractNumbers, multiplyNumbers, divideNumbers, moduloNumbers);
 
-if (addNumbers > 20) {
-    console.log("Hurra! wynik dodawania jest wiekszy od 20");
-} else {
-    console.log("Niestety, tym razem wynik dodawania jest mniejszy niz 20");
-}
-      
-if (subtractNumbers > 20) {
-    console.log("Hurra! wynik odejmowania jest wiekszy od 20");
-} else {
-    console.log("Niestety, tym razem wynik odejmowania jest mniejszy niz 20")
-}
 
-if(multiplyNumbers>20) {
-    console.log("Hurra! wynik mnozenia jest wiekszy od 20");
-} else {
-    console.log("Niestety, tym razem wynik mnozenia jest mniejszy niz 20");
-}
+arr = [addNumbers, subtractNumbers, multiplyNumbers, divideNumbers, moduloNumbers];
 
-if(divideNumbers>20) {
-    console.log("Hurra! wynik dzielenia jest wiekszy od 20");
-} else {
-    console.log("Niestety, tym razem wynik dzielenia jest mniejszy niz 20");
-}
-
-if(moduloNumbers>20) {
-    console.log("Hurra! reszta z dzielenia jest wieksza od 20");
-} else {
-    console.log("Niestety, tym razem reszta z dzielenia jest mniejsza niz 20");
-}
+const result = arr.forEach(element => {
+    if (element < 20) {
+        console.log(element + " " + "jest mniejsze od 20");
+    } else {
+        console.log(element + " " + "jest wieksze niz 20");
+    }
+})
