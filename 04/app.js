@@ -1,7 +1,7 @@
 const arr = [];
 
 const createArr = function (min, max) {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 30; i++) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
     // console.log(randomNumber);
     arr.push(randomNumber);

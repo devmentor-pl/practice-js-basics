@@ -8,9 +8,6 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 const getSum = function (a, b, c) {
-    convertedA = parseInt(a);
-    convertedB = parseInt(b);
-    convertedC = parseInt(c);
     arr = [];
     arr.push(a, b, c);
     // console.log(arr);
@@ -28,20 +25,33 @@ const getSum = function (a, b, c) {
 
 const isEven = function (number) {
     if (isNaN(number)) {
-        return 0;
+        return null;
     } else if (number % 2 === 0) {
         return true;
     } else(number % 2 !== 0)
     return false;
 }
 
+const showInfo = function (a, boolean) {
+    switch (boolean) {
+        case null:
+            console.log(`Podany argument ${a} nie jest liczbą`);
+            break;
+        case true:
+            console.log(`Podany argument ${a} jest parzysty`);
+            break;
+        case false:
+            console.log(`Podany argument ${a} jest nieparzysty`);
+    }
 
-
+}
 
 const sumTotal = getSum(a, b, c);
 console.log(sumTotal);
-const checkNumber = isEven();
+const checkNumber = isEven(sumTotal);
 console.log(checkNumber);
+const finalnfo = showInfo(sumTotal, checkNumber);
+
 
 
 
