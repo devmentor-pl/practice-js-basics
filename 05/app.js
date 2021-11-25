@@ -12,28 +12,30 @@ Student.prototype.addGrade = function (subject, grade) {
 }
 
 Student.prototype.getAverageGrade = function (subject) {
-    if (typeof this.subject !== 'undefined') {
-        grades = this.grades[subject];
-        console.log(grades);
+    grades = this.grades[subject];
+    if (typeof subject !== "undefined") {
+        if (grades.length === 0) {
+            return 0;
+        }
         const reducer = grades.reduce((acc, curr) => acc + curr);
-        console.log(reducer);
         const avGradeSub = reducer / grades.length;
         return avGradeSub;
 
     } else {
-
+        const gradesTotal = [];
         for (const key in this.grades) {
             const gradesArr = this.grades[key];
-            const gradesTotal = [];
-            console.log(gradesTotal)
-            const result = gradesArr.forEach(grade => {
+            gradesArr.forEach(grade => {
                 gradesTotal.push(grade);
-                let total = 0;
-                total += grade;
-                const AvGrade = total / gradesTotal.length;
-                return AvGrade;
             })
         }
+        if (gradesTotal.length === 0) {
+            return 0;
+        }
+        const reducer2 = gradesTotal.reduce((acc, curr) => acc + curr);
+        const avGrade = reducer2 / gradesTotal.length;
+        return avGrade;
+
     }
 }
 
@@ -41,8 +43,12 @@ const student = new Student('Magda', 'Nolde');
 student.addGrade('maths', 4);
 student.addGrade('maths', 6);
 student.addGrade('english', 3);
-const avgMath = student.getAverageGrade('math'); // 5
-// const avg = student.getAverageGrade(); // 4.33
+student.addGrade('spanish', 2);
+student.addGrade('spanish', 5);
+student.addGrade('maths', 2);
+
+const avgMath = student.getAverageGrade(); // 5
+const avg = student.getAverageGrade(); // 4.33
 console.log(student.grades);
-console.log(student.getAverageGrade('maths'));
-console.log(student.getAverageGrade('english'));
+console.log(student.getAverageGrade('spanish'));
+console.log(avg);
