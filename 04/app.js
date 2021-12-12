@@ -10,28 +10,31 @@ const createArr = function (min, max) {
   return arr;
 };
 
+const arrNew = createArr(10, 200);
+
 const getHighestNumbers = function (array) {
-  arr.sort(function (a, b) {
+  array.sort(function (a, b) {
     return a - b;
+    
   });
-  // console.log(arr);
-  const arr3 = arr.slice(0, 10);
-  // console.log(arr3);
-  return arr3;
+  const arr2 = arr.slice(0, 10);
+  return arr2;
 }
 
+const arrSliced = getHighestNumbers(arrNew);
+
 const getAvarage = function (array) {
-  const reducer = arr4.reduce((acc, curr) => acc + curr);
-  if (arr4.length === 0) {
+  const reducer = array.reduce((acc, curr) => acc + curr);
+  if (arrSliced.length === 0) {
     return 0;
   }
-  const avGradeSub = reducer / arr4.length;
+  const avGradeSub = reducer / arrSliced.length;
   return avGradeSub;
 }
 
-const arr2 = createArr(10, 200);
+
 // console.log(arr2);
-const arr4 = getHighestNumbers(arr2);
-const finalarr = getAvarage(arr4);
-console.log(arr4);
-console.log(finalarr);
+const arrHighest = getHighestNumbers(arrNew);
+const avg = getAvarage(arrSliced);
+console.log(arrHighest);
+console.log(avg);

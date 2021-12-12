@@ -8,11 +8,11 @@ if (x > 9) {
     alert('Musisz podac liczbe w przedziale 0-9');
   }
   else {
-let i = 0;
-for(let i=0; i<=9; i++) {
-let multiplyResult = x * i;
-console.log(`${x} * ${i} = ${multiplyResult}`);
-}
+  let i = 0;
+  for(let i=0; i<=9; i++) {
+    let multiplyResult = x * i;
+    console.log(`${x} * ${i} = ${multiplyResult}`);}
+
 }
 }
 

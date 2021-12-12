@@ -17,7 +17,7 @@ console.log(
     addNumbers, subtractNumbers, multiplyNumbers, divideNumbers, moduloNumbers);
 
 
-arr = [addNumbers, subtractNumbers, multiplyNumbers, divideNumbers, moduloNumbers];
+const arr = [addNumbers, subtractNumbers, multiplyNumbers, divideNumbers, moduloNumbers];
 
 const result = arr.forEach(element => {
     if (element < 20) {
