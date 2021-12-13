@@ -25,10 +25,10 @@ const arrSliced = getHighestNumbers(arrNew);
 
 const getAvarage = function (array) {
   const reducer = array.reduce((acc, curr) => acc + curr);
-  if (arrSliced.length === 0) {
+  if (array.length === 0) {
     return 0;
   }
-  const avGradeSub = reducer / arrSliced.length;
+  const avGradeSub = reducer / array.length;
   return avGradeSub;
 }
 
