@@ -6,45 +6,36 @@ function Student(firstName, secondName) {
 
 const student1= new Student('John', 'Smith');
 
-// ----------------------------------------------
-Student.prototype.addGrades = function(subject, grade){
-    if(this.grades[subject] == undefined){
+Student.prototype.addGrade = function(subject, grade) {
+    if(typeof this.grades[subject] === 'undefined') {
         this.grades[subject] = [grade];
     } else {
         this.grades[subject].push(grade);
     }
 }
 
-// ----------------------------------------------
-Student.prototype.calcSubjectAverage = function(subject) {
-    if(Object.keys(this.grades).length !== 0){
-        if(this.average===undefined) {
-            this.average = {}
+Student.prototype.getAverageGrade = function(subject) {
+    if (typeof subject === 'undefined') {
+        let avSum = 0;
+        const objectItems = Object.keys(this.grades);
+        const objectLenght = objectItems.length;
+        for(const key in this.grades) {
+            const arrLenght = this.grades[key].length;
+            const arrElementsSum = this.grades[key].reduce(function(total, num) {
+                return total + num;
+            }); 
+            const arrAv = arrElementsSum/arrLenght;
+            avSum += arrAv;
         }
-        this.average[subject];
-
-        function sum(sum,obj) {
-            sum+=obj
-            return sum;
-        }
-
-        this.average[subject]=this.grades[subject].reduce(sum)/(this.grades[subject].length).toFixed(2);
+        const totaleAverage = (avSum / objectLenght).toFixed(1);
+        return totaleAverage;
     } else {
-        console.log('Oceny z tego przedmiotu nie zostaly wprowadzone!')
-    }
- }
-
-// ----------------------------------------------
-Student.prototype.calcTotalAverage = function() {
-    if(this.average!==undefined) {
-        let total = 0;
-        
-        for(const key in this.average) {
-            total+=this.average[key];
+        let sum = 0;
+        const subjectArrLength = this.grades[subject].length;
+        for(const key in this.grades[subject]) {
+            sum += this.grades[subject][key];
         }
-        
-        return this.totaleAverage = parseFloat((total/Object.keys(this.average).length).toFixed(2));
-    } else {
-        console.log('Srednie z poszczegolnych przedmiotow nie istnieja !');
+        const subjectAverage = (sum / subjectArrLength).toFixed(1);
+        return subjectAverage;
     }
 }
