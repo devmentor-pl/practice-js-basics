@@ -4,11 +4,14 @@ const aNum = parseFloat(a);
 const bNum = parseFloat(b);
 
 console.log(a, b);
+console.log(aNum, bNum);
 
 /*sprawdzenie jakiego typu są zmienne*/
 
 console.log(typeof a);
 console.log(typeof b);
+console.log(typeof aNum);
+console.log(typeof bNum);
 
 /*działania dla każdego operatora arytmetycznego*/
 /*dodawanie*/

@@ -46,13 +46,13 @@ const fn = function isEven(num) {
 function showInfo(x, y) {
     switch(y) {
         case null:
-            console.log('Podany argument', y, 'nie jest liczbą');
+            console.log('Podany argument', x, 'nie jest liczbą');
             break;
         case true:
-            console.log('Podany argument', y, 'jest parzysty');
+            console.log('Podany argument', x, 'jest parzysty');
             break;
         case false:
-            console.log('Podany argument', y, 'jest nieparzysty');
+            console.log('Podany argument', x, 'jest nieparzysty');
             break;
     }
 }
