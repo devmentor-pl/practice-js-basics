@@ -1,4 +1,18 @@
-const x = 4;
+let x = prompt('Podaj liczbę całkowitą z zakresu 1-9;');
+checkNumber(x);
+
+function checkNumber(number) {
+
+    if (number < 1 || number > 9 || (Math.round(number) != number)) {
+        alert(`Podana liczba jest błędna, spróbuj ponownie!`);
+        let newNumber = prompt('Podaj liczbę całkowitą z zakresu 1-9;');
+        checkNumber(newNumber);
+    } else {
+        console.log(`Podana przez Ciebie cyfra to ${number}`)
+        x = number;
+    }
+};
+
 
 /* rozwiązanie z pętlą for */
 
