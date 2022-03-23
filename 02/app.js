@@ -5,8 +5,8 @@ document.getElementById('app2').addEventListener('click', exponentiation);
 
 function exponentiation() {
 
-    let a = prompt("Podaj podstawę potęgi - liczbę całkowitą z zakresu 1-9;");
-    let n = prompt("Podaj wykładnik potęgi - liczbę całkowitą z zakresu 1-9;");
+    const a = prompt("Podaj podstawę potęgi - liczbę całkowitą z zakresu 1-9;");
+    const n = prompt("Podaj wykładnik potęgi - liczbę całkowitą z zakresu 1-9;");
     let result = count(a, n);
 
     function count(base, exponent) {
