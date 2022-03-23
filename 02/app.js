@@ -27,10 +27,15 @@ function exponentiation() {
         let resultString = `${a}`;
 
         if (n > 1) {
+            let i = 1;
+            while (i < n) {
 
-            for (let i = 1; i < n; i++) {
                 resultString += ` * ${a}`;
+                i++;
+
             }
+
+
             resultString += ` = ${result}`;
             console.log(resultString);
         }
