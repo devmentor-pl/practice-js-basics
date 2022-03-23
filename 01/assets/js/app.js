@@ -6,7 +6,7 @@ console.log(`Zmienna a jest typu ${typeof a}`);
 console.log(`Zmienna b jest typu ${typeof b}`);
 
 let rest1 = a + b; // add
-console.log(`a + b = ${rest1} (wystąpiła konkatynacja)`);
+console.log(`a + b = ${rest1} (wystąpiła konkatenacja)`);
 console.log(`Zmienna newA jest typu ${typeof newA}`);
 
 let rest2 = newA + b; // add

@@ -35,7 +35,6 @@ function exponentiation() {
 
             }
 
-
             resultString += ` = ${result}`;
             console.log(resultString);
         }
