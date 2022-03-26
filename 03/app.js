@@ -34,7 +34,7 @@ function getSum(x, y, z) {
         (previousValue, currentValue) => previousValue + currentValue,
         initial) - lowest;
 
-    // console.log(`Suma dwóch największych liczb wynosi ${result}`);
+    console.log(`Suma dwóch największych liczb wynosi ${result}`);
     return result;
 }
 
