@@ -5,7 +5,6 @@ class Student {
         this.lastName = initLastName;
         this.grades = {};
     }
-
     addGrade(grade, subject) {
 
         if (grade < 1 || grade > 6 || typeof grade != "number" || typeof subject !== "string" || subject === "") {
@@ -18,9 +17,9 @@ class Student {
                 this.grades[subject] = [];
             }
             this.grades[subject].push(grade);
-        };
-    }
 
+        }
+    }
     getAverage(subject) {
 
         if (!subject) {
@@ -32,23 +31,21 @@ class Student {
                 allGrades = allGrades.concat(this.grades[subjects[i]]);
             }
 
-            let sumOfAllGrades = 0;
-            allGrades.forEach(element => {
-                sumOfAllGrades += element;
-            });
-            let allAverage = (sumOfAllGrades / allGrades.length).toFixed(2);
+            const initial = 0;
+            const sum = allGrades.reduce(
+                (previousValue, currentValue) => previousValue + currentValue,
+                initial);
 
-            return allAverage;
+            return (sum / allGrades.length).toFixed(2);
         }
         else {
-            let sumOfGrades = 0;
-            this.grades[subject].forEach(element => {
-                sumOfGrades += element;
-            });
 
-            let subjectAverage = (sumOfGrades / this.grades[subject].length).toFixed(2);
+            const initial = 0;
+            const sum = this.grades[subject].reduce(
+                (previousValue, currentValue) => previousValue + currentValue,
+                initial);
 
-            return subjectAverage;
+            return (sum / this.grades[subject].length).toFixed(2);
         }
     }
 }
