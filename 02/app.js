@@ -20,17 +20,22 @@ const a = prompt('Podaj liczbę!');
 let n = prompt('Podaj Potęgę!');
 let result = 1;
 let wynik = '';
-
-while (n != 0) {
-    if (n === 1) {
-        wynik += a + ' = ';
+if (a >= 1 && a <= 9) {
+    while (n != 0) {
+        if (n === 1) {
+            wynik += a + ' = ';
+        }
+        else {
+            wynik += a + ' * ';
+        }
+        result *= a;
+        n--;
     }
-    else {
-        wynik += a + ' * ';
-    }
-    result *= a;
-    n--;
+    wynik += result;
+    console.log(wynik);
+}
+else {
+    console.log("Nie obsługujemy takiej liczby :/");
 }
 
-wynik += result;
-console.log(wynik);
+
