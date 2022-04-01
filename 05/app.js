@@ -29,15 +29,11 @@ Student.prototype.getAverageGrade = function (subject) {
         let numberGrades = 0
         let sum = 0
         for (let key in this.grades) {
-            console.log('arr',this.grades[key])
             sum += this.grades[key].reduce(function(prev, next) {
                 return prev + next
             },0)
-            console.log('arr length',this.grades[key].length)
             numberGrades += this.grades[key].length
         }
-        console.log('sum:',sum)
-        console.log('numberGrades',numberGrades)
         return (sum / numberGrades).toFixed(2)
     }
 }
@@ -49,17 +45,12 @@ console.log('----- add grades to subjects -----')
 console.log(student1.addGrade('maths', 4))
 console.log(student1.addGrade('maths', 6))
 console.log(student1.addGrade('english', 3))
-console.log(student1.addGrade('polish', 3))
-console.log(student1.addGrade('polish', 3))
-console.log(student1.addGrade('spanish', 5))
-console.log(student1.addGrade('spanish', 5))
 
 console.log('----- average for every subjects -----')
 const avgMath = student1.getAverageGrade('maths')
 const avgEnglish = student1.getAverageGrade('english')
 console.log('avgMath:', avgMath)
 console.log('avgEnglish:', avgEnglish)
-console.log(student1.getAverageGrade('spanish'))
 
 console.log('----- average all subjects -----')
 const avg = student1.getAverageGrade()
