@@ -22,7 +22,7 @@ const results = [result1, result2, result3, result4]
 
 results.forEach(function(x) {
     if(x > 20) {
-        console.log(x + ' jest większy od 20.')
+        console.log(x + ' jest większe od 20.')
     } else {
         console.log(x + ' jest równe lub mniejsze od 20.')
     }
