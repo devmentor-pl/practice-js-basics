@@ -1,8 +1,7 @@
 function Student(initFirstName, initLastName){
     this.firstName = initFirstName;
     this.lastName = initLastName;
-    this.grades = {};
-    
+    this.grades = {}; 
 }
 
 Student.prototype.newGrade = function(subject, grade){
@@ -14,26 +13,26 @@ Student.prototype.newGrade = function(subject, grade){
 
 
 Student.prototype.getAverageGrade = function(subject){
-        let array = []
-        if (typeof subject === 'undefined') {
-            for (const key in this.grades){
-                const subjectGrades = this.grades[key]
+    let array = []
+    if (typeof subject === 'undefined') {
+        for (const key in this.grades){
+            const subjectGrades = this.grades[key]
         
-                subjectGrades.forEach(function(item){
-                    array.push(item)
-                })
-                   
-            }
-        } else {
+            subjectGrades.forEach(function(item){
+            array.push(item)
+            })        
+        }
+    } else {
             array = this.grades[subject]
         }
 
-        let sum = 0
-        for(i = 0; i<array.length; i++ ){
+    let sum = 0
+    for(i = 0; i<array.length; i++ ){
             sum = sum + array[i] 
     }
-        let avg = sum / array.length
-        return avg
+
+    let avg = sum / array.length
+    return avg
  
 }
 
