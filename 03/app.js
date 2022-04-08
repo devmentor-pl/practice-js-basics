@@ -8,7 +8,10 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 
-getSum(a, b, c);
+
+
+
+
 
 
 
@@ -28,6 +31,7 @@ function getSum(param1, param2, param3) {
     const arr = [param1, param2, param3];
     let max1 = 0;
     let max2 = 0;
+    let result = 0;
 
 
     arr.sort(function (a, b) {
@@ -38,8 +42,37 @@ function getSum(param1, param2, param3) {
     max2 = arr[1];
 
 
-    console.log('Suma dwóch największych liczb to: ', max1 + max2)
+    result = max1 + max2;
+    return result;
 }
 
+
+const isEven = function (param) {
+    if (typeof param !== 'number') {
+        return null;
+    }
+    else if (param % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+
+
+}
+
+
+
+function showInfo(param1, param2) {
+    console.log(param1, param2);
+}
+
+
+
+
+const sum = getSum(a, b, c);
+const even = isEven(sum);
+
+showInfo(sum, even);
 
 
