@@ -24,8 +24,8 @@ matchTable();
 /* rozwiązanie z pętlą while  */
 
 function matchTable2() {
-    const a = 3;
-    const n = 4;
+    const a = prompt('Podaj liczbę, którą chcesz potęgować!');
+    const n = prompt('Podaj potęgę!');
 
     let iter = 0;
     let numbers = '';
