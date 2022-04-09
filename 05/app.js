@@ -19,6 +19,8 @@ Student.prototype.addGrade = function (subject, grade) {
     return 'added: ' + subject + ' ' + grade
 }
 Student.prototype.getAverageGrade = function (subject) {
+    if(this.grades[subject] === undefined) return 0
+
     if (subject !== undefined) {
         let sum = 0
         sum = this.grades[subject].reduce(function (prev, next) {
@@ -48,15 +50,18 @@ console.log(student1.addGrade('english', 3))
 
 console.log('----- average for every subjects -----')
 const avgMath = student1.getAverageGrade('maths')
-const avgEnglish = student1.getAverageGrade('english')
 console.log('avgMath:', avgMath)
+const avgEnglish = student1.getAverageGrade('english')
 console.log('avgEnglish:', avgEnglish)
+const avgXxxxx = student1.getAverageGrade('xxxxx')
+console.log('avgXxxxx:', avgXxxxx)
 
 console.log('----- average all subjects -----')
 const avg = student1.getAverageGrade()
 console.log('avg:', avg)
 
 console.log(student1)
+
 
 
 

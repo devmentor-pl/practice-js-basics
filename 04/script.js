@@ -1,8 +1,8 @@
 console.log('zad-4')
 const n = 20
 
-console.log('----- create Array of 20 random numbers from range 1-200 -----')
-const arr = createArr(1,200)
+console.log('----- create Array of 20 random numbers from range 10-200 -----')
+const arr = createArr(10,200)
 console.log(arr)
 
 console.log('----- get 10 largest numbers -----')
