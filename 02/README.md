@@ -14,15 +14,15 @@ Tym razem wykorzystasz dwa rodzaje pętli.
 Twój kolega ma syna w podstawówce i właśnie uczy go tabliczki mnożenia. Zaoferowałeś pomoc w formie programu, który pokaże wszystkie działania mnożenia dla wybranej liczby.
 
 Za pomocą pętli `for` stwórz rozwiązanie, które będzie wyświetlać kolejne wyniki mnożenia.
-- Jednym iloczynem niech jest wartość zmiennej `x`, np. `const x = 4`.
-- W miejsce drugiego iloczynu wstaw kolejne cyfry od 1 do 9.
+- Pierwszym czynnikiem niech będzie wartość zmiennej `x`, np. `const x = 4`.
+- W miejsce drugiego czynnika wstaw kolejne cyfry od 1 do 9.
 
 Wyświetlane działania powinny prezentować się jak poniżej:
 
 ```
-1 x 4 = 4
-2 x 4 = 8
-3 x 4 = 12
+4 x 1 = 4
+4 x 2 = 8
+4 x 3 = 12
 4 x 4 = 16
 // ...
 ```
