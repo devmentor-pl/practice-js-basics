@@ -25,6 +25,7 @@ function getLargest(arr) {
 
 const largest = arr.slice(0,10)
 console.log(largest)
+return largest
 }
 
 function getAvg(arr) {
