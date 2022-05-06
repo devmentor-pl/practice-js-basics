@@ -17,14 +17,14 @@ function getSum(num1, num2, num3) {
 
 const isEven = function (number) {
 	if (number === null) {
-		console.log(null);
+		return null;
 	}
 	if (number % 2 === 0) {
-		console.log(true);
+		return true;
 	}
 
 	if (number % 2 !== 0) {
-		console.log(false);
+		return false;
 	}
 };
 
