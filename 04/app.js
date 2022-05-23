@@ -22,7 +22,6 @@ function getLargest(arr) {
 
     return arr.slice(0, 10)
 }
-getLargest(createArray(1, 100))
 
 
 function getAvg(arr) {
