@@ -1,18 +1,20 @@
-const min = 1;
-const max = 100;
+const a = 4;
+const b = 25;
+const c = 14;
 
-const a = randomNumber(min, max);
-const b = randomNumber(min, max);
-const c = randomNumber(min, max);
+const sum = getSum(a, b, c);
 
-console.log(a, b, c);
-
-
-
-
-
-
-
-function randomNumber(min, max) {
-    return Math.round((Math.random() * (max - min)) + min);
+function getSum(a,b,c){
+    let sum = a
+    sum += sum + b
+    sum += sum + c
+    return sum 
 }
+
+console.log(sum)
+
+
+const even = isEven(sum);
+
+
+showInfo(sum, even);

@@ -32,7 +32,7 @@ while(iter < y) {
     if(iter > 0){
         info = info + '*'
     }
-    info = info  + x
+    info = info + x
     iter ++
     console.log(iter)
     // let res = 4
