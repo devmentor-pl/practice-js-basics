@@ -20,7 +20,6 @@ console.log('multiplication: ' + multiplication);
 console.log('division: ' + division);
 
 const resultsArray = [addition, subtraction, multiplication, division];
-
 const greaterThan20 = resultsArray.filter(item => item > 20);
 const lowerThan20 = resultsArray.filter(item => item < 20);
 
