@@ -48,12 +48,22 @@ Student.prototype.getAverageGrade = function (subject) {
 
     const grades = this.grades[subject]
 
+    // const sum = grades.reduce(function (acc, curr) {
+    //     return acc + curr;
+    // }, 0)
+
+    return this.avg(grades)
+}
+
+Student.prototype.avg = function(arr) {
+    if(arr.length === 0){
+        return 0;
+    }
     const sum = grades.reduce(function (acc, curr) {
         return acc + curr;
     }, 0)
-
+    
     return sum / grades.length
-
 }
 const student = new Student('Jan', 'Kowalski')
 student.showFullName()
