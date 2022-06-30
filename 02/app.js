@@ -13,12 +13,17 @@
 /* rozwiązanie z pętlą while  */
 
 let a = 3;
-let n = 4;
+let n = 2;
 
 while (a <= 9 && a >= 1 && n <= 9 && n >= 1) {
 	let result = a ** n;
+	let str = a;
+	for (let i = 1; i < n; i++) {
+		str = str + "*" + a;
+	}
+	str = str + "=" + result;
 	if (result > 0) {
-		console.log(info);
+		console.log(str);
 		break;
 	}
 }

@@ -17,7 +17,11 @@ Student.prototype.getAverageGrade = function (subject) {
 		return allGrades.reduce((a, b) => a + b, 0) / allGrades.length;
 	} else {
 		const subjectGrades = this.grades[subject];
-		return subjectGrades.reduce((a, b) => a + b, 0) / subjectGrades.length;
+		if (typeof subjectGrades !== "undefined") {
+			return subjectGrades.reduce((a, b) => a + b, 0) / subjectGrades.length;
+		} else {
+			return console.log("Nie ma takiego przedmiotu");
+		}
 	}
 };
 
