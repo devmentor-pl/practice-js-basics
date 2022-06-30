@@ -45,7 +45,7 @@ Trzecią funkcję wykorzystaj do wyświetlenia odpowiedniego komunikatu w konsol
 Powinno to wyglądać mniej więcej tak:
 
 ```
-const a = 4;
+const a = 4;    
 const b = 25;
 const c = 14;
 
@@ -64,3 +64,4 @@ showInfo(sum, even);
 
 > :no_entry: *Jeśli nie posiadasz materiałów do tego zadania, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-basics/)*
 
+-
