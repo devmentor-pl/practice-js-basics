@@ -27,5 +27,18 @@ getSum();
 
 
 
+/*isEven*/
+function isEven () 
+
+
+
 
  
+
+
+
+
+/*showinfo*/
+function showInfo () {
+
+}
