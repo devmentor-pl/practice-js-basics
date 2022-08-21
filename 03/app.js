@@ -15,30 +15,62 @@ function randomNumber(min, max) {
 }
 
 
-function getSum() {
-    
-    const a = 10;
-    const b = 20;
-    const c = 30;
-    console.log (a+b+c);
+
+
+function getSum (num1,num2,num3) {
+    const intNum1 = parseInt (num1);
+    const intNum2 = parseInt (num2);
+    const intNum3 = parseInt (num3);
+    console.log (num1,num2,num3);
+    console.log(intNum1,intNum2,intNum3);
+    const arr=[intNum1,intNum2,intNum3];
+    console.log(arr);
+    arr.sort(function(a,b){
+        return a-b;
+    })
+    console.log(arr);
+    return arr[1]+arr[2];
 }
-    
-getSum();
-
-
-
-/*isEven*/
-function isEven () 
+const sum = getSum (a,b , c);
+console.log(sum);
 
 
 
 
- 
-
-
-
-
-/*showinfo*/
-function showInfo () {
-
+const isEven = function(num) {
+    if(typeof num != "number") {
+      return null
+    }
+    else if (typeof num == 'number') {
+      if (num % 2 == 0) {
+        return true;
+      }
+      return false;
+    }   
 }
+
+const checkEven = isEven(sum)
+console.log(checkEven);
+
+    
+
+
+
+
+function showInfo(a,even) {
+    switch(even) {
+      case false:
+        console.log(a + ' jest nieparzysta ')
+        break;
+      case true:
+        console.log(a + ' jest parzysta ')
+        break;
+      default:
+        console.log(a + ' nie jest liczba ')
+        break;  
+    }
+  }
+  
+  const checkBoolean = showInfo(sum, checkEven);
+  
+  
