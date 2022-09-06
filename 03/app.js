@@ -17,7 +17,7 @@ function randomNumber(min, max) {
 
 
 
-function getSum (num1,num2,num3) {
+/*function getSum (num1,num2,num3) {
     const intNum1 = parseInt (num1);
     const intNum2 = parseInt (num2);
     const intNum3 = parseInt (num3);
@@ -32,7 +32,7 @@ function getSum (num1,num2,num3) {
     return arr[1]+arr[2];
 }
 const sum = getSum (a,b , c);
-console.log(sum);
+console.log(sum);*/
 
 
 

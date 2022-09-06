@@ -1,26 +1,31 @@
-const min = 10;
-const max = 200;
+const arr = [];
 
-
-function arrRange(min,max) {
-    
-    let arr = [];
-    Math.floor(Math.random()*(min - max));
-    for (let i=min; i<=max; i++)
-    arr.push(i);
-    return arr;
-    
-};
-    console.log (arrRange(min,max));
-
-
-function getNumnbers () {
-    
+for (let i=0;i<=200;i++){
+    arr.push(randomNumbers(10,200));
 }
+    console.log(arr);
+
+function randomNumbers(min,max) {
+    return Math.floor(Math.random()*(max-min) + min)
+}
+   
 
 
 
 
+
+    
+
+
+
+ 
+
+
+    
+
+
+
+    
 
 
 
