@@ -17,7 +17,7 @@ function Student (firstName, lastName,grades) {
     }
     const student1 = new Student('Jan', 'Kowalski');
     const student2 = new Student('Michał', 'Nowak');
-    console.log(
-    student1,
-    student2,
-    );
+    const student3 = new Student('Maciej', 'Zielinski');
+    
+    console.log(student1,student2,student3);
+    
