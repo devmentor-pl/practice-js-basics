@@ -15,10 +15,10 @@ const result = getNumbers(1, 30);
 console.log(result);
 
 
-function sortNumbers(GetNumbersResult) {
-  const leftNumbers10 = GetNumbersResult.sort(function (a, b) {
+function sortNumbers(getNumbersResult) {
+  const leftNumbers10 = getNumbersResult.sort(function (a, b) {
     return a - b;
-  }).slice(-10); // dlaczego podajac (0,10) zwraca mi 10 elementow a nie 9? nie powinno byc, że od indexu 0 do 10 ale bez niego? jesli chciałbym 10 elementow to powinienem podać (0,11)
+  }).slice(-10);
   return leftNumbers10;
 }
 console.log(sortNumbers(result));

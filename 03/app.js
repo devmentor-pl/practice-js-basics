@@ -11,7 +11,7 @@ function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
 
-function GetSum(par1, par2, par3) {
+function getSum(par1, par2, par3) {
     const changeNumbers = [];
     changeNumbers.push(par1, par2, par3)
     const changedNumbers = changeNumbers.map(changeToInt);
@@ -32,7 +32,7 @@ function GetSum(par1, par2, par3) {
     return sumNumbers;
 
 }
-const sumAbc = GetSum(a, b, c);
+const sumAbc = getSum(a, b, c);
 console.log(sumAbc);
 
 

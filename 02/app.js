@@ -5,7 +5,7 @@ const x = 4;
 const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 for (let i = 0; i < numberArray.length; i++) {
-  console.log(x * numberArray[i]);
+  console.log(`${x} x ${numberArray[i]} = ${x * numberArray[i]}`);
 }
 
 

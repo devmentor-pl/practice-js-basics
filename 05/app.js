@@ -34,10 +34,8 @@ student1.addGrade("maths", 6);
 student1.addGrade("maths", 6);
 student1.addGrade("english", 5);
 student1.addGrade("english", 4)
-student1.addGrade("historia", 5)
-student1.addGrade("historia", 5)
-
+// student1.addGrade("historia", 5)
+// student1.addGrade("historia", 5)
 student1.countAvg("maths")
-student1.countAvg("english")
 student1.countAvg("maths", "english")
-student1.countAvg("maths", "historia", "english")
+// student1.countAvg("maths", "historia", "english")
