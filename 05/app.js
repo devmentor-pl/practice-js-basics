@@ -1,49 +1,55 @@
-function Student(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+function Student(firstNameVal, lastNameVal) {
+    this.firstName = firstNameVal;
+    this.lastName = lastNameVal;
     this.grades = {}
 }
 
 Student.prototype.addGrade = function(subject, grade) {
-
     if(typeof this.grades[subject] === 'undefined') {
         this.grades[subject] = [];
-    } else {
-        this.grades[subject].push(grade);
     }
+
+    this.grades[subject].push(grade);
 }
 
 Student.prototype.getAverageGrade = function(subject) {
     if(typeof subject === 'undefined') {
-        let sum1 = 0;
-        let num = 0;
-
+        const grades = [];
         for(const key in this.grades) {
             const arr = this.grades[key];
-            sum1 += arr.reduce(function(a, b) {
-                return a + b;
-            }, 0);
-            num += arr.length;
-            num++;
-            const result = sum1 / num;
-            console.log('The average of all subjects is:' , result);
-            return result;
-        }
-    } else {
-        const grades = this.grades[subject];
-        let sum2 = 0;
-        let num2 = 0;
 
-    
+            arr.forEach(function(item) {
+                grades.push(item);
+            });
+        }
     }
+
+    return this.avg(grades);
+    }
+
+    if(typeof this.grades[subject] === 'undefined') {
+        return 0;
+    }
+
+    return this.avg(this.grades[subject]);
+
+
+Student.prototype.avg = function(arr) {
+    if(arr.length === 0) {
+        return 0;
+    }
+
+    const sum = arr.reduce(function(acc, curr) {
+        return acc + curr;
+    }, 0);
+
+    return sum / arr.length;
 }
 
-const student1 = new Student('Genowefa', 'Pigwa')
+const student = new Student('Mariusz', 'Nowak');
+student.addGrade('math', 4);
+student.addGrade('polish', 6);
+student.addGrade('english', 4);
+student.addGrade('IT', 6);
 
-student1.addGrade('maths', 4);
-student1.addGrade('polish', 6);
-student1.addGrade('english', 3);
-student1.addGrade('PE', 3);
-student1.addGrade('IT', 6);
-
-console.log(student1.getAverageGrade());
+console.log(student.getAverageGrade());

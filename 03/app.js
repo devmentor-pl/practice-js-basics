@@ -8,9 +8,9 @@ const c = randomNumber(min, max);
 console.log('Wylosowane liczby to: ' , a, b, c);
 
 function getSum(x, y, z) {
-    x = parseInt(x);
-    y = parseInt(y);
-    z = parseInt(z);
+    const x = parseInt(x);
+    const y = parseInt(y);
+    const z = parseInt(z);
 
     if(x > z && y > z) {
         return x + y;
@@ -23,22 +23,21 @@ function getSum(x, y, z) {
 
 const isEven = function (num) {
     if (typeof num !== 'number') {
-        return null
-    } else if (num % 2 === 0) {
-        return true
-    } else {return false}
+        return null;
+    } 
+    return num % 2 === 0;
 }
 
-function showInfo(d, e) {
-    switch(e) {
+function showInfo(value, isEven) {
+    switch(isEven) {
         case null: 
-            console.log('Podany argument ', e , 'nie jest liczbą');
+            console.log('Podany argument ', value , 'nie jest liczbą');
             break;
         case true:
-            console.log('Podany argument ', e , 'jest parzysty');
+            console.log('Podany argument ', value , 'jest parzysty');
             break;
         case false:
-            console.log('Podany argument ', e , 'jest nieparzysty');
+            console.log('Podany argument ', value , 'jest nieparzysty');
             break;
         default:
             alert('Błąd danych!');

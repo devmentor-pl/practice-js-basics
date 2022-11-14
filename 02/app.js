@@ -35,7 +35,8 @@ const exponentiation = function (y, z) {
         } else {
             string += '*' + y;
         }
-    } console.log(string, ' = ' , result);
+    } 
+    console.log(string, ' = ' , result);
 }
 
 exponentiation();
