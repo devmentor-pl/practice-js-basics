@@ -15,7 +15,7 @@ Dlatego teraz przećwiczymy ich tworzenie na podstawie 3 funkcji.
 1. Funkcja o nazwie `getSum`:
     - przyjmuje 3 parametry. Ich wartość w ciele funkcji ma zostać przekonwertowana na liczby całkowite,
     - z podanych 3 liczb wybierane są 2 największe,
-    - wartości tych 2 liczb są sumowane, a wynik jest zwracany przez funkcję.
+    - wartości tych 2 liczb są sumowane, a wynik jest zwracany przez funkcję. 
 
 2. Funkcja o nazwie `isEven`:
     - ma formę wyrażenia funkcyjnego,
