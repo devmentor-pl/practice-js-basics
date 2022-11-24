@@ -1,5 +1,5 @@
-﻿const min = 1;
-const max = 30;
+﻿const min = 10;
+const max = 200;
 
 const arr = createArray(min, max);
 const largestNumbers = getLargestNumbers(arr);
