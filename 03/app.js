@@ -7,22 +7,6 @@ const c = randomNumber(min, max);
 
 console.log(a, b, c);
 
-const isEven = function (x) {
-	if (typeof x === 'number') {
-		if (x % 2 == 0) {
-			return true;
-		} else {
-			return false;
-		}
-	} else {
-		return null;
-	}
-};
-
-const sum = getSum(a, b, c);
-const even = isEven(sum);
-showInfo(sum, even);
-
 function getSum(x, y, z) {
 	const xInt = parseInt(x);
 	const yInt = parseInt(y);
@@ -35,6 +19,18 @@ function getSum(x, y, z) {
 		return xInt + zInt;
 	}
 }
+
+const isEven = function (x) {
+	if (typeof x === 'number') {
+		if (x % 2 == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return null;
+	}
+};
 
 function showInfo(x, y) {
 	switch (y) {
@@ -52,3 +48,7 @@ function showInfo(x, y) {
 function randomNumber(min, max) {
 	return Math.round(Math.random() * (max - min) + min);
 }
+
+const sum = getSum(a, b, c);
+const even = isEven(sum);
+showInfo(sum, even);
