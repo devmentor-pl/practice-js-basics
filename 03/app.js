@@ -1,30 +1,22 @@
-// const min = 1;
-// const max = 100;
+const min = 1;
+const max = 100;
 
-// const a = randomNumber(min, max);
-// const b = randomNumber(min, max);
-// const c = randomNumber(min, max);
+const a = randomNumber(min, max);
+const b = randomNumber(min, max);
+const c = randomNumber(min, max);
 
-// console.log(a, b, c);
+console.log(a, b, c);
 
-
-// getSum(9,8,7);
-
-
-
-
-// function randomNumber(min, max) {
-//     return Math.round((Math.random() * (max - min)) + min);
-// }
+function randomNumber(min, max) {
+    return Math.round((Math.random() * (max - min)) + min);
+}
 
 function getSum(x, y, z) {
-    let sum = 0;
+    tempSum = 0;
     x = parseInt(x);
     y = parseInt(y);
     z = parseInt(z);
     tempSum = x + y + z;
-    //sum = tempSum - Math.min(x,y,z);
-    // console.log(sum);
     return tempSum - Math.min(x,y,z);
 }
 
@@ -51,3 +43,10 @@ function showInfo(a, b) {
             break;
     }
 }
+
+const sum = getSum(a,b,c);
+const even = isEven(sum);
+// console.log(sum);
+// console.log(getSum(a,b,c))
+// console.log(isEven(sum));
+showInfo(sum, even);
