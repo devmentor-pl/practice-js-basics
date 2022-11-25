@@ -8,16 +8,11 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 function getSum(x, y, z) {
-	const xInt = parseInt(x);
-	const yInt = parseInt(y);
-	const zInt = parseInt(z);
-	if (xInt >= zInt && yInt >= zInt) {
-		return xInt + yInt;
-	} else if (zInt >= xInt && yInt >= xInt) {
-		return zInt + yInt;
-	} else if (xInt >= yInt && zInt >= yInt) {
-		return xInt + zInt;
-	}
+	const arr = [parseInt(x), parseInt(y), parseInt(z)];
+	arr.sort(function (a, b) {
+		return b - a;
+	});
+	return arr[0] + arr[1];
 }
 
 const isEven = function (x) {
