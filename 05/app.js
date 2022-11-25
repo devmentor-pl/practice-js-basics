@@ -8,12 +8,7 @@ Student.prototype.addGrade = function (sub, grade) {
 	if (typeof this.grades[sub] === 'undefined') {
 		this.grades[sub] = [];
 	}
-
-	if (grade >= 1 && grade <= 6) {
-		this.grades[sub].push(grade);
-	} else {
-		console.log('Ocena musi zawierać się w przedziale od 1 do 6!');
-	}
+	this.grades[sub].push(Number(grade));
 };
 
 Student.prototype.getAvgGrade = function (sub) {
@@ -23,33 +18,43 @@ Student.prototype.getAvgGrade = function (sub) {
 			const arr = this.grades[key];
 			grades.push(...arr);
 		}
-		let sum = 0;
-		grades.forEach((num) => {
-			sum += num;
-		});
-		return sum / grades.length;
+		return getAvgFromArray(grades);
 	} else if (typeof this.grades[sub] === 'undefined') {
 		return 0;
 	} else {
 		const grades = this.grades[sub];
-		let sum = 0;
-		grades.forEach((num) => {
-			sum += num;
-		});
-		return sum / grades.length;
+		return getAvgFromArray(grades);
 	}
 };
 
+Student.prototype.isCorrectGrade = function (grade) {
+	if (grade === null) {
+		return false;
+	} else if (grade >= 1 && grade <= 6) {
+		return true;
+	} else {
+		console.log('Ocena musi być liczbą i zawierać się w przedziale od 1 do 6!');
+	}
+};
+
+function getAvgFromArray(arr) {
+	let sum = 0;
+	arr.forEach((num) => {
+		sum += num;
+	});
+	return sum / arr.length;
+}
+
 const student = new Student('Jan', 'Kowalski');
-student.addGrade('math', 4);
-student.addGrade('math', 6);
-student.addGrade('english', 3);
-student.addGrade('english', 4);
-student.addGrade('polish', 2);
-student.addGrade('polish', 6);
-student.addGrade('history', 3);
-student.addGrade('history', 5);
-student.addGrade('physics', 2);
+let grade, subject;
+do {
+	grade = prompt('Podaj ocenę');
+	subject = prompt('Podaj nazwę przedmiotu z którego chcesz dodać ocenę');
+	if (student.isCorrectGrade(grade)) {
+		student.addGrade(subject, grade);
+	}
+} while (student.isCorrectGrade(grade));
+
 const avgMath = student.getAvgGrade('math');
 const avgEnglish = student.getAvgGrade('english');
 const avgHistory = student.getAvgGrade('history');
