@@ -13,15 +13,14 @@ function createArray(min, max) {
     for(let i = 0; i < 20; i++) {
         tab.push(Math.floor(Math.random()*(max - min) + min + 1));
     }
-    // console.log(tab);
     return tab;
 }
 
 function getLargest(arr) {
     arr.sort(function(a, b) {
-        return a - b;
+        return b - a;
     });
-    return arr.slice(arr.length/2, arr.length);
+    return arr.slice(0, 10);
 
 }
 
