@@ -1,7 +1,7 @@
 
 /* rozwiązanie z pętlą for */
 // const x = prompt('MNOŻENIE\nPodaj liczbę:');
-const x = 4;
+const x = prompt('MNOŻENIE\nPodaj liczbę:');
 console.log('MNOŻENIE');
 
 for (let i = 1; i <= 9; i++) {
