@@ -4,9 +4,6 @@ const max = 100;
 const a = randomNumber(min, max);
 const b = randomNumber(min, max);
 const c = randomNumber(min, max);
-// const a = 4;
-// const b = 25;
-// const c = 14;
 
 console.log(a, b, c);
 
@@ -15,21 +12,9 @@ function getSum(a, b, c) {
     b = parseInt(b);
     c = parseInt(c);
 
-    const numArray = [a, b, c];
+    const numArray = [a, b, c].sort((a, b) => b - a);
 
-    // W znalezieniu dwóch największych liczb posiłkowałem się trochę internetem
-    let biggest = 0;
-    let nextBiggest = 0;
-    numArray.forEach(item => {
-        if (item > biggest) {
-            nextBiggest = biggest;
-            biggest = item;
-        } else if (item > nextBiggest && item !== biggest) {
-            nextBiggest = item;
-        }
-    });
-
-    return biggest + nextBiggest;
+    return numArray[0] + numArray[1];
 }
 
 const isEven = function (num) {
