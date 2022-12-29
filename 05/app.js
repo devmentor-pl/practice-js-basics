@@ -12,27 +12,28 @@ Student.prototype.addGrade = function (subject, grade) {
     this.grades[subject].push(grade);
 }
 
+Student.prototype.calcAvg = function (grades) {
+    const gradesSum = grades.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue;
+    }, 0)
+    return (gradesSum / grades.length).toFixed(2);
+}
+
 Student.prototype.getAvgGrade = function (subject) {
+    const subjects = this.grades;
     const subjectGrades = this.grades[subject];
+    const grades = [];
 
-    // Przy wyliczeniu średniej ze wszystkich przedmiotów posiłkowałem się podobnym pytaniem na slacku
-    const grades = Array.from(Object.values(this.grades)).flat();
-
-
+    for (const key in subjects) {
+        for (let i = 0; i < subjects[key].length; i++) {
+            grades.push(subjects[key][i]);
+        }
+    }
 
     if (typeof subject !== 'undefined') {
-        const gradesSum = subjectGrades.reduce(function (previousValue, currentValue) {
-            return previousValue + currentValue;
-        }, 0)
-
-        const subjectAvg = gradesSum / subjectGrades.length;
-        return `Średnia z ${subject} to: ${subjectAvg.toFixed(2)}`;
+        return `Średnia z ${subject} to: ${this.calcAvg(subjectGrades)}`;
     } else {
-        const gradesSum = grades.reduce(function (previousValue, currentValue) {
-            return previousValue + currentValue;
-        }, 0)
-        const subjectsAvg = gradesSum / grades.length;
-        return `Średnia ze wszystkich przedmiotów to: ${subjectsAvg.toFixed(2)}`
+        return `Średnia ze wszystkich przedmiotów to: ${this.calcAvg(grades)}`
     }
 }
 
@@ -44,6 +45,8 @@ student.addGrade('english', 3);
 student.addGrade('english', 6);
 student.addGrade('physics', 1);
 student.addGrade('physics', 4);
+student.addGrade('physics', 3);
+student.addGrade('physics', 2);
 const avgMath = student.getAvgGrade('maths');
 const avgPhysics = student.getAvgGrade('physics');
 const avg = student.getAvgGrade();
