@@ -22,11 +22,11 @@ function getSum(one, two, three) {
 		return a - b;
 	});
 
-	console.log(numbersArr[1] + numbersArr[2]);
+	// console.log(numbersArr[1] + numbersArr[2]);
 	return numbersArr[1] + numbersArr[2];
 }
 
-const even = function isEven(num) {
+const isEven = function (num) {
 	if (typeof num !== "number") {
 		console.log(null);
 		return null;
@@ -53,3 +53,11 @@ function showInfo(a, value) {
 			break;
 	}
 }
+
+const sum = getSum(a, b, c);
+console.log(sum);
+
+const even = isEven(sum);
+console.log(even);
+
+showInfo(sum, even);
