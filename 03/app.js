@@ -38,3 +38,18 @@ const even = function isEven(num) {
 		return false;
 	}
 };
+
+function showInfo(a, value) {
+	switch (value) {
+		case null:
+			console.log("Podany argument " + value + " nie jest liczbą");
+			break;
+		case true:
+			console.log("Podany argument " + value + " jest parzysty");
+			break;
+
+		case false:
+			console.log("Podany argument " + value + " jest nieparzysty");
+			break;
+	}
+}
