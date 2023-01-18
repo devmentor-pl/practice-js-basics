@@ -12,7 +12,7 @@ function createArray(min, max) {
 const arr = createArray(1, 100);
 console.log(arr);
 
-function sortArray(array) {
+function getLargest(array) {
 	const sorted = array.sort(function (a, b) {
 		return b - a;
 	});
@@ -21,5 +21,17 @@ function sortArray(array) {
 	return sorted.slice(0, 10);
 }
 
-const sortedArray = sortArray(arr);
-console.log(sortedArray);
+const largest = getLargest(arr);
+console.log(largest);
+
+function getAvg(array) {
+	const sumOfArray = array.reduce(function (acc, num) {
+		return acc + num;
+	});
+
+	const avg = sumOfArray / array.length;
+	return avg;
+}
+
+const avg = getAvg(largest);
+console.log(avg);
