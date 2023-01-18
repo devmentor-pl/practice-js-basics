@@ -25,3 +25,16 @@ function getSum(one, two, three) {
 	console.log(numbersArr[1] + numbersArr[2]);
 	return numbersArr[1] + numbersArr[2];
 }
+
+const even = function isEven(num) {
+	if (typeof num !== "number") {
+		console.log(null);
+		return null;
+	} else if (num % 2 === 0) {
+		console.log("true");
+		return true;
+	} else {
+		console.log("false");
+		return false;
+	}
+};
