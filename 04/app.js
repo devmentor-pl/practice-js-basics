@@ -35,3 +35,12 @@ function getAvg(array) {
 
 const avg = getAvg(largest);
 console.log(avg);
+
+const arr2 = createArray(10, 200);
+console.log(arr2);
+
+const largest2 = getLargest(arr2);
+console.log(largest2);
+
+const avg2 = getAvg(largest2);
+console.log(avg2);
