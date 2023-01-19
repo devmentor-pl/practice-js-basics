@@ -31,9 +31,10 @@ while (step <= 4) {
 	if ((step = 1)) {
 		pow = a + " * ";
 	} else {
-		pow = pow + a;
+		pow = a;
 	}
 
+	pow += pow;
 	step++;
 
 	console.log(pow + " = " + result);
