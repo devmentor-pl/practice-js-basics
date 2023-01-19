@@ -17,3 +17,24 @@ if (parsedX >= 1 && parsedX <= 9) {
 }
 
 /* rozwiązanie z pętlą while  */
+// `3 * 3 * 3 * 3 = 81`
+
+let result = 1;
+const a = 3;
+const n = 4;
+let step = 1;
+let pow = "";
+
+while (step <= 4) {
+	result = result * a;
+
+	if ((step = 1)) {
+		pow = a + " * ";
+	} else {
+		pow = pow + a;
+	}
+
+	step++;
+
+	console.log(pow + " = " + result);
+}
