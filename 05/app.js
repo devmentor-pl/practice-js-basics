@@ -55,6 +55,7 @@ student.addGrade("maths", 6);
 student.addGrade("english", 3);
 console.log(student);
 
-const avgMath = student.getAverageGrade("math"); // 5
+const avgMath = student.getAverageGrade("maths"); // 5
+console.log(avgMath);
 const avg = student.getAverageGrade(); // 4.33
 console.log(avg);
