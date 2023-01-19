@@ -28,14 +28,13 @@ let pow = "";
 while (step <= 4) {
 	result = result * a;
 
-	if ((step = 1)) {
-		pow = a + " * ";
-	} else {
+	if (step === 1) {
 		pow = a;
+	} else {
+		pow = pow + " * " + a;
 	}
 
-	pow += pow;
 	step++;
-
-	console.log(pow + " = " + result);
 }
+
+console.log(pow + " = " + result);

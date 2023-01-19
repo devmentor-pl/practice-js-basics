@@ -36,7 +36,7 @@ Student.prototype.getAverageGrade = function (subject) {
 		gradesList.forEach(function (element) {
 			return (sum = sum + element);
 		});
-		return sum / grades.length;
+		return sum / gradesList.length;
 	}
 };
 
