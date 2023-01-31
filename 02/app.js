@@ -1,6 +1,6 @@
 /* rozwiązanie z pętlą for */
 
-// const x = prompt('Podaj liczbę!')
+// const x = parseInt(prompt('Podaj liczbę!'))
 // const y = 9
 
 // if (x >= 1 && x <= 9) {
@@ -14,8 +14,8 @@
 
 /* rozwiązanie z pętlą while  */
 
-const a = prompt('Podaj liczbę podstawy! (1 - 100)')
-const n = prompt('Podaj liczbę wykładnika!(1 - 10) ')
+const a = parseInt(prompt('Podaj liczbę podstawy! (1 - 100)'))
+const n = parseInt(prompt('Podaj liczbę wykładnika!(1 - 10) '))
 
 if (a >= 1 && a <= 100 && n >= 1 && n <= 10) {
 	let i = 1
