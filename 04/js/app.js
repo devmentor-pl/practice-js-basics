@@ -1,16 +1,22 @@
+const arr = createArray(10, 200)
+const largest = getLargest(arr)
+const avg = getAvg(largest)
+console.log(arr)
+console.log(largest)
+console.log(
+	`Średnia arytmetyczna 10 największych liczb z tablicy: ${avg.toFixed(0)}`
+)
+
 function createArray(min, max) {
-	const numberArr = []
+	const numbersArr = []
 
 	for (let i = 1; i <= 20; i++) {
 		const randomNum = Math.round(Math.random() * (max - min) + min)
-		numberArr.push(randomNum)
+		numbersArr.push(randomNum)
 	}
 
-	return numberArr
+	return numbersArr
 }
-
-const arr = createArray(10, 200)
-console.log(arr)
 
 function getLargest(arr) {
 	const sortArr = arr.sort((a, b) => {
@@ -19,9 +25,6 @@ function getLargest(arr) {
 	return sortArr.slice(0, 10)
 }
 
-const largest = getLargest(arr)
-console.log(largest)
-
 function getAvg(arr) {
 	let avg = 0
 	arr.forEach((el) => {
@@ -29,8 +32,3 @@ function getAvg(arr) {
 	})
 	return avg / arr.length
 }
-
-const avg = getAvg(largest)
-console.log(
-	`Średnia arytmetyczna 10 największych liczb z tablicy: ${avg.toFixed(0)}`
-)
