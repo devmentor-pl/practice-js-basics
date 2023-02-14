@@ -7,6 +7,8 @@ const c = randomNumber(min, max);
 
 console.log(a, b, c);
 
+
+
 //1.Funkcja getSum
 
 function getSum(a, b, c) {

@@ -3,8 +3,8 @@
 function createArr(min, max) {
   const newArr = [];
 
-  for (let i = min; i <= min + 19; i++) {
-    let maxNum = Math.round(Math.random() * max);
+  for (let i = 0; i < 20; i++) {
+    let maxNum = Math.round(Math.random() * (max - min) + min);
 
     newArr.push(maxNum);
   }

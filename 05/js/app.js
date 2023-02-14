@@ -10,40 +10,46 @@ function Student(studentFirstName, studentLastName) {
 const student1 = new Student("Jerzy", "Lis");
 
 Student.prototype.addGrade = function (subject, grade) {
-  if (subject === "english") {
-    this.grades.english.push(grade);
-    console.log(this.grades.english);
+  if (typeof this.grades[subject] === "undefined") {
+    this.grades[subject] = [];
+    this.grades[subject].push(grade);
+    console.log(this.grades[subject]);
+  } else if (subject === "english") {
+    this.grades[subject].push(grade);
+    console.log(this.grades[subject]);
   } else if (subject === "maths") {
-    this.grades.maths.push(grade);
-    console.log(this.grades.maths);
+    this.grades[subject].push(grade);
+    console.log(this.grades[subject]);
   }
 };
 
 Student.prototype.getAverageGrade = function (subject) {
   let sum = 0;
-  const lang = this.grades.english;
-  const math = this.grades.maths;
+  const arraySubject = this.grades[subject];
+
+  console.log(arraySubject);
 
   if (subject === "english") {
-    this.grades.english.forEach(function (num) {
+    this.grades[subject].forEach(function (num) {
       sum = sum + num;
-      result = sum / lang.length;
+      result = sum / arraySubject.length;
     });
   } else if (subject === "maths") {
     this.grades.maths.forEach(function (num) {
       sum = sum + num;
-      result = sum / math.length;
+      result = sum / arraySubject.length;
     });
-  } else if (typeof subject === "undefined") {
-    const total = lang.concat(math);
-    console.log(total);
-    total.forEach(function (num) {
+  } else if (subject !== "undefined") {
+    const totalArray = this.grades;
+
+    totalArray.forEach(function (num) {
       sum = sum + num;
-      result = sum / total.length;
+      result = sum / totalArray.length;
     });
   }
   console.log(result);
 };
 
-student1.addGrade("english", 3);
-student1.getAverageGrade("english");
+student1.addGrade("maths", 1);
+student1.addGrade("english", 5);
+student1.getAverageGrade(0);
