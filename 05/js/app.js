@@ -14,10 +14,7 @@ Student.prototype.addGrade = function (subject, grade) {
     this.grades[subject] = [];
     this.grades[subject].push(grade);
     console.log(this.grades[subject]);
-  } else if (subject === "english") {
-    this.grades[subject].push(grade);
-    console.log(this.grades[subject]);
-  } else if (subject === "maths") {
+  } else if (typeof this.grades[subject] !== "undefined") {
     this.grades[subject].push(grade);
     console.log(this.grades[subject]);
   }
@@ -50,6 +47,7 @@ Student.prototype.getAverageGrade = function (subject) {
   console.log(result);
 };
 
-student1.addGrade("maths", 1);
+student1.addGrade("maths", 3);
 student1.addGrade("english", 5);
+student1.addGrade("", 4);
 student1.getAverageGrade(0);
