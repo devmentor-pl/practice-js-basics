@@ -15,7 +15,7 @@ if (x >= 1 && x <= 9) {
 
 const a = prompt("Podaj liczbę podstawy!");
 const n = prompt("Podaj liczbę wykładnika!");
-let number = 1;
+let number = 0;
 
 //while (number <= n) {
 //number++;
@@ -28,17 +28,19 @@ let number = 1;
 //}
 //}
 
-while (number <= n) {
-  number++;
-  let result = 0;
- 
+// 2 ^ 3 = 2*2*2 = 8
 
-  if (a > 1 && a < 9 && n > 1 && n < 9) {
+if (a > 1 && a < 9 && n > 1 && n < 9) {
+  let str = "";
 
-    
-      result = a ** n;
-     
-      console.log( result);
-  
+  while (number < n) {
+    number++;
+
+    if (str === "") {
+      str = a;
+    } else str = str + " * " + a;
   }
+
+  str = str + " = " + a ** n;
+  console.log(str);
 }
