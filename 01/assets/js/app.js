@@ -17,11 +17,11 @@ console.log(
 
 if (suma > 20) {
     console.log( `${suma} jest większa od 20 `)
-} if (subtr > 20) {
+} else if (subtr > 20) {
     console.log(` ${subtr} jest większa od 20 `)
-} if (multipl > 20) {
+} else if (multipl > 20) {
     console.log(` ${multipl} jest większa od 20 `)
-} if (division > 20) {
+} else if (division > 20) {
     console.log( ` ${division} ta liczba jest większa od 20 `)
 } else{
     console.log('żadna z liczb nie jest wieksza od 20 ')
