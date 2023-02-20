@@ -5,21 +5,21 @@ const userNumber = Number(prompt('Podaj liczbę od 1 do 9'));
 function checkNumber(num) {
     if (typeof num !== 'number' || Number.isNaN(num)) {
 
-        alert(' Bład! - Dane powinny być liczbą');
+        alert(' Bład! - Dane powinny być liczbą ');
         return;
 
-    } else if (userNumber < 1 || userNumber > 10) {
+    } else if (num  < 1 || num > 10) {
         alert(' Bład - liczba powinna być z przedziału od 1 do 9 ');
         return;
 
     } else {
         for (let i = 1; i <= 9; i++) {
-            const result = userNumber * i;
-            console.log(` Wynik mnożenia  ${userNumber} x ${i} = ${result}`)
+            const result = num * i;
+            console.log(` Wynik mnożenia  ${num} x ${i} = ${result}`)
 
         }
     }
-
+    
 }
 checkNumber(userNumber);
 
