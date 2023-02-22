@@ -8,7 +8,7 @@
 
 
 
-Funkcje pozwalają na wielokrotne wykorzystanie kodu i grupowanie go, tak aby był bardziej czytelny. 
+Funkcje pozwalają na wielokrotne wykorzystanie kodu i grupowanie go, tak aby był bardziej czytelny.
 
 Dlatego teraz przećwiczymy ich tworzenie na podstawie 3 funkcji.
 
@@ -24,7 +24,7 @@ Dlatego teraz przećwiczymy ich tworzenie na podstawie 3 funkcji.
         - jeśli jest to liczba, to zwróć:
             - `true` - jeśli jest parzysta,
             - `false` - jeśli jest nieparzysta.
- 
+
 3. Funkcja o nazwie `showInfo`:
     - przyjmuje 2 parametry:
         - pierwszy to dowolna wartość,
