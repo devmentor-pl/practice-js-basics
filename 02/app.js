@@ -12,14 +12,38 @@ if( x <= 9 && x>0){
 
 /* rozwiązanie z pętlą while  */
 
-const a = 3;
-const n = 4;
-let counter = 1;
-let result = 1;
+// const a = 3;
+// const n = 4;
+// let counter = 1;
+// let result = 1;
 
-while(counter<=n){
+// while(counter<=n){
+//     result *=a;
+//     counter++;
+// }
+
+// console.log(a + ' x ' + a + ' x ' + a + ' x ' + a + ' = ' + result);
+
+
+// drugie rozwiązanie z pętlą while
+
+const a = prompt('Podaj liczbę od 1 do 9');
+const n = prompt('Podaj potęgę większą od 0');
+let counter = 0;
+let result = 1;
+let str='';
+
+while(counter<n){
     result *=a;
+    if(counter>0){
+        str += ' x '
+    }
+
+    str += a
     counter++;
 }
 
-console.log(a + ' x ' + a + ' x ' + a + ' x ' + a + ' = ' + result);
+info = str + ' = ' + result;
+
+console.log(result);
+console.log(info);
