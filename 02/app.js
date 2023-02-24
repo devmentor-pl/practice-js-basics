@@ -11,3 +11,15 @@ if( x <= 9 && x>0){
 }
 
 /* rozwiązanie z pętlą while  */
+
+const a = 3;
+const n = 4;
+let counter = 1;
+let result = 1;
+
+while(counter<=n){
+    result *=a;
+    counter++;
+}
+
+console.log(a + ' x ' + a + ' x ' + a + ' x ' + a + ' = ' + result);
