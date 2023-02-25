@@ -1,4 +1,4 @@
-const arr = createRandomArray(1,100);
+const arr = createRandomArray(10,200);
 
 function createRandomArray(min, max){
     const arr = [];
