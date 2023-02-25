@@ -16,19 +16,43 @@ function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
 
+// dodaję numery do tablicy
+// sortuję od największych liczb
+
 arr.push(a, b, c);
 arr.sort(function(a, b){
     return b - a;
 });
 
+// funkcja getSum dodaje 2 największe liczby (z początku posortowanych)
 
 function getSum(el){
     parseInt(el);
-    console.log(arr[0] + arr[1]);
+    let result = (arr[0] + arr[1]);
+    return result;
 }
 
+let sum = getSum(a,b,c);
 
-console.log(arr);
-console.log(arr[0],arr[1]);
+// funkcja isEven
 
-getSum(a,b,c)
+function isEven(input){
+    if(isNaN(input)){
+        return null
+    }else if(input%2===0){
+         return true
+    }else{
+        return false
+    }
+}
+
+const checkIfEven = isEven(sum);
+
+
+// console.log(arr);
+// console.log(arr[0],arr[1]);
+
+
+console.log(sum);
+console.log(checkIfEven);
+
