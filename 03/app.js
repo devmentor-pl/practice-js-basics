@@ -32,7 +32,7 @@ function getSum(el){
     return result;
 }
 
-let sum = getSum(a,b,c);
+const sum = getSum(a,b,c);
 
 // funkcja isEven
 
@@ -41,18 +41,36 @@ function isEven(input){
         return null
     }else if(input%2===0){
          return true
-    }else{
+    }else if(input%2==1){
         return false
     }
 }
 
-const checkIfEven = isEven(sum);
+const even = isEven(sum);
+
+// funkcja showInfo
+
+function showInfo(param, param2){
+    switch (param2){
+        case null:
+            console.log('Podany argument ' + param + ' nie jest liczbą.' );
+            break;
+        case true:
+            console.log('Podany argument ' + param + ' jest parzysty.');
+            break;
+        case false:
+            console.log('Podany argument ' + param + ' jest nieparzysty.');
+            break;
+    }
+}
 
 
-// console.log(arr);
-// console.log(arr[0],arr[1]);
+console.log(arr);
+console.log(arr[0],arr[1]);
 
 
 console.log(sum);
-console.log(checkIfEven);
+console.log(even);
+
+showInfo(sum, even);
 
