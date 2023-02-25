@@ -36,14 +36,14 @@ let str='';
 while(counter<n){
     result *=a;
     if(counter>0){
-        str += ' x '
+        str += ' x ';  //if żeby za pierwszym przejściem (counter 0) nie wstawiło 'x'
     }
 
-    str += a
+    str += a;
     counter++;
 }
 
-info = str + ' = ' + result;
+let info = str + ' = ' + result;
 
 console.log(result);
 console.log(info);
