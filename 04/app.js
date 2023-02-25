@@ -16,7 +16,7 @@ function getLargest(arr){
     arr.sort(function(a, b){
         return b - a;
     });
-    const largestArr = arr.slice(1,11);
+    const largestArr = arr.slice(0,10);
 
     return largestArr;
 }
@@ -24,3 +24,17 @@ function getLargest(arr){
 const largest = getLargest(arr);
 
 console.log(largest);
+
+function getAvg(array){
+    let sum = 0;
+    array.forEach(function(num){
+        sum += num;
+    });
+    const avg = sum / array.length;
+    
+    return avg;
+}
+
+const avg = getAvg(largest);
+
+console.log(avg);
