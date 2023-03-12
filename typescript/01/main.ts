@@ -1,8 +1,7 @@
-let a = parseInt('4.2');
-let b = 9;
+type OperationsNames = 'addition' | 'subtraction' | 'multiplication' | 'exponentiation' | 'division' | 'modulus';
 
-console.log(a, b);
-console.log(typeof a, typeof b);
+const a = parseInt('4.2');
+const b = 9;
 
 const addition = a + b;
 const subtraction = a - b;
@@ -11,7 +10,7 @@ const exponentiation = a ** b;
 const division = a / b;
 const modulus = a % b;
 
-const checkNumber = (operation, operationName = 'operation') => {
+const checkNumber = (operation: number, operationName: OperationsNames): void => {
 	console.log(`Result: ${operation}`);
 	if (operation >= 20) {
 		console.log(`Result of ${operationName} is greater or equal 20`);
@@ -19,4 +18,4 @@ const checkNumber = (operation, operationName = 'operation') => {
 		console.log(`Result of ${operationName} is less than 20`);
 	}
 };
-checkNumber(subtraction, 'addition');
+checkNumber(addition, 'addition');
