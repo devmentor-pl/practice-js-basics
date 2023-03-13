@@ -33,7 +33,7 @@ const isEven = function (number) {
 	const oddOrEven = number % 2;
 
 	if (oddOrEven === 0) return true;
-	else return false;
+	else return !oddOrEven;
 };
 const even = isEven(sum);
 

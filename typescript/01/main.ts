@@ -1,21 +1,79 @@
-type OperationsNames = 'addition' | 'subtraction' | 'multiplication' | 'exponentiation' | 'division' | 'modulus';
+let a = parseInt('4.2');
+let b = 9;
 
-const a = parseInt('4.2');
-const b = 9;
+// console.log(a, b);
+// console.log(typeof a, typeof b);
 
-const addition = a + b;
-const subtraction = a - b;
-const multiplication = a * b;
-const exponentiation = a ** b;
-const division = a / b;
-const modulus = a % b;
-
-const checkNumber = (operation: number, operationName: OperationsNames): void => {
-	console.log(`Result: ${operation}`);
-	if (operation >= 20) {
-		console.log(`Result of ${operationName} is greater or equal 20`);
-	} else {
-		console.log(`Result of ${operationName} is less than 20`);
-	}
+const addition = (a: number, b: number) => {
+	return a + b;
 };
-checkNumber(addition, 'addition');
+const subtraction = (a: number, b: number) => {
+	return a - b;
+};
+const multiplication = (a: number, b: number) => {
+	return a * b;
+};
+const exponentiation = (a: number, b: number) => {
+	return a ** b;
+};
+const division = (a: number, b: number) => {
+	return a / b;
+};
+const modulus = (a: number, b: number) => {
+	return a % b;
+};
+
+const operations = {
+	'+': addition,
+	'-': subtraction,
+	'*': multiplication,
+	'**': exponentiation,
+	'/': division,
+	'%': modulus,
+};
+const checkNumber = (operationValue: number, operation: Function, index: Object) => {
+
+	const operationType = operation.toString();
+	const operationOperand = Object.keys(index);
+
+	operationOperand.forEach(el => {
+		if (operationType.includes(el)) {
+			console.log(`Result: ${operationValue}`);
+			if (operationValue >= 20) {
+				console.log(`Result of ${el} is greater or equal 20`);
+			} else {
+				console.log(`Result of ${el} is less than 20`);
+			}
+		}
+	});
+};
+checkNumber(operations['+'](a, b), operations['+'], operations);
+
+// const checkNumber = (operationValue, operations, xyz) => {
+// 	const operand = xyz.toString();
+// 	const operationNames = Object.keys(operations).toString();
+
+// 	let sign;
+
+// 	if (operand.includes('+')) {
+// 		console.log(operand);
+// 	}
+// 	console.log(operationNames);
+
+// 	const index = operationNames[1];
+
+// 	// console.log(`Result of ${index} is greater or equal 20`);
+// 	// console.log(operationFunc);
+// 	// if (operation >= 20) {
+// 	// 	console.log(`Result of ${operationName[0]} is greater or equal 20`);
+// 	// } else {
+// 	// 	console.log(`Result of ${operationName} is less than 20`);
+// 	// }
+// };
+// checkNumber(operations.add(a, b), operations, operations.add);
+
+// if (checkNumber(operation) < 20) {
+// 	console.log(`Result of ${operationName} is greater or equal 20`);
+// } else {
+// 	console.log(`Result of ${operationName} is less than 20`);
+// }
