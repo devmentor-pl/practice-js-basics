@@ -3,10 +3,10 @@ type Grades = 1 | 2 | 3 | 4 | 5 | 6;
 interface Student {
 	firstName: string;
 	lastName: string;
-	subjectsAndGrades: { [Subjects:string]: Grades };
+	subjectsAndGrades: { [Subjects: string]: Grades };
 }
 
-const calc = (array: Grades[], length: number) => {
+const calAvg = (array: Grades[], length: number) => {
 	return array.reduce((acc: number, curr: number) => acc + curr / length, 0);
 };
 
@@ -30,11 +30,11 @@ Student.prototype.getAvgGrade = function (subject: string) {
 			// metoda reduceRight jako parametry ma typy: unknown i nie wiem co tutaj generuje błąd
 		);
 
-		const avg = calc(arrayWithGrades, arrayWithGrades.length);
+		const avg = calAvg(arrayWithGrades, arrayWithGrades.length);
 		console.log(`Student average: ${avg.toFixed(2)}`);
 	}
 	if (typeof subject !== 'undefined') {
-		const subjectAvg = calc(this.subjectsAndGrades[subject], this.subjectsAndGrades[subject].length);
+		const subjectAvg = calAvg(this.subjectsAndGrades[subject], this.subjectsAndGrades[subject].length);
 		console.log(`Student average from ${subject}: ${subjectAvg.toFixed(2)}`);
 	}
 };

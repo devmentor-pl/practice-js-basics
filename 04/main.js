@@ -8,7 +8,7 @@ const createArray = (min, max) => {
 	}
 	return array;
 };
-const array = createArray(1, 10);
+const array = createArray(1, 100);
 
 const getLargestNumbersFromArray = arrayWithNumbers => {
 	const halfOfArray = arrayWithNumbers.length / 2;
@@ -27,8 +27,7 @@ const calcAvg = arrayWithNumbers => {
 	// const avgWithReduce = arrayWithNumbers.reduce((acc, curr) => (acc + curr) / arrayWithNumbers.length, 0);
 	// return avgWithReduce;
 	arrayWithNumbers.forEach(number => (acc += number));
-	
-	// acc = 0;
+
 	if (acc === 0) return console.error('Wrong number');
 	return acc / arrayWithNumbers.length;
 };

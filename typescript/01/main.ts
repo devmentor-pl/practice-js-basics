@@ -1,29 +1,39 @@
+type CalcOperation = (a: number, b: number) => number;
+
+interface Operations {
+	'+': (a: number, b: number) => number;
+	'-': (a: number, b: number) => number;
+	'*': (a: number, b: number) => number;
+	'**': (a: number, b: number) => number;
+	'/': (a: number, b: number) => number;
+	'%': (a: number, b: number) => number;
+}
 let a = parseInt('4.2');
 let b = 9;
 
 // console.log(a, b);
 // console.log(typeof a, typeof b);
 
-const addition = (a: number, b: number) => {
+const addition = (a: number, b: number): number => {
 	return a + b;
 };
-const subtraction = (a: number, b: number) => {
+const subtraction = (a: number, b: number): number => {
 	return a - b;
 };
-const multiplication = (a: number, b: number) => {
+const multiplication = (a: number, b: number): number => {
 	return a * b;
 };
-const exponentiation = (a: number, b: number) => {
+const exponentiation = (a: number, b: number): number => {
 	return a ** b;
 };
-const division = (a: number, b: number) => {
+const division = (a: number, b: number): number => {
 	return a / b;
 };
-const modulus = (a: number, b: number) => {
+const modulus = (a: number, b: number): number => {
 	return a % b;
 };
 
-const operations = {
+const operations: Operations = {
 	'+': addition,
 	'-': subtraction,
 	'*': multiplication,
@@ -31,49 +41,21 @@ const operations = {
 	'/': division,
 	'%': modulus,
 };
-const checkNumber = (operationValue: number, operation: Function, index: Object) => {
 
+//
+const checkNumber = (operationValue: number, operation: CalcOperation, operations: Operations) => {
 	const operationType = operation.toString();
-	const operationOperand = Object.keys(index);
+	const operationOperand = Object.keys(operations);
 
-	operationOperand.forEach(el => {
-		if (operationType.includes(el)) {
+	operationOperand.forEach(operand => {
+		if (operationType.includes(operand)) {
 			console.log(`Result: ${operationValue}`);
 			if (operationValue >= 20) {
-				console.log(`Result of ${el} is greater or equal 20`);
+				console.log(`Result of ${operand} is greater or equal 20`);
 			} else {
-				console.log(`Result of ${el} is less than 20`);
+				console.log(`Result of ${operand} is less than 20`);
 			}
 		}
 	});
 };
 checkNumber(operations['+'](a, b), operations['+'], operations);
-
-// const checkNumber = (operationValue, operations, xyz) => {
-// 	const operand = xyz.toString();
-// 	const operationNames = Object.keys(operations).toString();
-
-// 	let sign;
-
-// 	if (operand.includes('+')) {
-// 		console.log(operand);
-// 	}
-// 	console.log(operationNames);
-
-// 	const index = operationNames[1];
-
-// 	// console.log(`Result of ${index} is greater or equal 20`);
-// 	// console.log(operationFunc);
-// 	// if (operation >= 20) {
-// 	// 	console.log(`Result of ${operationName[0]} is greater or equal 20`);
-// 	// } else {
-// 	// 	console.log(`Result of ${operationName} is less than 20`);
-// 	// }
-// };
-// checkNumber(operations.add(a, b), operations, operations.add);
-
-// if (checkNumber(operation) < 20) {
-// 	console.log(`Result of ${operationName} is greater or equal 20`);
-// } else {
-// 	console.log(`Result of ${operationName} is less than 20`);
-// }
