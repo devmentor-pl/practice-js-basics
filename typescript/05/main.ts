@@ -37,7 +37,7 @@ Student.prototype.getAvgGrade = function (subject: string) {
 		console.log(`Student average from ${subject}: ${subjectAvg.toFixed(2)}`);
 	}
 };
-// @ts-ignore
+
 const firstStudent = new (Student as any)('bob', 'kevin');
 firstStudent.addGrade('math', 5);
 firstStudent.addGrade('math', 5);
