@@ -24,10 +24,9 @@ Student.prototype.addGrade = function (subject: string, grade: Grades) {
 };
 Student.prototype.getAvgGrade = function (subject: string) {
 	if (typeof subject === 'undefined') {
+		const previousArray: Grades[] = [];
 		const arrayWithGrades = <Grades[]>(
-			Object.values(this.subjectsAndGrades).reduceRight((previousValue: any, currentValue) => previousValue.concat(currentValue))
-			// w typie previousvalue dałem any, mimo, że to jest zła praktyka, ale nie wiem również jak rozwiązać ten problem
-			// metoda reduceRight jako parametry ma typy: unknown i nie wiem co tutaj generuje błąd
+			Object.values(this.subjectsAndGrades).reduceRight((previousArray: Grades[], currentValue) => previousArray.concat(<Grades[]>currentValue), previousArray)
 		);
 
 		const avg = calAvg(arrayWithGrades, arrayWithGrades.length);
@@ -39,7 +38,7 @@ Student.prototype.getAvgGrade = function (subject: string) {
 	}
 };
 // @ts-ignore
-const firstStudent = new Student('bob', 'kevin');
+const firstStudent = new (Student as any)('bob', 'kevin');
 firstStudent.addGrade('math', 5);
 firstStudent.addGrade('math', 5);
 firstStudent.addGrade('english', 4);
