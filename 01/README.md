@@ -6,7 +6,7 @@
 
 # `#01` JavaScript: Podstawy
 
-Do pliku HTML dodaj plik `app.js` i sprawdź w konsoli (Chrome -> F12), czy widzisz zawartość zmiennych.
+Do pliku HTML podepnij plik `app.js` znajdujący się w katalogu assets/js i sprawdź w konsoli (Chrome -> F12), czy widzisz zawartość zmiennych.
 Następnie wykonaj poniższe zadania:
 - Sprawdź, jakiego typu są to zmienne. Użyj `typeof`.
 - Wykonaj działania dla każdego operatora arytmetycznego, jaki znasz: 
