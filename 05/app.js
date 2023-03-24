@@ -32,7 +32,6 @@ Student.prototype.getAverageGrade = function(subject) {
         const avg = sum / newArr2.length;
         return avg;
     }
-
 }
 
 const student1 = new Student('Sebastian', 'Wapiński');
