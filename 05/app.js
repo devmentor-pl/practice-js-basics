@@ -23,12 +23,7 @@ Student.prototype.calcGradeAvg= function(subject){
     let sum = 0;
     let counter = 0;
     const subjects = Object.keys(this.grades);
-    // console.log(typeof this.grades[subjects[0]][0]); number
-    // console.log(subjects)
-    // console.log(subjects.length);
-    // console.log(this.grades[subjects[i]][j])
     for (let i = 0; i < subjects.length; i++) {
-        // console.log(`i:${i} length: `, this.grades[subjects[i]].length, subjects[i])
         for (let j = 0; j < this.grades[subjects[i]].length; j++) {
             sum += this.grades[subjects[i]][j];
             console.log(`i: ${i} ; j: ${j}`)
@@ -46,5 +41,5 @@ student1.addGrade('science',4);
 student1.addGrade('science',6);
 student1.addGrade('science',2);
 student1.addGrade('science',3);
-console.log(student1.calcGradeAvg('science'));
+console.log('Avg of grades: ', student1.calcGradeAvg('science'));
 console.log(student1)
