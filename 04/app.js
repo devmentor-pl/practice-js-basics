@@ -1,5 +1,8 @@
 
-console.log(createArray(2, 5));
+const randomArray = createArray(1, 20);
+const largest = getLargest(randomArray);
+console.log(randomArray);
+console.log(largest);
 
 function createArray(min, max) {
     let randomNumbers = [];
@@ -9,3 +12,9 @@ function createArray(min, max) {
     return randomNumbers;
 };
 
+function getLargest(arr) {
+    const sortedArray = arr.sort(function(a, b) {
+        return b - a;
+    });
+    return sortedArray.slice(0, 10);
+};
