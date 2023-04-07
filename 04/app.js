@@ -1,7 +1,7 @@
 
-const randomArray = createArray(1, 20);
-const largest = getLargest(randomArray);
-const avg = getAvg([1, 2, 3, 4, 5]);
+const randomArray = createArray(10, 200);
+const largest = get20LargestNumbers(randomArray);
+const avg = getAvg(largest);
 // console.log(randomArray);
 // console.log(largest);
 console.log(avg);
@@ -14,7 +14,7 @@ function createArray(min, max) {
     return randomNumbers;
 };
 
-function getLargest(arr) {
+function get20LargestNumbers(arr) {
     const sortedArray = arr.sort(function(a, b) {
         return b - a;
     });
@@ -28,3 +28,5 @@ function getAvg(arr) {
     })
     return avg / arr.length;
 }
+
+
