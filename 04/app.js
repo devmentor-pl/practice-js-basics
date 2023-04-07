@@ -1,8 +1,10 @@
 
 const randomArray = createArray(1, 20);
 const largest = getLargest(randomArray);
-console.log(randomArray);
-console.log(largest);
+const avg = getAvg([1, 2, 3, 4, 5]);
+// console.log(randomArray);
+// console.log(largest);
+console.log(avg);
 
 function createArray(min, max) {
     let randomNumbers = [];
@@ -18,3 +20,11 @@ function getLargest(arr) {
     });
     return sortedArray.slice(0, 10);
 };
+
+function getAvg(arr) {
+    let avg = 0;
+    arr.forEach(function(num) {
+        avg += num;
+    })
+    return avg / arr.length;
+}
