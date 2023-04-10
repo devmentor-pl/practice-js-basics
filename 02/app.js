@@ -1,8 +1,7 @@
 
 /* rozwiązanie z pętlą for */
 
-// const x = Number(prompt('Podaj liczbę!'))
-const x = 3
+const x = Number(prompt('Podaj liczbę!'))
 if(x>=1 && x<10) {
 
     for(let i=1; i<=9; i++) {
