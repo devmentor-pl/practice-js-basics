@@ -43,3 +43,25 @@ const isEven = function(num) {
 }
 
 console.log(isEven(1), isEven(2), isEven('jfjfjfjf'))
+
+function showInfo(value, isEven) {
+    switch(isEven) {
+        case null:
+            console.log('Podany argument ' + value + ' nie jest liczbą')
+            break
+
+        case true:
+            console.log('Podany argument ' + value + ' jest parzysty')
+            break
+
+        case false:
+            console.log('Podany argument ' + value + ' nie jest parzysty')
+            break
+    }
+}
+
+const sum2 = getSum(a, b, c);
+const even = isEven(sum);
+
+
+showInfo(sum2, even);
