@@ -31,3 +31,15 @@ console.log(sum)
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
+
+const isEven = function(num) {
+
+    if (typeof num !== 'number') {
+        return null
+    }
+
+    return num % 2 === 0
+
+}
+
+console.log(isEven(1), isEven(2), isEven('jfjfjfjf'))
