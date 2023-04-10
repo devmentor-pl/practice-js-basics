@@ -8,7 +8,22 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 
+function getSum(x, y, z) {
+    const xInt = parseInt(x)
+    const yInt = parseInt(y)
+    const zInt = parseInt(z)
 
+    const arr = [xInt, yInt, zInt]
+    
+    arr.sort(function(a, b) {
+        return a - b
+    })
+
+    return arr[0] + arr[1]
+}
+
+const sum = getSum(a, b, c)
+console.log(sum)
 
 
 
