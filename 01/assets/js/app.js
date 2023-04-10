@@ -1,3 +1,6 @@
+// I USED NUMBER IN CODE IN RESULTS - I WANT TO HAVE ONLY NUMBERS NOT STRINGS
+
+
 const a = '4.2';
 const b = 9;
 
@@ -26,3 +29,5 @@ numbers.forEach(function(num){
         console.log(num + ' jest mniejsze od liczby 20')
     }
 })
+
+// FINISHED TASK 01
