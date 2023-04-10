@@ -15,3 +15,14 @@ console.log(Number(result3.toFixed(1)));
 
 const result4 = Number(a) / b
 console.log(result4);
+
+const numbers = [result1, result2, result3, result4]
+console.log(numbers);
+
+numbers.forEach(function(num){
+    if (num > 20) {
+        console.log(num + ' jest większe od liczby 20')
+    } else {
+        console.log(num + ' jest mniejsze od liczby 20')
+    }
+})
