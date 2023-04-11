@@ -8,7 +8,22 @@ const c = randomNumber(min, max);
 console.log(a, b, c);
 
 
+function getSum(x, y, z) {
+    const xInt = parseInt(x)
+    const yInt = parseInt(y)
+    const zInt = parseInt(z)
 
+    const arr = [xInt, yInt, zInt]
+    
+    arr.sort(function(a, b) {
+        return a - b
+    })
+
+    return arr[0] + arr[1]
+}
+
+const sum = getSum(a, b, c)
+console.log(sum)
 
 
 
@@ -16,3 +31,39 @@ console.log(a, b, c);
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
+
+const isEven = function(num) {
+
+    if (typeof num !== 'number') {
+        return null
+    }
+
+    return num % 2 === 0
+
+}
+
+console.log(isEven(1), isEven(2), isEven('jfjfjfjf'))
+
+function showInfo(value, isEven) {
+    switch(isEven) {
+        case null:
+            console.log('Podany argument ' + value + ' nie jest liczbą')
+            break
+
+        case true:
+            console.log('Podany argument ' + value + ' jest parzysty')
+            break
+
+        case false:
+            console.log('Podany argument ' + value + ' nie jest parzysty')
+            break
+    }
+}
+
+const sum2 = getSum(a, b, c);
+const even = isEven(sum);
+
+
+showInfo(sum2, even);
+
+// FINISHED
