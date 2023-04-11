@@ -15,10 +15,18 @@ console.log(sum, subtract, multiply.toFixed(2), divide.toFixed(2))
 
 const arr = [sum, subtract, multiply, divide]
 
-for(const key in arr){
-    if (arr[key]>20){
-        console.log(arr[key] , ' jest większe od 20')
+// for(const key in arr){
+//     if (arr[key]>20){
+//         console.log(arr[key] , ' jest większe od 20')
+//     } else{ 
+//         console.log(arr[key] , ' jest mniejsze lub równe 20')
+//     }
+// }
+
+arr.forEach(function(num){
+    if(num>20){
+        console.log(num, ' jest większe od 20')
     } else{ 
-        console.log(arr[key] , ' jest mniejsze lub równe 20')
+        console.log(num, ' jest mniejsze lub równe 20')
     }
-}
+})
