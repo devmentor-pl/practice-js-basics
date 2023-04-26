@@ -13,6 +13,8 @@ Student.prototype.addGrade = function(subject, grade) {
 }
 
 Student.prototype.getAverageGrade = function(subject) {
+    // this.grades[subject] - należałoby sprawdzić czy to w ogóle istnieje
+    // czyli typeof this.grades[subject === 'undefined' { return 0 }
     if (subject !== undefined) {
         const grades = this.grades[subject];
         const sum = grades.reduce(function(acc, grades) {

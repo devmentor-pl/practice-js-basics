@@ -15,6 +15,8 @@ const isEven = function (num) {
             return false;
         }
     }
+    // po tym null na dobrą sprawę wystarczy zapisać
+    // return num % 2 === 0
 }
 
 console.log(a, b, c);
@@ -50,6 +52,13 @@ function getSum(a, b, c) {
             theBiggest2 = z;
         }
     }
+
+    //Można łatwiej czyli użyć sortowania
+    // const arr = [x, y, z]
+    // arr.sort(function(a,b) {
+    //   return b - a;
+    // })
+    // return arr[0] + arr[1]
 
     const sum = theBiggest1 + theBiggest2;
     return sum;
