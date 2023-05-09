@@ -1,10 +1,10 @@
 // /* rozwiązanie z pętlą for */
 const x = parseInt(prompt('podaj liczbę do mnożenia'))
-for (let i = 1; i < 10; i++) {
-	const element = x * i
-	if (x < 1 && x >= 10) {
-		console.log('nie poprawna liczba')
-	} else {
+if (x < 1 && x >= 10) {
+	console.log('nie poprawna liczba')
+} else {
+	for (let i = 1; i < 10; i++) {
+		const element = x * i
 		console.log(`${x} x ${i} =${element}`)
 	}
 }

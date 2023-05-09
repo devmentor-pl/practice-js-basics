@@ -1,19 +1,27 @@
-const min = 10
-const max = 200
+const arr = createArray(1, 100);
 
-let arr = [];
-for (let i = 0; i < 20; i++) {
-  arr.push(Math.round(Math.random() * (max - min) + min));
+function createArray(min, max) {
+    let arr = [];
+    for (let i = 0; i < 20; i++) {
+        arr.push(Math.ceil(Math.random() * (max - min)) + min);
+    }
+    return arr;
 }
-function getLargest(x,y){
-    return y-x
+const largest = getLargest(arr);
+
+function getLargest(arr) {
+    const newArr = arr.sort((x, y) => y - x);
+    return newArr.slice(-10);
 }
-console.log(arr);
-const largest = arr.slice(-10).sort(getLargest)
-let sum=0;
-console.log(largest);
-largest.forEach((e) => {
-    sum= (sum+e)
-});
-sum=sum/10
-console.log(sum);
+const avg = getAvg(largest);
+
+function getAvg(arr) {
+    const avg = arr.reduce((total, num) => (total + num)) / arr.length;
+    return avg;
+}
+const newArr = createArray(10, 200);
+console.log(newArr);
+const newLargestArr = getLargest(newArr);
+console.log(newLargestArr);
+const newAvg = getAvg(newLargestArr);
+console.log(newAvg);

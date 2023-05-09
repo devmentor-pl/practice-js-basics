@@ -18,12 +18,10 @@ function getSum(a, b, c) {
 	if (b > a && c > a) {
 		return b + c
 	}
-	if (a > c && b > c) {
+	else {
 		return a + b
 	}
-	if (a === b && a === c && b === c) {
-		console.log(`wygenerowane liczby są takie same pierwsza=${a},druga=${b},trzecia=${c}`)
-	}
+
 }
 
 const isEven = num => {
