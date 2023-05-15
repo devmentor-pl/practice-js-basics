@@ -7,7 +7,7 @@ const c = randomNumber(min, max);
 
 const sum = getSumTwoNumbers(a, b, c)
 
-// console.log(a, b, c);
+console.log(a, b, c);
 // console.log(sum)
 
 const isEven = function (x) {
@@ -26,9 +26,13 @@ function randomNumber(min, max) {
 }
 
 function getSumTwoNumbers(x, y, z) {
-    if (x > y && y > z) return x + y
-    else if (x > y && z > y) return x + z
-    else return y + z
+    // if (x > y && y > z) return x + y
+    // else if (x > y && z > y) return x + z
+    // else return y + z
+    const sortArray = [x, y, z].sort((a, b) => { return b - a })
+    return sortArray[0] + sortArray[1]
+
+
 }
 
 function showInfo(x, boolean) {

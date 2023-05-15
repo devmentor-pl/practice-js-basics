@@ -19,7 +19,7 @@ function createArray(min, max) {
 }
 
 function getLargest(arr) {
-    const sortArr = arr.sort(function (a, b) { return a - b })
+    const sortArr = arr.sort(function (a, b) { return b - a })
     const largestArr = sortArr.slice(0, 10)
 
     return largestArr
@@ -27,7 +27,15 @@ function getLargest(arr) {
 
 function getAvg(arr) {
     let sum = 0
+    const amount = arr.length
+
     arr.forEach(function (item) { sum += Number(item) })
 
-    return sum
+    if (!amount) {
+        return alert("nie dzieli się przez 0!")
+    }
+
+    const avg = sum / amount
+
+    return avg
 }
