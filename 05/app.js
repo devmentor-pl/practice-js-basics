@@ -24,11 +24,14 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.countAvg = function (arr) {
     let sum = 0;
+    const gradesAmount = arr.length
+
+    if (!gradesAmount) return 
 
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i]
     }
-    return ((sum / arr.length).toFixed(2))
+    return ((sum / gradesAmount).toFixed(2))
 }
 
 Student.prototype.getAverageGrade = function (subject) {
