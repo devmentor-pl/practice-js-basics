@@ -24,13 +24,11 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.countAvg = function (arr) {
     let sum = 0;
-    let gradesAmount = 0
 
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i]
-        gradesAmount++
     }
-    return ((sum / gradesAmount).toFixed(2))
+    return ((sum / arr.length).toFixed(2))
 }
 
 Student.prototype.getAverageGrade = function (subject) {
@@ -40,10 +38,6 @@ Student.prototype.getAverageGrade = function (subject) {
     if (!subject) {
         let allGradesArr = []
         for (const key in this.grades) {
-            // for (let i = 0; i < this.grades[key].length; i++) {
-            //     sum += this.grades[key][i];
-            //     gradesAmount++
-            // }
             allGradesArr.push(...this.grades[key])
             avg = this.countAvg(allGradesArr)
         }
@@ -53,10 +47,6 @@ Student.prototype.getAverageGrade = function (subject) {
     } else {
         for (const key in this.grades) {
             if (subject === key) {
-                // for (let i = 0; i < this.grades[subject].length; i++) {
-                //     sum += this.grades[subject][i]
-                //     gradesAmount++
-                // }
                 avg = this.countAvg(this.grades[subject])
             }
         }
@@ -75,7 +65,8 @@ student.addGrade('geography', 3);
 
 const avgMath = student.getAverageGrade('maths'); // 5
 const avg = student.getAverageGrade(); // 4.33
+const avgGeography = student.getAverageGrade('geography');
 
-console.log(avg, avgMath)
+console.log(avg, avgMath, avgGeography)
 console.log(student)
 
