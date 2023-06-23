@@ -10,7 +10,7 @@ function createArray(min, max) {
 }
 
 function getLargest(arr) {
-    return arr.sort((a, b) => a-b).slice(10);
+    return arr.sort((a, b) => b - a).slice(0, 9);
 }
 
 function getAvg(arr) {
