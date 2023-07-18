@@ -1,5 +1,5 @@
 /* rozwiązanie z pętlą for */
-// const x = prompt("Podaj liczbę");
+// const x = parseInt(prompt("Podaj liczbę"));
 
 // if (x <= 9 && x > 0) {
 //   for (let i = 1; i < 10; i++) {
@@ -19,8 +19,8 @@
 /* rozwiązanie z pętlą while  */
 
 
-let a = prompt("Podaj podstawe");
-let n = prompt("Podaj wykładnik");
+let a = parseInt(prompt("Podaj podstawe"));
+let n = parseInt(prompt("Podaj wykładnik"));
 
 
 let i = 0;
