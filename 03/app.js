@@ -15,7 +15,7 @@ function getSum(a, b, c) {
     a = parseInt(a);
     b = parseInt(b);
     c = parseInt(c);
-    const arr = [a, b, c]
+    const arr = [parseInt(a), parseInt(b), parseInt(c)];
     arr.sort(function(a, b){return b-a})
     let first = arr[0];
     let second = arr[1];
@@ -26,7 +26,7 @@ function isEven(sum) {
     if (isNaN(sum)) {
         return null
     }
-    if (!isNaN(sum) && sum % 2 === 0) {
+    else if (sum % 2 === 0) {
         return true;
     }
     else {
