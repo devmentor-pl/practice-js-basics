@@ -13,7 +13,9 @@ const exponentiation = a ** b;
 
 const arr = [add, subtract, multiplication, division, modulo, exponentiation];
 
-const result = arr.filter(checkNum);
+
+
+const result = arr.forEach(checkNum);
 
 function checkNum(num) {
   if (num > 20) {
@@ -22,3 +24,4 @@ function checkNum(num) {
     console.log(`${num} < 20`);
   }
 }
+
