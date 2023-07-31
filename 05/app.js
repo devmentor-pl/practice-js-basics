@@ -9,13 +9,17 @@ Student.prototype.addGrade = function (subject, grade) {
 	}
 	this.grades[subject].push(grade);
 };
+Student.prototype.countAverage = function (subject, numberOfGrades) {
+	const calc = subject.reduce((acc, curr) => acc + curr) / numberOfGrades;
+	return Number(calc.toFixed(2));
+};
 Student.prototype.getAverageGrade = function (subject) {
 	let avgGradesArr = [];
 
 	// dla konkretnego przedmiotu
 
 	if (this.grades[subject] && this.grades[subject].length !== 0) {
-		const subjectAverage = countAverage(this.grades[subject], this.grades[subject].length);
+		const subjectAverage = this.countAverage(this.grades[subject], this.grades[subject].length);
 		return subjectAverage;
 	}
 
@@ -23,19 +27,13 @@ Student.prototype.getAverageGrade = function (subject) {
 	if (!subject) {
 		for (const subjectName in this.grades) {
 			const grades = this.grades[subjectName];
-			const mainAvgCounting = countAverage(grades, grades.length);
+			const mainAvgCounting = this.countAverage(grades, grades.length);
 			avgGradesArr.push(mainAvgCounting);
 		}
 	}
-	const mainAvg = countAverage(avgGradesArr, avgGradesArr.length);
+	const mainAvg = this.countAverage(avgGradesArr, avgGradesArr.length);
 	return mainAvg;
 };
-
-function countAverage(subject, numberOfGrades) {
-	const calc = subject.reduce((acc, curr) => acc + curr) / numberOfGrades;
-	return Number(calc.toFixed(2));
-}
-
 const student = new Student('Jan', 'Kowalski');
 const math = student.addGrade('math', 3);
 const math2 = student.addGrade('math', 6);
