@@ -1,13 +1,13 @@
 /* rozwiązanie z pętlą for */
-const x = prompt('Podaj liczbe!')
+// const x = prompt('Podaj liczbe!')
 
-if (x > 0 && x < 10) {
-	for (let i = 1; i <= 10; i++) {
-		console.log(x + 'x' + i + '=' + x * i)
-	}
-} else {
-	console.log('zła liczba')
-}
+// if (x > 0 && x < 10) {
+// 	for (let i = 1; i <= 10; i++) {
+// 		console.log(x + 'x' + i + '=' + x * i)
+// 	}
+// } else {
+// 	console.log('zła liczba')
+// }
 
 /* rozwiązanie z pętlą while  */
 const number = prompt('podaj liczbę')
