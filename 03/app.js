@@ -29,6 +29,33 @@ function getSum() {
 const result = getSum(a, b, c)
 console.log('Suma dwóch największych liczb: ' + result)
 
+const isEven = function (numRandom) {
+	if (typeof numRandom !== 'number') {
+		return null
+	}
+	if (numRandom % 2 === 0) {
+		return true
+	}
+	return false
+}
+console.log(isEven('test'), isEven(1), isEven(2))
+
+function showInfo(value, isEven) {
+	switch (isEven) {
+		case null:
+			console.log(`Podany argument ${value} nie jest liczba`)
+			break
+		case true:
+			console.log(`Podany argument ${value} jest parzysty`)
+			break
+		case false:
+			console.log(`Podany argument ${value} jest nieparzysty`)
+	}
+}
+const sum = getSum(a, b, c)
+const even = isEven(sum)
+showInfo(sum, even)
+
 function randomNumber(min, max) {
 	return Math.round(Math.random() * (max - min) + min)
 }
