@@ -1,0 +1,23 @@
+{
+  "name": "practice-js-basics",
+  "version": "1.0.0",
+  "description": "> :dart: *Chcę mieć absolutną pewność, że **darmowe materiały**, które publikuję, spełniają Twoje oczekiwania. Dlatego oferuję Ci ebooka o wartości 39 PLN: `Jak zostać programistą? SKUTECZNY PRZEWODNIK` w zamian za [wypełnienie ankiety](https://devmentor.pl/ankieta).*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czarsbenemoriendi/practice-js-basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czarsbenemoriendi/practice-js-basics/issues"
+  },
+  "homepage": "https://github.com/czarsbenemoriendi/practice-js-basics#readme",
+  "dependencies": {
+    "typescript": "^4.9.5"
+  }
+}

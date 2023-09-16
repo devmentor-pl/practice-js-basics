@@ -1,20 +1,25 @@
+
 const min = 1;
 const max = 100;
 
-const a = randomNumber(min, max);
-const b = randomNumber(min, max);
-const c = randomNumber(min, max);
-
-function randomNumber(min, max) {
+const firstNum = randomNumber(min, max);
+const secondNum = randomNumber(min, max);
+const thirdNum = randomNumber(min, max);
+console.log(firstNum);
+function randomNumber(min: number, max: number) {
 	return Math.round(Math.random() * (max - min) + min);
 }
 
-const getSum = (a, b, c) => {
-	const numA = parseInt(a);
-	const numB = parseInt(b);
-	const numC = parseInt(c);
+const getSum = (x: number, y: number, z: number) => {
+	const newX = x.toString();
+	const newY = y.toString();
+	const newZ = z.toString();
 
-	const intArray = [numA, numB, numC];
+	const numX = parseInt(newX);
+	const numY = parseInt(newY);
+	const numZ = parseInt(newZ);
+
+	const intArray = [numX, numY, numZ];
 	intArray
 		.sort((a, b) => {
 			return b - a;
@@ -24,20 +29,20 @@ const getSum = (a, b, c) => {
 	const sumFromArray = intArray.reduce((previousVal, currentVal) => previousVal + currentVal, 0);
 	return sumFromArray;
 };
-const sum = getSum(a, b, c);
+const sum = getSum(firstNum, secondNum, thirdNum);
 
-const isEven = function (number) {
+const isEven = function (number: number) {
 	if (!Number.isSafeInteger(number)) return null;
 	// if (typeof number === 'number') return null;
 
 	const oddOrEven = number % 2;
 
 	if (oddOrEven === 0) return true;
-	else return !oddOrEven;
+	else return false;
 };
 const even = isEven(sum);
 
-const showInfo = (value, secondValue) => {
+const showInfo = (value: number, secondValue: boolean | null) => {
 	if (!(secondValue === false || secondValue === null || secondValue === true)) return;
 
 	switch (secondValue) {
