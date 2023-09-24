@@ -20,10 +20,9 @@ Student.prototype.getAverageGrade = function (grade) {
     if (grades.length === 0) {
       throw new Error(`Brak ocen z przedmiotu ${subject}`);
     }
-    const sum = grades.reduce((accumulator, current) => accumulator + current);
-    return sum / grades.length;
+    return calculateAverage(grades);
   } else {
-    return 0;
+    throw new Error(`Brak ocen z przedmiotu ${subject}`);
   }
 };
 
@@ -37,8 +36,7 @@ Student.prototype.getAverageGradeAll = function () {
     throw new Error('Brak ocen');
   }
 
-  const sum = allGrades.reduce((accumulator, current) => accumulator + current);
-  return parseFloat((sum / allGrades.length).toFixed(2));
+  return calculateAverage(allGrades);
 };
 
 const student = new Student('Andrzej', 'Nowak');
@@ -49,3 +47,8 @@ console.log(student);
 console.log(student.getAverageGrade('english'));
 console.log(student.getAverageGrade('maths'));
 console.log(student.getAverageGradeAll());
+
+function calculateAverage(grades) {
+  const sum = grades.reduce((accumulator, current) => accumulator + current, 0);
+  return parseFloat((sum / grades.length).toFixed(2));
+}
