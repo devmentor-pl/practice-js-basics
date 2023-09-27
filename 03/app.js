@@ -24,3 +24,16 @@ function getSum(a, b, c) {
 
 const sum = getSum(a, b, c);
 console.log(sum);
+
+const isEven = function (num) {
+    if (typeof num !== "number") {
+        return null;
+    }
+
+    if (num % 2 === 0) {
+        return true;
+    }
+    return false;
+};
+
+console.log(isEven(1), isEven(2), isEven("coś"));
