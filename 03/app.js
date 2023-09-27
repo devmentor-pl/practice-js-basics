@@ -7,9 +7,6 @@ const c = randomNumber(min, max);
 
 console.log(a, b, c);
 
-function randomNumber(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-}
 function getSum(a, b, c) {
     const aInt = Number(a);
     const bInt = Number(b);
@@ -55,3 +52,7 @@ const sum = getSum(a, b, c);
 const even = isEven(sum);
 
 showInfo(sum, even);
+
+function randomNumber(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+}
