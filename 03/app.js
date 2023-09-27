@@ -22,8 +22,8 @@ function getSum(a, b, c) {
     return arr[0] + arr[1];
 }
 
-const sum = getSum(a, b, c);
-console.log(sum);
+// const sum = getSum(a, b, c);
+// console.log(sum);
 
 const isEven = function (num) {
     if (typeof num !== "number") {
@@ -36,4 +36,22 @@ const isEven = function (num) {
     return false;
 };
 
-console.log(isEven(1), isEven(2), isEven("coś"));
+// console.log(isEven(1), isEven(2), isEven("coś"));
+
+function showInfo(value, isEven) {
+    switch (isEven) {
+        case null:
+            console.log("Podany argument " + value + "  nie jest liczbą");
+            break;
+        case true:
+            console.log("Podany argument " + value + " jest parzysty");
+            break;
+        case false:
+            console.log(" Podany argument " + value + " jest nieparzysty");
+            break;
+    }
+}
+const sum = getSum(a, b, c);
+const even = isEven(sum);
+
+showInfo(sum, even);
