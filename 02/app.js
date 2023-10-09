@@ -11,7 +11,7 @@ for (i = 1; i <= 9; i++) {
 /* rozwiązanie z pętlą while  */
 
 const a = prompt('Podaj liczbę!');
-const n = 4;
+let n = 5;
 
 let result = 1;
 
