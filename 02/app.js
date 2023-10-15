@@ -19,11 +19,12 @@ if (a === null || a === '' || isNaN(a)) {
     console.log("To nie jest liczba!");
 } else {
     let j = 1;
-
+    let equation = '';
     while (j <= n) {
         result *= a;
+        equation += (j === 1) ? a : ` * ${a}`;
         j++;
     }
 
-    console.log(`${a} * ${a} * ${a} * ${a} = ${result}`);
+    console.log(`${equation} = ${result}`);
 }
