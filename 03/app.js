@@ -16,3 +16,11 @@ console.log(a, b, c);
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
+function getSum(a,b,c){
+    let array = [a,b,c];
+    array.sort(function()) {
+        return a + b;
+    }
+   
+}
+console.log(getSum);
