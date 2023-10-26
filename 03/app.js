@@ -18,9 +18,12 @@ function randomNumber(min, max) {
 }
 function getSum(a,b,c){
     let array = [a,b,c];
-    array.sort(function()) {
-        return a + b;
-    }
+    array.sort(function(a,b) {
+        return b-a;
+    })
+
+    let sorted = array.slice(0,1);
+    return sorted.reduce((accumulator, currentValue) => accumulator + currentValue);
    
 }
 console.log(getSum);

@@ -22,7 +22,9 @@ let j= 1;
 while( j <= n ) {
     j++
 let result2= a ** n;
-let power= "a *" * j;
-console.log( power, '=', result2);
+console.log(a,  "*",  '=',  result2)
+2
 
 }
+
+/* Teraz juz w konsoli mam informacje, ze pętla sie wykonała n razy, ale nie wyswietla mi sie to jako "(a *)n". Jak mogę to rozwiązać? */
