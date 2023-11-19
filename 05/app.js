@@ -10,17 +10,21 @@ class Student {
     }
     this.grade[subject].push(mark);
   }
+  calculateAverage(grades) {
+    const sum = grades.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    const avg = sum / grades.length;
+    return avg;
+  }
   getAverageGrade(subject) {
     if (subject === undefined) {
       let avgSum = 0;
       let count = 0;
       for (const key in this.grade) {
         const grades = this.grade[key];
-        const sum = grades.reduce(
-          (accumulator, currentValue) => accumulator + currentValue,
-          0
-        );
-        const avg = sum / grades.length;
+        const avg = this.calculateAverage(grades);
         avgSum += avg;
         count++;
       }
@@ -28,11 +32,7 @@ class Student {
       return avgGeneral;
     } else {
       const grades = this.grade[subject];
-      const sum = grades.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-        0
-      );
-      const avg = sum / grades.length;
+      const avg = this.calculateAverage(grades);
       return avg;
     }
   }
@@ -44,12 +44,15 @@ student.addGrade('maths', 5);
 student.addGrade('maths', 4);
 student.addGrade('maths', 3);
 student.addGrade('english', 3);
-student.addGrade('english', 2);
+student.addGrade('english', 3);
 student.addGrade('english', 3);
 student.addGrade('polish', 4);
 student.addGrade('polish', 3);
 student.addGrade('polish', 3);
-console.log(student);
+student.addGrade('polish', 6);
+// console.log(student);
 
-const avgMath = student.getAverageGrade();
+const avgMath = student.getAverageGrade('maths');
 console.log(avgMath);
+const avg = student.getAverageGrade();
+console.log(`Ogólna średnia artymetyczna: ${avg}`);
