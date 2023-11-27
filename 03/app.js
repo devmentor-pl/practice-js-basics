@@ -5,7 +5,13 @@ const a = randomNumber(min, max);
 const b = randomNumber(min, max);
 const c = randomNumber(min, max);
 
+const sum =TwoNumbers(a, b, c)
+
 console.log(a, b, c);
+
+function TwoNumbers(a, b, c) {
+    
+}
 
 
 
