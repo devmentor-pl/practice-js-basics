@@ -1,3 +1,5 @@
+/*notatki: for (zainicjowanie_zmiennych; warunek_kończący_wykonywanie_pętli; 
+zmiana_zmiennych) {  kod który zostanie wykonany pewną ilość razy} */
 
 /* rozwiązanie z pętlą for */
 const getNumber = function () { 
@@ -16,3 +18,8 @@ const getNumber = function () {
 
 
 /* rozwiązanie z pętlą while  */
+/*notatki: while (wyrażenie_sprawdzające_zakończenie_pętli) {
+ ...fragment kodu który będzie powtarzany...
+}
+*/
+
