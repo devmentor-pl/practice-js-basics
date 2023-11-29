@@ -2,18 +2,19 @@
 zmiana_zmiennych) {  kod który zostanie wykonany pewną ilość razy} */
 
 /* rozwiązanie z pętlą for */
-const getNumber = function () { 
+const getNumber = function ()  
     let x = prompt('write number from 1 to 9')
     if (x === null || x.trim() === '') return
-    else if {}
+    else if (NaN(x)) {
         alert('its not a number!');
 
         return getNumber ()
     }
     else if (x < 1 || x > 9)
         alert('Number must be from 1 to 9')
+
         return getNumber()
-    }
+    {
     return x    
 
 } 
