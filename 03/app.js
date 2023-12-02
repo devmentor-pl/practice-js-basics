@@ -25,6 +25,27 @@ function getSum(d, e, f) {
 const sum = getSum(a, b, c);
 console.log(sum);
 
+const isEven = function(num) {
+    if(typeof num !== 'number') {
+        return null;
+    }
+
+    return num % 2 === 0;
+}
+
+console.log(isEven(2), isEven(1), isEven('mikmik'));
+
+/* why its not working ;-/
+const isEven = function(num) {
+    if(isNaN(x)) return null;
+    else if (x % 2) return false;
+    else return true;
+}
+*/
+
+
+
+
 
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
@@ -42,17 +63,6 @@ function TwoNumbers(a, b, c) {
     }
     return numbers[0] + [1];
 }
-console.log('Two biggest numbers: ' + sum);
+console.log('Two biggest numbers: ' + sum);*/
 
-//isEven
-const isEven = function(num){
-    if
-}
-
-//const isEven = function (x) {
-  //  if (isNaN(x)) return null
-    //else if (x % 2) return false
-    //else return true
-}
-
-const even = isEven(sum)*/ 
+ 
