@@ -22,8 +22,8 @@ function getSum(d, e, f) {
     
 }
 
-const sum = getSum(a, b, c);
-console.log(sum);
+// const sum = getSum(a, b, c);
+// console.log(sum);
 
 const isEven = function(num) {
     if(typeof num !== 'number') {
@@ -33,7 +33,28 @@ const isEven = function(num) {
     return num % 2 === 0;
 }
 
-console.log(isEven(2), isEven(1), isEven('mikmik'));
+// console.log(isEven(2), isEven(1), isEven('mikmik'));
+
+function showInfo(value, isEven) {
+    switch(isEven) {
+        case null:
+            console.log('Wrong '+ value +'its not a number');
+            break;
+        case true:
+            console.log('Wrong '+ value +'jest parzysty');
+            break;
+        case false:
+            console.log('Wrong '+ value +'jest nieparzysty');
+            break;
+
+    }
+}
+
+const sum = getSum(a, b, c);
+const even = isEven(sum);
+
+
+showInfo(sum, even);
 
 /* why its not working ;-/
 const isEven = function(num) {
