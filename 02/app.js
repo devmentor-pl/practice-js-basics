@@ -2,8 +2,9 @@
 zmiana_zmiennych) {  kod który zostanie wykonany pewną ilość razy} */
 
 /* rozwiązanie z pętlą for */
+/* dlaczego to nie działa ? ;-/
 const getNumber = function ()  
-    let x = prompt('write number from 1 to 9')
+    let  x = prompt('write number from 1 to 9') 
     if (x === null || x.trim() === '') return
     else if (NaN(x)) {
         alert('its not a number!');
@@ -20,7 +21,7 @@ const getNumber = function ()
 } 
 
 const number = getNumber()
-
+*/
 
 
 /* rozwiązanie z pętlą while  */
@@ -28,6 +29,16 @@ const number = getNumber()
  ...fragment kodu który będzie powtarzany...
 }
 */
+const x = Number(prompt('number'));
+
+if(x >= 1 && x < 10) {
+    for(let i=1; i<=9; i++){
+        const result = x * i;
+        console.log(x + ' x ' + i + ' = ' + result);
+    }
+} else {
+    alert('Wrong! Try again');
+}
 
 let a = Number(prompt('Number from 1 to 9'));
 let n = Number(prompt('wykładnik z przedziału 1 do 9'));
