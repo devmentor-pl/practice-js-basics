@@ -56,34 +56,11 @@ const even = isEven(sum);
 
 showInfo(sum, even);
 
-/* why its not working ;-/
-const isEven = function(num) {
-    if(isNaN(x)) return null;
-    else if (x % 2) return false;
-    else return true;
-}
-*/
-
-
-
-
 
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
 
-/* const sum =TwoNumbers(a, b, c)
 
-function TwoNumbers(a, b, c) {
-    a = Number(a);
-    b = Number(b);
-    c = Number(c);
-    const numbers = [a, b, c];
-    numbers.sort(function(a,b)){
-        return b-a;
-    }
-    return numbers[0] + [1];
-}
-console.log('Two biggest numbers: ' + sum);*/
 
  
