@@ -1,5 +1,5 @@
 
-const x = Number(prompt('number'));
+const x = Number(prompt("write a number"));
 
 if(x >= 1 && x < 10) {
     for(let i=1; i<=9; i++){
@@ -10,27 +10,33 @@ if(x >= 1 && x < 10) {
     alert('Wrong! Try again');
 }
 
-let a = Number(prompt('Number from 1 to 9'));
-let n = Number(prompt('wykładnik z przedziału 1 do 9'));
+const a = Number(prompt('write a from 1 to 10'));
+const n = Number(prompt('write n from 0 to 10'));
+if(a >= 1 && a <= 10 && n >= 0 && n <= 10) { 
+    if(n === 0) {
+        console.log('when n = 0 its always 1');
+    } else { 
+        let iter = 0;
+        let result = 1;
+        let info = '';
+        while(iter < n) {
+            result = result * a;
 
-if (a >= 1 && a < 10 && n >= 1 && n < 10) {
+            if(iter > 0) {
+                info = info + ' * '
 
-    let i = 0;
-    let res = 1;
-    let operation = '';
-
-    while (i < n) {
-        res *= a;
-        if (i > 0) {
-            operation += ' x ';
+            }
+            
+            info = info + a;
+            iter++;
+            
         }
-        operation += a;
-        i++;
+
+        info = info + ' = ' + result;
+
+        console.log(result);
+        console.log(info);
     }
-
-    operation += ' = ' + res;
-    console.log(operation);
-
 } else {
-    alert('Error ! Think again ;-)');
+    alert('wrong numbers');
 }
