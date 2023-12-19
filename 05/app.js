@@ -9,10 +9,11 @@ function Student(firstName, lastName) {
 //prototypy
 
 Student.prototype.addGrade = function(subject, grade) {
-    if (subject.trim() === '') {
-        console.log('Name of subject')
-        return
+    if (typeof this.grades[subject] === "undefined") {
+        this.grades[subject] = [];
+        
     }
 
-    if
-}
+    this.grades[subject].push(grade);
+};
+
