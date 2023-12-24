@@ -23,7 +23,6 @@ function getSum (par1, par2, par3) {
         return b - a;
     });
     const sum = numbers[0] + numbers[1];
-    console.log(sum);
     return sum;
 
 }
@@ -38,7 +37,36 @@ const isEven = function(num) {
     }
 };
 
-console.log(isEven(5));
+/* Funkcja o nazwie showInfo */
+
+function showInfo (value, param) {
+    switch (param) {
+        case null:
+            console.log(`Podany argument ${param} nie jest liczbą`);
+            break;
+        case true:
+            console.log(`Podany argument ${param} jest parzysty`);
+            break;
+        case false:
+            console.log(`Podany argument ${param} jest nieparzysty`);
+            break;
+        default:
+            alert(`Podano błędne dane!`);
+            break;
+    }
+}
+
+const sum = getSum(a, b, c);
+console.log(sum);
+
+const even = isEven(sum);
+console.log(even);
+
+showInfo(sum, even);
+
+
+
+
 
 
 
