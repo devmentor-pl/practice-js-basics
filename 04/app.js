@@ -23,3 +23,19 @@ function getLargest (arr) {
 
 const largest = getLargest(arr);
 console.log(largest);
+
+function getAvg(arr) {
+    let sum = 0;
+    let counter = 0;
+
+    arr.forEach(function(element) {
+        sum += element;
+        counter++;
+    });
+
+    const avg = sum / counter;
+    return avg;
+}
+
+const avg = getAvg(largest);
+console.log(avg);
