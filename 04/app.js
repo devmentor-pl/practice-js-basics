@@ -11,3 +11,15 @@ function createArray (min, max) {
 
 const arr = createArray(1, 100);
 console.log(arr);
+
+function getLargest (arr) {
+    const numbers = arr.slice();
+    numbers.sort(function(a, b) {
+        return b - a;
+    });
+    const newNumbers = numbers.slice(0, 10);
+    return newNumbers;
+}
+
+const largest = getLargest(arr);
+console.log(largest);
