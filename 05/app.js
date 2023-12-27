@@ -13,33 +13,25 @@ Student.prototype.addGrade = function(subject, grade) {
     this.grades[subject].push(grade);
 }
 
+Student.prototype.calculateAverage = function(grades) {
+    if (grades && grades.length > 0) {
+        let sum = 0;
+        grades.forEach(function(grade){
+            sum += grade;
+        });
+        return sum / grades.length;
+    } else {
+        return 'Break ocen.';
+    }
+};
+
 Student.prototype.getAverageGrade = function(subject) {
     if (subject) {
         const subjectGrades = this.grades[subject];
-        if (subjectGrades && subjectGrades.length > 0) {
-            let sum = 0;
-            subjectGrades.forEach(function(grade) {
-                sum += grade;
-            });
-            const avg = sum / subjectGrades.length;
-            return avg;
-        } else {
-            return 'Brak ocen dla tego przedmiotu.';
-        }
+        return this.calculateAverage(subjectGrades);
     } else {
         const allGrades = Object.values(this.grades).flat();
-        if (allGrades.length > 0) {
-            let totalSum = 0;
-            let totalCount = 0;
-            allGrades.forEach(function(grade) {
-                totalSum += grade;
-                totalCount++;
-            });
-            const avg = totalSum / totalCount;
-            return avg;
-        } else {
-            return 'Brak ocen.';
-        }
+        return this.calculateAverage(allGrades);
     }
 };
 
