@@ -33,7 +33,8 @@ function getAvg(arr) {
         counter++;
     });
 
-    const avg = sum / counter;
+    
+    const avg = counter !== 0 ? sum / counter: 0;
     return avg;
 }
 
