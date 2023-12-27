@@ -1,21 +1,21 @@
-
 /* rozwiązanie z pętlą for */
 const x = prompt('Podaj liczbę!');
 
-for (var i = 1; i < 10; i++) {
-    var wynik = x * i;
-    console.log(`${x} x ${i} = ${wynik}`);
+for (let i = 1; i < 10; i++) {
+    let result = x * i;
+    console.log(`${x} x ${i} = ${result}`);
 }
 
 /* rozwiązanie z pętlą while  */
-let a = prompt('Podaj podstawe'); // podstawa
-let n = prompt('Podaj wykładnik'); // wykładnik
-let wynikWhile = 1;
-let czynniki = [];
+let base = prompt('Podaj podstawe'); // base
+let exponent = prompt('Podaj wykładnik'); // exponent
+let resultWhile = 1;
+let factors = [];
 
-while (czynniki.length < n) {
-    wynikWhile *= a;
-    czynniki.push(a);
+while (factors.length < exponent) {
+    resultWhile *= base;
+    factors.push(base);
 }
 
-console.log(`${czynniki.join(' * ')} = ${wynikWhile}`);
+console.log(`${factors.join(' * ')} = ${resultWhile}`);
+
