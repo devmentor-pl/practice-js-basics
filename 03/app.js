@@ -40,7 +40,7 @@ function getSum (a, b, c) {
     .sort(function (a, b) {
       return b - a;
     })
-    .splice(0, 2);
+    .slice(0, 2);
 
   const sum = biggestNumbers.reduce(function (a, b) {
     return a + b;
