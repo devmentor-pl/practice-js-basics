@@ -54,38 +54,9 @@ class Student {
     }
 
     if (!subject) {
-      const gradesNumber = Object.values(this.grades).reduce(function (a, b) {
-        if (typeof (a) === 'number' && typeof(b) === 'number') {
-          return a + b;
-        } else if (typeof (a) === 'number') {
-          return a + b.length;
-        } else if (typeof (b) === 'number') {
-          return a.length + b;
-        } else {
-        return a.length + b.length;
-        }
-      });
-      const sum = Object.values(this.grades).reduce(function (a, b) {
-        if (typeof (a) === 'number' && typeof (b) === 'number' ) {
-          return a + b;
-        } else if (typeof (a) === 'number') {
-          return a + b.reduce(function (a, b) {
-            return a + b;
-          })
-        } else if (typeof (b) === 'number') {
-          return a.reduce(function (a, b) {
-            return a + b;
-          }) + b;
-        } else {
-          return (
-            a.reduce(function (a, b) {
-              return a + b;
-            }) +
-            b.reduce(function (a, b) {
-              return a + b;
-            })
-          );
-        }
+      const gradesNumber = Object.values(this.grades).flat(1).length;
+      const sum = Object.values(this.grades).flat(1).reduce(function (a, b) {
+        return a + b;
       });
       const average = (sum / gradesNumber).toFixed(2);
       return console.log("General average: " + average);
