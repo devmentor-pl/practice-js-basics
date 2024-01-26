@@ -1,8 +1,8 @@
 /* rozwiązanie z pętlą for */
 const x = 4;
-// const x = prompt("Podaj liczbę od 1 do 9");
+// const x = Number(prompt("Podaj liczbę od 1 do 9"));
 if (x > 0 && x < 10) {
-  for (i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 9; i++) {
     console.log(`${x} x ${i} = ${x * i}`);
   }
 } else {
