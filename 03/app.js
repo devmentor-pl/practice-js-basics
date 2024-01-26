@@ -16,9 +16,24 @@ function getSum(num1, num2, num3) {
   return sum;
 }
 
+const isEven = function (num) {
+  if (typeof num !== "number") {
+    return null;
+  } else {
+    if (num % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+
 function randomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
 const sum = getSum(a, b, c);
 console.log(sum);
+
+const evenParam = isEven(sum);
+console.log(evenParam);
