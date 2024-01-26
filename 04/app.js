@@ -15,8 +15,20 @@ function getLargest(arr) {
   return newArray;
 }
 
+function getAvg(arr) {
+  const sum = arr.reduce(function (acc, num) {
+    return acc + num;
+  });
+  console.log(sum);
+  const result = sum / arr.length;
+  return result;
+}
+
 const arr = createArray(1, 200);
 console.log(arr);
 
 const largest = getLargest(arr);
 console.log(largest);
+
+const avg = getAvg(largest);
+console.log(avg);
