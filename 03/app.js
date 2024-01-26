@@ -28,6 +28,19 @@ const isEven = function (num) {
   }
 };
 
+function showInfo(par1, par2) {
+  switch (par2) {
+    case null:
+      console.log(`Podany argument ${par1} nie jest liczbą`);
+      break;
+    case true:
+      console.log(`Podany argument ${par1} jest parzysty`);
+      break;
+    case false:
+      console.log(`Podany argument ${par1} jest nieparzysty`);
+  }
+}
+
 function randomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
@@ -37,3 +50,5 @@ console.log(sum);
 
 const evenParam = isEven(sum);
 console.log(evenParam);
+
+showInfo(sum, evenParam);
