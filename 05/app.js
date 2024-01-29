@@ -11,13 +11,18 @@ Student.prototype.addGrade = function (subject, grade) {
   this.grades[subject].push(grade);
 };
 
+Student.prototype.getAvgFromArray = function (arr) {
+  const sumOfGrades = arr.reduce(function (acc, num) {
+    return acc + num;
+  });
+  return sumOfGrades / arr.length;
+};
+
 Student.prototype.getAverageGrade = function (subject) {
   if (typeof this.grades[subject] !== "undefined") {
     const grades = this.grades[subject];
-    const sumOfGrades = grades.reduce(function (acc, num) {
-      return acc + num;
-    });
-    return sumOfGrades / grades.length;
+    const result = this.getAvgFromArray(grades);
+    return result;
   }
   const gradesTotal = [];
   for (const key in this.grades) {
@@ -26,10 +31,8 @@ Student.prototype.getAverageGrade = function (subject) {
       gradesTotal.push(el);
     });
   }
-  const sumOfGrades = gradesTotal.reduce(function (acc, num) {
-    return acc + num;
-  });
-  return sumOfGrades / gradesTotal.length;
+  const result = this.getAvgFromArray(gradesTotal);
+  return result;
 };
 
 const student = new Student("Jan", "Kowalski");
