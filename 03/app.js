@@ -31,37 +31,27 @@ function getSum(param1, param2, param3) {
     console.log(maxNumber2);
 
     let sum = maxNumber1 + maxNumber2;
-    console.log(sum);
     return sum;
 }
 
 const sumTask1 = getSum(2, 4, 6);
 console.log(sumTask1);
 
-// end of TASK 1
-
 // TASK 2
 let num;
 
 let isEven = function(num) {
     if(typeof num !== 'number') {
-        console.log(num);
         return null;
     } else if(typeof num === 'number' && num % 2 === 0) {
-        console.log(num);
         return true;
     } else {
-        console.log(num);
         return false;
     }
 }
 
-// W konsoli pokazuje tak, jak powinno być w rozwiązaniu
-const cos = isEven(5);
-console.log(cos);
-isEven('Kasia');
-isEven(3);
-isEven(sumTask1);
+isEven(2);
+console.log(isEven('Kasia')); // null
 
 // Funkcja sprawdzająca czy jest liczbą
 // function isNumber(num) {
@@ -69,31 +59,24 @@ isEven(sumTask1);
 // }
 // isNumber(4);
 
-// end of TASK 2
-
 // TASK 3
 
-// task 3 nie działa 
-function showInfo(param4, param5) {
+function showInfo(sum2, even) {
 
-    switch(isEven) {
+    switch(even) {
         case null:
-            console.log('Podany argument ', param5, ' nie jest liczbą');
+            console.log('Podany argument ', sum2, ' nie jest liczbą');
             break;
         case true:
-            console.log('Podany argument ', param5, ' jest parzysty');
+            console.log('Podany argument ', sum2, ' jest parzysty');
             break;
         case false:
-            console.log('Podany argument ', param5, ' jest nieparzysty');
+            console.log('Podany argument ', sum2, ' jest nieparzysty');
             break;
         default:
             console.log('Podano błędne dane');
     }
 }
-
-showInfo(25, 40);
-
-// end of TASK 3
 
 // "oblicz sumę dla zmiennych a, b, c, wykorzystując pierwszą funkcję"
 
@@ -101,14 +84,12 @@ const x = 4;
 const y = 25;
 const z = 14;
 
-const sum2 = getSum(x, y, z); //zwraca 39
-const even = isEven(sum2); //zwraca false
-console.log(sum2, even); //zwraca 39, false
+const sum2 = getSum(x, y, z);
+const even = isEven(sum2); 
+console.log(sum2, even); 
 
-showInfo(sum2, even); //zwraca podano błędne dane - task3 nie działa poprawnie
+showInfo(sum2, even); 
 
-
-// do czego ta funkcja poniej?
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
 }
