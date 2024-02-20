@@ -17,22 +17,42 @@ function createArray(min, max) {
 }
 
 // Zadanie 2
+
 const largest = getLargest(arr);
 console.log(largest);
 
-arr.sort(function (a, b) {
-        return b - a;
-});
+arr.sort(arrSort);
 
-console.log(arr);
+function arrSort(a, b) {
+    return b - a;
+}
 
 function getLargest(arr) {
     return arr.slice(0, 10);
 }
 
-// zwraca pierwsze 10 z tablicy nieposortowanej
+// Zadanie 3 - średnia przez pętlę for a nie przez forEach()
 
-// Zadanie 3
+const avg = getAvg([1, 2, 3, 4, 5]);
+console.log(avg);
 
+function getAvg(arr) {
+    let sum3 = 0;
+    for(let i = 0; i < arr.length; i ++) {
+        sum3 += arr[i]; 
+    }
+    const avg = sum3 / arr.length;
+    return avg;
+}
 
+// Zadanie 4 
 
+const arr4 = createArray(10, 200); 
+const arr4Max = arr4.sort(arrSort);
+const arr4Largest = getLargest(arr4Max);
+console.log(arr4Largest);
+const avgLargest = getAvg(arr4Largest);
+console.log(avgLargest);
+
+// Zadbaj o odpowiednie nazwy dla funkcji - 
+// nie muszą być one identyczne jak w przykładach.
