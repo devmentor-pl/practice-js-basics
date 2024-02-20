@@ -35,50 +35,63 @@ function getSum(param1, param2, param3) {
     return sum;
 }
 
-getSum(2, 4, 6);
+const sumTask1 = getSum(2, 4, 6);
+console.log(sumTask1);
 
 // end of TASK 1
 
 // TASK 2
+let num;
 
 let isEven = function(num) {
     if(typeof num !== 'number') {
-        num = null;
+        console.log(num);
+        return null;
     } else if(typeof num === 'number' && num % 2 === 0) {
-        num = true;
+        console.log(num);
+        return true;
     } else {
-        num = false;
+        console.log(num);
+        return false;
     }
-    
-    console.log(num); // isElen('Katarzyna') zwraca null; isElen(2) zwraca 2
 }
 
-isEven(10);
+// W konsoli pokazuje tak, jak powinno być w rozwiązaniu
+const cos = isEven(5);
+console.log(cos);
+isEven('Kasia');
+isEven(3);
+isEven(sumTask1);
+
+// Funkcja sprawdzająca czy jest liczbą
+// function isNumber(num) {
+//     return !isNaN(num);
+// }
+// isNumber(4);
 
 // end of TASK 2
 
 // TASK 3
 
 // task 3 nie działa 
-// Jak określić wartości null, true, false dla 2-go parametru?
 function showInfo(param4, param5) {
 
-    switch(typeof param5 === 'null' || typeof param5 === 'true' || typeof param5 === 'false') {
-        case 'null':
-            console.log('Podany argument [tutaj jej wartość] nie jest liczbą');
+    switch(isEven) {
+        case null:
+            console.log('Podany argument ', param5, ' nie jest liczbą');
             break;
-        case 'true':
-            console.log('Podany argument [tutaj jej wartość] jest parzysty');
+        case true:
+            console.log('Podany argument ', param5, ' jest parzysty');
             break;
-        case 'false':
-            console.log('Podany argument [tutaj jej wartość] jest nieparzysty');
+        case false:
+            console.log('Podany argument ', param5, ' jest nieparzysty');
             break;
         default:
-            console.log('Podano błędne dane'); // nie wiem co tu powinno być?
+            console.log('Podano błędne dane');
     }
 }
 
-showInfo(25);
+showInfo(25, 40);
 
 // end of TASK 3
 
@@ -90,7 +103,7 @@ const z = 14;
 
 const sum2 = getSum(x, y, z); //zwraca 39
 const even = isEven(sum2); //zwraca false
-console.log(sum2, even); //zwraca 39, undefined - czy tak powinno być?
+console.log(sum2, even); //zwraca 39, false
 
 showInfo(sum2, even); //zwraca podano błędne dane - task3 nie działa poprawnie
 
