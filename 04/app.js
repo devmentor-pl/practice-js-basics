@@ -31,17 +31,33 @@ function getLargest(arr) {
     return arr.slice(0, 10);
 }
 
-// Zadanie 3 - średnia przez pętlę for a nie przez forEach()
+// Zadanie 3 - średnia przez pętlę for
+
+// const avg = getAvg([1, 2, 3, 4, 5]);
+// console.log(avg);
+
+// function getAvg(arr) {
+//     let sum3 = 0;
+//     for(let i = 0; i < arr.length; i ++) {
+//         sum3 += arr[i]; 
+//     }
+//     const avg = sum3 / arr.length;
+//     return avg;
+// }
+
+// Zadanie 3 - średnia przez forEach()
 
 const avg = getAvg([1, 2, 3, 4, 5]);
 console.log(avg);
 
 function getAvg(arr) {
     let sum3 = 0;
-    for(let i = 0; i < arr.length; i ++) {
-        sum3 += arr[i]; 
-    }
-    const avg = sum3 / arr.length;
+    let arrLen = 0;
+    arr.forEach(function(num) {
+        sum3 += num;
+        arrLen ++;
+    })
+    const avg = sum3 / arrLen;
     return avg;
 }
 
