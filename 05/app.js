@@ -49,3 +49,20 @@ Person.prototype.getAvg = function() {
 }
 
 // obliczanie średniej arytmetycznej dla wszystkich przedmiotów
+
+const avgAll = getAvgAll(this.person.math);
+console.log(avgAll);
+
+Person.prototype.getAvgAll = function() {
+    const scoreSumAll = 0;
+    const scoreNumbersAll = 0;
+
+    this.forEach(function(scores) {
+        scoreSumAll += scores;
+        scoreNumbersAll ++;
+    })
+    
+    avgAll = scoreSum / scoreNumbers;
+    console.log(avgAll);
+
+}
