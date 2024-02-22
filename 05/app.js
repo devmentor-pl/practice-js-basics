@@ -2,19 +2,19 @@
 function Person(initialName, initialSurname) {
     this.name = initialName;
     this.surname = initialSurname;
+    this.grades = [];
 }
 
 const student = new Person('Kasia', 'Dworak');
 
-// dodawanie listy przedmiotów będących tablicami
-student.grades = [];
+// dodawanie listy przedmiotów 
 student.grades.math = [];
 student.grades.english = [];
 student.grades.polish = [];
 student.grades.biology = [];
 
 // METODY
-// dodawanie ocen do przedmiotów - DZIAŁA
+// dodawanie ocen do przedmiotów
 student.grades.math.push(5, 6, 5, 5, 4);
 student.grades.polish.push(4, 6, 5, 3, 4);
 student.grades.english.push(5, 6, 6, 6, 3);
