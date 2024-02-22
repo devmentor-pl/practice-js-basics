@@ -2,67 +2,57 @@
 function Person(initialName, initialSurname) {
     this.name = initialName;
     this.surname = initialSurname;
-    this.math = [];
-    this.polish = [];
-    this.english = [];
-    this.biology = [];
 }
 
-const person = new Person('Kasia', 'Dworak');
+const student = new Person('Kasia', 'Dworak');
+
+// dodawanie listy przedmiotów będących tablicami
+student.grades = [];
+student.grades.math = [];
+student.grades.english = [];
+student.grades.polish = [];
+student.grades.biology = [];
 
 // METODY
-// dodawanie ocen do przedmiotów
+// dodawanie ocen do przedmiotów - DZIAŁA
+student.grades.math.push(5, 6, 5, 5, 4);
+student.grades.polish.push(4, 6, 5, 3, 4);
+student.grades.english.push(5, 6, 6, 6, 3);
+student.grades.biology.push(5, 6, 4, 4, 2);
 
-// czy oceny mogę dodać za pomocą prototypów 
-// (obiekt w obiekcie)?
-// dodawanie oceny
-// Person.prototype.addScore = function(score) {
-//     this.score = score;
-// }
+// dodawanie przedmiotów funkcją
+Person.prototype.addScore = function(subject, score) {
+    if(typeof this.grades[subject] === 'undefined') {
+        this.grades[subject] = [];
+    }
+    this.grades[subject].push(score);
+}
+student.addScore('physics', 4);
+console.log(student);
 
-// person.addScore([10, 20, 30, 40]);
+// obliczanie średniej arytmetycznej 
 
-person.math.push(5, 6, 5, 5, 4);
+let sum = 0;
+const numberOfGrades = 0;
 
-person.polish.push(4, 6, 5, 3, 4);
-
-person.english.push(5, 6, 6, 6, 3);
-
-person.biology.push(5, 6, 4, 4, 2);
-
-// obliczanie średniej arytmetycznej (dla obiektu w obiekcie)
-const avg = getAvg(this.person.math);
+Person.prototype.getAvg = function(subject) {
+    if(typeof this.grades[subject] === 'undefined') {
+        // średnia dla wszystkich przedmiotów
+        const gradesAll = Object.values(this.grades); 
+        gradesAll.forEach(function(grade) {
+            sum += grade;
+            numberOfGrades = grade ++;
+        });
+        const avg = sum / numberOfGrades;
+    } else {
+        // średnia dla wybranego subject
+        const gradesSubject = Object.values(this.grades); 
+        gradesSubject.forEach(function(grade) {
+            sum += grade;
+            numberOfGrades = grade ++;
+        });
+        const avg = sum / numberOfGrades;
+    }
+}
+const avg = getAvg('math');
 console.log(avg);
-
-Person.prototype.getAvg = function() {
-    const scoreSum = 0;
-    const scoreNumbers = 0;
-
-    this.forEach(function(scores) {
-        scoreSum += scores;
-        scoreNumbers ++;
-    })
-    
-    avg = scoreSum / scoreNumbers;
-    console.log(avg);
-
-}
-
-// obliczanie średniej arytmetycznej dla wszystkich przedmiotów
-
-const avgAll = getAvgAll(this.person.math);
-console.log(avgAll);
-
-Person.prototype.getAvgAll = function() {
-    const scoreSumAll = 0;
-    const scoreNumbersAll = 0;
-
-    this.forEach(function(scores) {
-        scoreSumAll += scores;
-        scoreNumbersAll ++;
-    })
-    
-    avgAll = scoreSum / scoreNumbers;
-    console.log(avgAll);
-
-}
