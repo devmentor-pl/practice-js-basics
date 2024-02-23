@@ -28,7 +28,7 @@ Person.prototype.addScore = function(subject, score) {
     this.grades[subject].push(score);
 }
 student.addScore('physics', 4);
-console.log(student);
+// console.log(student);
 
 // obliczanie średniej arytmetycznej
 const gradesValues = Object.values(student.grades);
@@ -46,7 +46,7 @@ Person.prototype.getAverageGrade = function(subject) {
         gradesNum ++;
     })
     const avgSub = sum / gradesNum;
-    console.log(avgSub);
+    // console.log(avgSub);
 }
 
 const cos = student.getAverageGrade('math');
@@ -89,7 +89,7 @@ Person.prototype.getAverageGrade2 = function(subject) {
 }
 
 avgAll1 = student.getAverageGrade2();
-console.log(avgAll1.toFixed(1));
+console.log('Rozwiązanie dla wszystkich z forEach() ', sumAll1, count, avgAll1.toFixed(1));
 
 
 // PĘTLA for NIE DZIAŁA
@@ -98,15 +98,14 @@ let count2 = 0;
 Person.prototype.getAverageGrade2 = function(subject) {
     if(typeof this.grades[subject] === 'undefined') {
     for(let i = 0; i < this.grades.length; i ++) {
-        for(let j = 0; j < this.grades[j].length; j ++) {
-            let grades = this.grades[j];
-            console.log(this.grades[j])
+        for(let j = 0; j < this.grades[i].length; j ++) {
+            let grades = this.grades[i][j];
             sumAll2 += grades;
             count2 ++;
         }
     }
     return sumAll2 / count2;
+    }
 }
-}
-let avgSubAll = student.getAverageGrade2();
-console.log(avgSubAll);
+let avgSubAll2 = student.getAverageGrade2();
+console.log('Rozwiązanie dla wszystkich z pętlą for ', sumAll2, count2, avgSubAll2);
