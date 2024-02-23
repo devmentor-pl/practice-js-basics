@@ -69,6 +69,3 @@ const arr4Largest = getLargest(arr4Max);
 console.log(arr4Largest);
 const avgLargest = getAvg(arr4Largest);
 console.log(avgLargest);
-
-// Zadbaj o odpowiednie nazwy dla funkcji - 
-// nie muszą być one identyczne jak w przykładach.
