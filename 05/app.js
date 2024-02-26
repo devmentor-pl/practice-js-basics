@@ -93,7 +93,7 @@ avgAll1 = student.getAverageGrade2();
 console.log('Rozwiązanie dla wszystkich z forEach() ', sumAll1, count, avgAll1.toFixed(1));
 
 
-// PĘTLA for NIE DZIAŁA
+// PĘTLA for DZIAŁA
 let sumAll2 = 0;
 let count2 = 0;
 Person.prototype.getAverageGrade2 = function(subject) {
