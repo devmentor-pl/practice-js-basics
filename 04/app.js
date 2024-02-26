@@ -52,12 +52,11 @@ console.log(avg);
 
 function getAvg(arr) {
     let sum3 = 0;
-    let arrLen = 0;
     arr.forEach(function(num) {
         sum3 += num;
-        arrLen ++;
+        arr.length ++;
     })
-    const avg = sum3 / arrLen;
+    const avg = sum3 / arr.length;
     return avg;
 }
 

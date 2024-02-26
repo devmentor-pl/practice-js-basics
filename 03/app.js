@@ -43,11 +43,13 @@ let num;
 let isEven = function(num) {
     if(typeof num !== 'number') {
         return null;
-    } else if(typeof num === 'number' && num % 2 === 0) {
+    } 
+    
+  if(num % 2 === 0) {
         return true;
-    } else {
-        return false;
-    }
+    } 
+
+  return false;
 }
 
 isEven(2);

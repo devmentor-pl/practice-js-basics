@@ -2,10 +2,11 @@
 function Person(initialName, initialSurname) {
     this.name = initialName;
     this.surname = initialSurname;
-    this.grades = [];
+    this.grades = {};
 }
 
 const student = new Person('Kasia', 'Dworak');
+console.log(student);
 
 // dodawanie listy przedmiotów 
 student.grades.math = [];
@@ -96,6 +97,7 @@ console.log('Rozwiązanie dla wszystkich z forEach() ', sumAll1, count, avgAll1.
 let sumAll2 = 0;
 let count2 = 0;
 Person.prototype.getAverageGrade2 = function(subject) {
+
     if(typeof this.grades[subject] === 'undefined') {
     for(let i = 0; i < this.grades.length; i ++) {
         for(let j = 0; j < this.grades[i].length; j ++) {
