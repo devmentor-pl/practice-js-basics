@@ -48,7 +48,6 @@ To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać np. t
     this.lastName = lastName;
     this.grades = {}
 }
-``` 
 
 Aby rozróżnić, czy mamy podać średnią dla 1 przedmiotu, czy dla wszystkich, wystarczy sprawdzić, czy pierwszy parametr funkcji `.getAverageGrade()` jest zdefiniowany (różny od `undefined`).
 
