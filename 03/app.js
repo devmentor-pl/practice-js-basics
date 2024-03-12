@@ -39,20 +39,23 @@ console.log("Suma dwóch największych liczb =", sum);
 
 // funkcja o nazwie "isEven"
 
-// const checkout = function(a, b, c) {
+const isEven = function(par) {
+    if(typeof par !== 'number') {
+        return null
+    }
 
-//     if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number" ) {
-//         return null
-//     } else {
-//         if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) { 
-//             return true
-//         } else {
-//             return false
-//         }
-//     }
-// }
+    if (par % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-// const wynik = checkout(a, b, c)
+console.log(isEven(5));
+
+// funkcja o nazwie show info
+
+
 
 
 
