@@ -20,28 +20,33 @@
 /* rozwiązanie z pętlą while  */
 
 
-const a = 3; //podstawa
-const n = 4; //wykładnik
+const a = prompt('Podaj liczbę podstawy!'); //podstawa
+const n = prompt('Podaj liczbę wykadnika!'); //wykładnik
 
-let i=0;
-let result2 = 1;
-let mathOperation2 = '';
-
-while (i < n) {
-
-    if (i > 0) {
-        result2 = result2 * a;
-        mathOperation2 = mathOperation2 + ' * ' + a;
-        i++;
-    } else {
-        result2 = result2 * a;
-        mathOperation2 = mathOperation2 + a;
-        i++;
+if (a >= 1 && a <= 100 && n > 0 && n <= 20) {
+    let i=0;
+    let result2 = 1;
+    let mathOperation2 = '';
+    
+    while (i < n) {
+    
+        if (i > 0) {
+            result2 = result2 * a;
+            mathOperation2 = mathOperation2 + ' * ' + a;
+            i++;
+        } else {
+            result2 = result2 * a;
+            mathOperation2 = mathOperation2 + a;
+            i++;
+        }
+    
     }
-
+    // console.log(result2);
+    console.log(mathOperation2, " = ", result2);
+} else {
+    alert('Podane liczby są spoza określonego zakresu!')
 }
-// console.log(result2);
-console.log(mathOperation2, " = ", result2);
+
 
 
 
