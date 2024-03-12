@@ -8,24 +8,26 @@ const c = randomNumber(min, max);
 
 function getSum(a, b, c) {
     
-    a = a ?? 0;
-    b = b ?? 0;
-    c = c ?? 0;
+    let x = parseInt(a);
+    let y = parseInt(b);
+    let z = parseInt(c);
 
-    let biggest = Math.max(a, b, c);
+    console.log("Wszystkie liczby:", x, y, z);
+
+    let biggest = Math.max(x, y, z);
     
 
-    if(a === biggest) {
-        a = -Infinity;
-    } else if (b === biggest) {
-        b = -Infinity;
+    if(x === biggest) {
+        x = -Infinity;
+    } else if (y === biggest) {
+        y = -Infinity;
     } else {
-        c = -Infinity;
+        z = -Infinity;
     }
 
-    let secondBiggest = Math.max(a, b, c);
+    let secondBiggest = Math.max(x, y, z);
 
-    console.log(biggest, secondBiggest);    
+    console.log("Największe liczby to:", biggest," i ", secondBiggest);    
 
     return biggest + secondBiggest;
 
@@ -37,18 +39,20 @@ console.log("Suma dwóch największych liczb =", sum);
 
 // funkcja o nazwie "isEven"
 
-const checkout = function(a, b, c) {
+// const checkout = function(a, b, c) {
 
-    if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number" ) {
-        return null
-    } else {
-        if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) { 
-            return true
-        } else {
-            return false
-        }
-    }
-}
+//     if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number" ) {
+//         return null
+//     } else {
+//         if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) { 
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
+// }
+
+// const wynik = checkout(a, b, c)
 
 
 
