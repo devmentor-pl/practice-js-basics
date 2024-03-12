@@ -32,7 +32,38 @@ function getSum(a, b, c) {
 }
 
 const sum = getSum(a, b, c);
-console.log("Suma dwój największych liczb:", sum);
+console.log("Suma dwóch największych liczb =", sum);
+
+
+// funkcja o nazwie "isEven"
+
+const checkout = function(a, b, c) {
+
+    if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number" ) {
+        return null
+    } else {
+        if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) { 
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
