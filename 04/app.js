@@ -25,5 +25,18 @@ const arr2 = arr.slice(0, 10);
 console.log("10 największych wartości tablicy", arr2);
 
 
+function sumUp(par2) {
+    return par2.reduce((first, second) => first + second);
+}
+
+console.log("Suma liczb w tablicy =", sumUp(arr2));
+
+const arAverage = (sumUp(arr2)) / arr2.length;
+
+console.log("Średnia arytmetyczna liczb w tablicy =", arAverage);
+
+
+
+
 
 
