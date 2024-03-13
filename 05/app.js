@@ -1,7 +1,3 @@
-
-
-
-
 function Student(initFirstName, initLastName) {
     this.firstName = initFirstName;
     this.lastName = initLastName;
@@ -20,7 +16,7 @@ Student.prototype.addGrade = function(subject, grade) {
 
 
 
-const student1 = new Student('Bartosz', 'Zagaja', '1');
+const student1 = new Student('Bartosz', 'Zagaja');
 student1.addGrade("Maths", 5);
 
 console.log(student1);
