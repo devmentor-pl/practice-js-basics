@@ -13,10 +13,11 @@ for (let i=0; i < 20; i++) {
 
 console.log("Tablica 20 losowych liczb", arr);
 
-arr.sort(function(a, b) {
-    return b - a;
-});
+function sortArr(par1) {
+    return par1.sort((a, b) => b - a)
+}
 
+sortArr(arr);
 console.log("Posortowana tablica od największej do namniejszej", arr);
 
 const arr2 = arr.slice(0, 10);
