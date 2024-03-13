@@ -1,5 +1,5 @@
-const min = 1;
-const max = 100;
+const min = 10;
+const max = 200;
 
 function randomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
