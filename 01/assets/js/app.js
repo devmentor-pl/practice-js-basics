@@ -5,23 +5,47 @@ console.log(a, b);
 console.log('Zmienna a jest typu: '+typeof(a));
 console.log('Zmienna b jest typu: '+typeof(b));
 
+const checkValue = 20;
 const aF = parseFloat(a);
 let tempNumber = 0;
 
-console.log(a+' + '+b+' = '+(aF+b));
-console.log(a+' - '+b+' = '+(aF-b));
-console.log(a+' * '+b+' = '+(aF*b));
-console.log(a+' / '+b+' = '+(aF/b));
-console.log(a+' % '+b+' = '+(aF%b));
+const sum = aF + b;
+console.log(a+' + '+b+' = '+sum);
+checkIfBiggerThan(sum);
+const diff = aF - b;
+console.log(a+' - '+b+' = '+diff);
+checkIfBiggerThan(diff);
+const multiply = aF * b;
+console.log(a+' * '+b+' = '+multiply);
+checkIfBiggerThan(multiply);
+const divide = aF / b;
+console.log(a+' / '+b+' = '+divide);
+checkIfBiggerThan(divide);
+const modulo = aF % b;
+console.log(a+' % '+b+' = '+modulo);
+checkIfBiggerThan(modulo);
 tempNumber = aF;
-tempNumber = ++tempNumber;
-console.log('++'+a+' = '+tempNumber);
+const incrementA = ++tempNumber;
+console.log('++'+a+' = '+incrementA);
+checkIfBiggerThan(incrementA);
 tempNumber = b;
-tempNumber = ++tempNumber;
-console.log('++'+b+' = '+tempNumber);
+const incrementB = ++tempNumber;
+console.log('++'+b+' = '+incrementB);
+checkIfBiggerThan(incrementB);
 tempNumber = aF;
-tempNumber = --tempNumber;
-console.log('--'+a+' = '+tempNumber);
+const decrementA = --tempNumber;
+console.log('--'+a+' = '+incrementA);
+checkIfBiggerThan(decrementA);
 tempNumber = b;
-tempNumber = --tempNumber;
-console.log('--'+b+' = '+tempNumber);
+const decrementB = --tempNumber;
+console.log('--'+b+' = '+decrementB);
+checkIfBiggerThan(decrementB);
+
+function checkIfBiggerThan(number) {
+    if(number > checkValue){
+        console.log('Wynik działania jest większy niż '+checkValue);
+    }
+    else {
+        console.log('Wynik działania nie jest większy niż '+checkValue);
+    }
+}
