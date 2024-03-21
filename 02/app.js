@@ -1,6 +1,6 @@
 
 /* rozwiązanie z pętlą for */
-const x = prompt('Podaj liczbę!');
+const x = getNumber();
 
 for(i=0;i<9;i++){
     const multiplying = x * (i+1);
@@ -8,3 +8,13 @@ for(i=0;i<9;i++){
 }
 
 /* rozwiązanie z pętlą while  */
+
+function getNumber() {
+    let number = prompt('Podaj liczbę!');
+    if (number>0 && number <10) {
+        return number
+    }
+    else {
+        return getNumber();
+    }
+}
