@@ -11,8 +11,7 @@ console.log(a, b, c);
 const sum = getSum(a, b, c);
 const even = fn(sum);
 
-console.log(sum);
-console.log(even);
+showInfo(sum, even);
 
 function getSum(x, y, z) {
 
@@ -49,12 +48,13 @@ function getSum(x, y, z) {
             number2 = y;
         }
     }
+    console.log(number1+' + '+number2+' = '+(number1+number2))
     return (number1+number2);
 }
 
-function isEven(param) {
-    if (typeof(param) == 'number') {
-        if (param % 2 == 0) {
+function isEven(inputNumber) {
+    if (typeof(inputNumber) == 'number') {
+        if (inputNumber % 2 == 0) {
             return true;
         }
         else {
@@ -66,8 +66,18 @@ function isEven(param) {
     }
 }
 
-function showInfo() {
-
+function showInfo(inputValue, inputState) {
+    switch(inputState) {
+        case null:
+            console.log('Podany argument '+inputValue+' nie jest liczbą');
+            break;
+        case true:
+            console.log('Podany argument '+inputValue+' jest parzysty');
+            break;
+        case false:
+            console.log('Podany argument '+inputValue+' jest nieparzysty');
+            break;
+    }
 }
 
 function randomNumber(min, max) {
