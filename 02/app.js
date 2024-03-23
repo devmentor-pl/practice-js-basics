@@ -13,9 +13,9 @@ for(i=0;i<9;i++){
 
 let fullOperation = '';
 let counter = y;
-let square = 1
 
 console.log('Liczba '+x+' do '+y+' potęgi:')
+
 while (counter>0) {
     if (counter > 1) {
         fullOperation += ''+x +' * ';
@@ -23,9 +23,8 @@ while (counter>0) {
     else {
         fullOperation += x;
     }
-    square = square * x;
     if (counter === 1) {
-        fullOperation += ' = '+ square;
+        fullOperation += ' = '+ Math.pow(x,y);
     }
     counter--;
 }
