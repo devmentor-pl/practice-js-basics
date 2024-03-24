@@ -7,11 +7,8 @@ function Student(initFirstName, initLastName) {
 Student.prototype.addGrade = function(subject, grade) {
     if (typeof(this.grades[subject]) == 'undefined') { 
         this.grades[subject] = [];
-        this.grades[subject].push(grade);
     }
-    else {
         this.grades[subject].push(grade);
-    }
 }
 
 Student.prototype.getAverageGrade = function(subject) {
