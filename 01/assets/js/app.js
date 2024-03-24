@@ -18,7 +18,7 @@ checkIfBiggerThan(diff);
 const multiply = (aF * b).toFixed(1);
 console.log(a+' * '+b+' = '+multiply);
 checkIfBiggerThan(multiply);
-const divide = (aF / b).toFixed(1);
+const divide = (aF / b).toFixed(3);
 console.log(a+' / '+b+' = '+divide);
 checkIfBiggerThan(divide);
 const modulo = (b % aF).toFixed(1);
