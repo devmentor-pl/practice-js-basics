@@ -10,17 +10,21 @@ function getTwentyElements(min, max) {
 }
 
 function getBiggestTenFromArray(array) {
-    let sortedArray = array.sort(function(a, b) {
+    array.sort(function(a, b) {
         return b-a;
     });
 
-    return sortedArray.slice(0, 10);
+    return array.slice(0, 10);
 }
 
 function average(array) {
+    if(array.length === 0) {
+        return 0;
+    }
+
     return array.reduce(function(acc, current) {
         return acc += current;
-    }) / array.length;    
+    }, 0) / array.length;    
 }
 
 let arr = getTwentyElements(10, 200);
