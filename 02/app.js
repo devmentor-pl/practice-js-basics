@@ -6,7 +6,6 @@ while(input < 1 || input > 9) {
     input = prompt('Podana liczba jest spoza zakresu. Podaj 1-9: ');
 }
 
-
 const x = input;
 
 console.log('Pętla for:');
