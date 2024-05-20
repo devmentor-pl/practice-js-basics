@@ -11,30 +11,18 @@ Student.prototype.addGrade = function (subject, grade) {
     this.grades[subject].push(grade);
 };
 
-function averageCounter(item){
-    let sum = 0;
-    let count = 0;
-    item.forEach(function (num) {
-        sum += num;
-        count++;
-    });
-    return sum / count;
-}
+Student.prototype.calculateAverage = function (gradesArray) {
+    const sum = gradesArray.reduce((acc, grade) => acc + grade, 0);
+    return sum / gradesArray.length;
+};
 
 Student.prototype.getAverageGrade = function (subject) {
     if (subject) {
-        return averageCounter(this.grades[subject])
+        return Number(this.calculateAverage(this.grades[subject]).toFixed(2));
     } else {
-        let totalSum = 0;
-        let totalCount = 0;
-
-        for (const gradesArray of Object.values(this.grades)) {
-            const subjectAverage = averageCounter(gradesArray);
-            totalSum += subjectAverage * gradesArray.length;
-            totalCount += gradesArray.length;
-        }
-        const overallAverage = totalSum / totalCount;
-        return overallAverage.toFixed(2);
+        const allGrades = Object.values(this.grades).flat();
+        const overallAverage = this.calculateAverage(allGrades);
+        return Number(overallAverage.toFixed(2));
     }
 };
 
