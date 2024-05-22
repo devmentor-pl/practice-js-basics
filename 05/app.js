@@ -13,13 +13,13 @@ Student.prototype.addGrade = function (subject, grade) {
 
 Student.prototype.calculateAverage = function (gradesArray) {
     const sum = gradesArray.reduce((acc, grade) => acc + grade, 0);
-    if(sum > 0){
+    if(gradesArray.length > 0){
         return sum / gradesArray.length;
     }
 };
 
 Student.prototype.getAverageGrade = function (subject) {
-    if (subject && this.grades[subject] !== 'undefined') {
+    if (subject && typeof this.grades[subject] !== 'undefined') {
         return Number(this.calculateAverage(this.grades[subject]).toFixed(2));
     } else {
         const allGrades = Object.values(this.grades).flat();
