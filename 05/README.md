@@ -1,5 +1,4 @@
-> :white_check_mark: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s1e04-js-basics` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/)) lub na ogólnodostępnej i bezpłatnej [społeczności na Discordzie](https://devmentor.pl/discord). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
-
+> :white_check_mark: _Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s1e04-js-basics` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/)) lub na ogólnodostępnej i bezpłatnej [społeczności na Discordzie](https://devmentor.pl/discord). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/)._
 
 &nbsp;
 
@@ -8,9 +7,11 @@
 Tym razem stworzysz konstruktor, na podstawie którego będzie można generować obiekt przechowujący informacje o studencie.
 
 Wymagania:
+
 1. Obiekt posiada imię i nazwisko przekazywane podczas inicjalizacji (przy użyciu `new`).
 
 2. Konstruktor:
+
 - udostępnia metody (przez `prototype`),
 - metody te pozwalają:
   - dodać ocenę z danego przedmiotu,
@@ -29,6 +30,7 @@ const avg = student.getAverageGrade(); // 4.33
 ```
 
 Struktura danych w obiekcie może prezentować się następująco:
+
 ```
 {
     firstName: 'Jan',
@@ -41,23 +43,26 @@ Struktura danych w obiekcie może prezentować się następująco:
 ```
 
 To oznacza, że w konstruktorze deklaracje właściwości mogą wyglądać np. tak:
+
 ```
 /* ... */ {
     this.firstName = firstName;
     this.lastName = lastName;
     this.grades = {}
 }
-``` 
+```
 
 Aby rozróżnić, czy mamy podać średnią dla 1 przedmiotu, czy dla wszystkich, wystarczy sprawdzić, czy pierwszy parametr funkcji `.getAverageGrade()` jest zdefiniowany (różny od `undefined`).
 
 Zwróć uwagę, że pobranie informacji o ocenach z konkretnego przedmiotu może się odbywać w ten sposób:
+
 ```
 const subject = 'maths';
 const grades = this.grades[subject];
 ```
 
 Pamiętaj również, aby przy dodawaniu ocen sprawdzić, **czy dany przedmiot już istnieje**. Jeśli nie, to trzeba utworzyć odpowiednią właściwość w obiekcie, przypisać do niej pustą tablicę i wstawić odpowiednią ocenę, np.
+
 ```
 if(typeof this.grades[subject] === 'undefined') {
     this.grades[subject] = [];
@@ -66,15 +71,10 @@ if(typeof this.grades[subject] === 'undefined') {
 this.grades[subject].push(grade);
 ```
 
-
 Powodzenia!
 
-
-
-
 &nbsp;
-> :no_entry: *Jeśli nie posiadasz materiałów do tego zadania tj. **PDF + wideo, projekt + Code Review**, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/workshop-js-basics/)*
 
-> :arrow_left: [*poprzednie zadanie*](./../04) | ~~*następne zadanie*~~ :arrow_right:
+> :no_entry: _Jeśli nie posiadasz materiałów do tego zadania tj. **PDF + wideo, projekt + Code Review**, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/workshop-js-basics/)_
 
-
+> :arrow_left: [_poprzednie zadanie_](./../04) | ~~_następne zadanie_~~ :arrow_right:
