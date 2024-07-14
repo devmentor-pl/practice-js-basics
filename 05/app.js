@@ -4,7 +4,6 @@
 console.log(
 	'Based on the entered data, calculate the average for individual subjects and the overall average.'
 );
-// console.log('Calculate for:');
 
 const firstName = prompt(String('Add Your Name: '));
 const lastName = prompt(String('Add Your Last Name'));
