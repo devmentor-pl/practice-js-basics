@@ -51,3 +51,36 @@ const getAvg = (numbers) => {
 
 const avg = getAvg([1, 2, 3, 4, 5]);
 console.log(avg); // 3
+
+
+    // Funkcja generująca tablicę losowych liczb
+function generateRandomArray(size, lowerBound, upperBound) {
+  let arr = [];
+  for (let i = 0; i < size; i++) {
+    let randomNum = Math.floor(Math.random() * (upperBound - lowerBound + 1)) + lowerBound;
+    arr.push(randomNum);
+  }
+  return arr;
+}
+
+// Funkcja wybierająca n największych elementów z tablicy
+function getTopNElements(arr, n) {
+  return arr.sort((a, b) => b - a).slice(0, n);
+}
+
+// Funkcja obliczająca średnią arytmetyczną elementów w tablicy
+function calculateAverage(arr) {
+  let sum = arr.reduce((acc, val) => acc + val, 0);
+  return sum / arr.length;
+}
+
+// Główna część programu
+let randomArray = generateRandomArray(20, 10, 200);
+console.log("Wygenerowana tablica:", randomArray);
+
+let top10Numbers = getTopNElements(randomArray, 10);
+console.log("10 największych liczb:", top10Numbers);
+
+let average = calculateAverage(top10Numbers);
+console.log("Średnia arytmetyczna 10 największych liczb:", average);
+
