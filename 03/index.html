@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>devmentor.pl - JS BASICS - #03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
-    <script src="./app.js"></script>
+    <div class="container-fluid vh-100 d-flex align-items-center">
+
+        <div class="container d-flex flex-column justify-content-around align-items-center col-md-6">
+
+            <div class="formContainer d-flex justify-content-center align-items-center w-100">
+                <form class="d-flex flex-column align-items-center border rounded p-3 w-100">
+                    <h4>Wybranie największej z trzech i sumowanie dwóch największych</h4>
+                    <div class="form-group d-flex flex-column align-items-center w-100">
+                        <label for="firstNum">Wprowadź pierwszą cyfrę:</label>
+                        <input type="number" class="form-control text-center w-50" id="firstNum" aria-describedby="firstNum">
+                    </div>
+                    <div class="form-group d-flex flex-column align-items-center w-100">
+                        <label for="secondNum">Wprowadź drugą cyfrę:</label>
+                        <input type="number" class="form-control text-center w-50" id="secondNum" aria-describedby="secondNum">
+                    </div>
+                    <div class="form-group d-flex flex-column align-items-center w-100">
+                        <label for="thirdNum">Wprowadź trzecią cyfrę:</label>
+                        <input type="number" class="form-control text-center w-50" id="thirdNum" aria-describedby="thirdNum">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2" id="getSumButton">Wprowadź</button>
+                </form>
+            </div>
+
+            <div class="formContainer d-flex justify-content-center align-items-center mt-3 w-100">
+                <form class="d-flex flex-column align-items-center border rounded p-3 w-100">
+                    <h4>Informacje o wyniku</h4>
+                    <div class="form-group d-flex flex-column align-items-center w-100">
+                        <label for="firstNum">Wprowadź cyfrę:</label>
+                        <input type="text" class="form-control text-center w-50" id="isEvenNum" aria-describedby="isEvenNum" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2" id="isEvenButton">Wprowadź</button>
+                    <p class="mt-3 text-success p-2" id="infoP"></p>
+                </form>
+            </div>
+
+            <div class="formContainer d-flex justify-content-center align-items-center mt-3 w-100">
+                <form class="d-flex flex-column align-items-center border rounded p-3 w-100">
+                    <h4>Interpretacja wyniku</h4>
+                    <div class="form-group d-flex flex-column text-center align-items-center w-100">
+                        <p id="interpretate"></p>
+                        <div class="text-bg-primary p-3 w-100" id="interResult"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

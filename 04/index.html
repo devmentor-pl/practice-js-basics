@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>devmentor.pl - JS BASICS - #04</title>
 </head>
+
 <body>
-    
+    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
+        <h4>Śmieszna aplikacja</h4>
+        <div class="text-center border rounded p-3">
+            <label for="min">Podaj dolną granicę</label>
+            <input class="form-control mb-3 text-center" type="number" placeholder="min" id="min" aria-label="min">
+            <label for="min">Podaj górna granicę</label>
+            <input class="form-control mb-3 text-center" type="number" placeholder="min" id="max" aria-label="max">
+            <label for="count">Ile losujemy liczb?</label>
+            <input class="form-control mb-3 text-center d-flex flex-row" type="number" placeholder="liczba" id="count" aria-label="max">
+            <button type="button" class="btn btn-primary" id="submitRange">Wprowadź</button>
+        </div> 
+        
+        <div class="m-3 text-center fs-5">
+            <p id="randNums"> </p>
+            <p id="highest"> </p>
+            <p id="average"> </p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
 </body>
+
 </html>
