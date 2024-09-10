@@ -4,36 +4,18 @@ const b = 9;
 console.log(typeof a);
 console.log(typeof b);
 
-const result = +a + b;
-console.log(result);
+const result = a + b;
 const result1 = a - b;
-console.log(result1);
 const result2 = a * b;
-console.log(result2);
 const result3 = a / b;
-console.log(result3);
+const result4 = a ** b;
 
-if( result > 20){
-    console.log(`Wynik dodawania ${result} jest większy niż 20`);
-}else{
-    console.log(`Wynik dodawania ${result} jest mniejszy niż 20`);
+const scoreboard = [result, result1, result2, result3, result4];
+
+for (const element of scoreboard) {
+    if (element > 20) {
+        console.log(`${element} jest wiekszy niz 20`);
+    } else {
+        console.log(`${element} nie jest większy niż 20`)
+    }
 };
-
-if( result1 > 20){
-    console.log(`Wynik dodawania ${result1} jest większy niż 20`);
-}else{
-    console.log(`Wynik dodawania ${result1} jest mniejszy niż 20`);
-};
-
-if( result2 > 20){
-    console.log(`Wynik dodawania ${result2} jest większy niż 20`);
-}else{
-    console.log(`Wynik dodawania ${result2} jest mniejszy niż 20`);
-};
-
-if( result3 > 20){
-    console.log(`Wynik dodawania ${result3} jest większy niż 20`);
-}else{
-    console.log(`Wynik dodawania ${result3} jest mniejszy niż 20`);
-};
-
