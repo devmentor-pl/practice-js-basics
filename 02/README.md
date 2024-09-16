@@ -25,7 +25,7 @@ Wyświetlane działania powinny prezentować się jak poniżej:
 // ...
 ```
 
-Jak już wszystko będzie działać, zmień `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3schools.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie, jeśli za każdym razem sprawdzisz, czy podana przez użytkownika wartość mieści się w przedziale od 1 do 9.
+Jak już wszystko będzie działać, zmień `const x = 4` na `const x = prompt('Podaj liczbę!')`. Dzięki [prompt()](https://www.w3scho›ols.com/jsref/met_win_prompt.asp) możesz pobierać dane od użytkownika. Idelanie, jeśli za każdym razem sprawdzisz, czy podana przez użytkownika wartość mieści się w przedziale od 1 do 9.
 
 Zwróć uwagę, że najpierw tworzymy rozwiązanie dla konkretnego przypadku, a dopiero potem je uogólniamy. Tak ułatwiamy sobie proces tworzenia algorytmu. Pamiętaj o tym! Postaraj się w ten sposób rozwiązywać kolejne zadania.
 
