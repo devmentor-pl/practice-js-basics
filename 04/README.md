@@ -4,9 +4,6 @@
 
 # `#04` JavaScript: Podstawy
 
-
-
-
 1. Napisz funkcję, która utworzy i zwróci tablicę z 20 elementami wylosowanymi z podanego zakresu. Zakres mają określać dwa parametry:
 - liczba minimalna,
 - liczba maksymalna. 
