@@ -35,7 +35,7 @@ const avg = getAvg([1, 2, 3, 4, 5]);
 console.log(avg); // 3
 ```
 
-4. Wykorzystaj napisane funkcje w taki sposób, aby utworzyć tablicę składającą się z 20 losowych liczb z przedziału od 10 do 200. Z utworzonej tablicy wybiesz 10 największych i obliczych ich średnią arytmetyczną.
+4. Wykorzystaj napisane funkcje w taki sposób, aby utworzyć tablicę składającą się z 20 losowych liczb z przedziału od 10 do 200. Z utworzonej tablicy wybierz 10 największych i obliczych ich średnią arytmetyczną.
 
 Zadbaj o odpowiednie nazwy dla funkcji - nie muszą być one identyczne jak w przykładach.
 
