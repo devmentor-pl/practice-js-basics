@@ -13,21 +13,28 @@
 
 /* rozwiązanie z pętlą while  */
 
-const a = prompt('Podaj podstawę!');
+const a = prompt('Podaj podstawę!'); 
 const n = prompt('Podaj wykładnik!');
 
 if (a > 9 || a < 0 || n < 0 || n > 10){
     alert('Wartość powinna mieścić się w przedziale 1-9! Podaj cyfrę!');
     location.reload();
+
 } else if (n == 0) {
-    console.log(`${a}^${n} = 1`);
-}
+    console.log(`${a}^${n} = 1`); 
+    //zostawilem w tym przypadku zapis a^n, poniewaz a^0 = 1, ciezko to inaczej zapisac
+    
+} else {
 
-let i = 1;
-let sum = a;
+    let i = 1;
+    let sum = a;
+    let equation = `${a}`
 
-while (i < n){
-   sum *= a;
-   console.log(`${a}^${n} = ${sum}`);
-   i++;
+    while (i < n){
+        sum *= a;
+        equation += ` * ${a}`;
+        i++;
+    }
+
+    console.log(`${equation} = ${sum}`);
 }
