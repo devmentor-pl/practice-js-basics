@@ -13,18 +13,12 @@ function randomNumber(min, max) {
 
 function getSum(a, b, c) {
 
-    if (a > b && b > c){
-        return parseInt(a) + parseInt(b);
-
-    } else if (a > b && c > b){
-        return parseInt(a) + parseInt(c);
-
-    } else if (a < b && a < c){
-        return parseInt(b) + parseInt(c);
-
-    } else if (a < b && a >c){
-        return parseInt(a) + parseInt(b);
-    }
+    const array = [parseInt(a), parseInt(b), parseInt(c)];
+    const sortedArray = array.sort((a ,b) => b - a);
+    const arrayWith2Elements = sortedArray.slice(0, 2);
+    const sum = arrayWith2Elements.reduce((acc, el) => acc + el, 0);
+    return sum;
+    
 }
 
 
