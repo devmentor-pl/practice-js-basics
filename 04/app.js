@@ -3,8 +3,8 @@ function createArray(min, max){
     const array = [];
 
     for (let i = 0; i < 20; i++){
-    const randomNumber = Math.round((Math.random() * (max - min)) + min);
-    array.push(randomNumber);
+        const randomNumber = Math.round((Math.random() * (max - min)) + min);
+        array.push(randomNumber);
     }
 
     return array;
@@ -17,7 +17,7 @@ function sortArray(array){
 }
 
 function getAvg(array){
-    const sum = array.reduce((acc, element) => acc + element);
+    const sum = array.reduce((acc, element) => acc + element, 0);
     const avg = sum / array.length;
     return avg;
 }
