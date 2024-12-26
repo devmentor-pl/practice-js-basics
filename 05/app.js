@@ -13,8 +13,10 @@ Student.prototype.addGrade = function (subject, grade) {
 };
 
 Student.prototype.getAverageGrade = function (subject) {
-  const calcAverage = (grades) =>
-    grades.reduce((acc, cur) => acc + cur, 0) / grades.length;
+  const calcAverage = (grades) => {
+    if (!grades || grades.length === 0) throw new Error("No grades found!");
+    return grades.reduce((acc, cur) => acc + cur, 0) / grades.length;
+  };
 
   if (typeof subject === "undefined") {
     const grades = Object.values(this.grades).flat();

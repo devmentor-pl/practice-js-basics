@@ -1,6 +1,16 @@
 function createArray(min, max) {
-  if (typeof min !== "number" || typeof max !== "number")
-    throw new Error("min and max must be a number");
+  if (
+    typeof min !== "number" ||
+    typeof max !== "number" ||
+    isNaN(min) ||
+    isNaN(max)
+  ) {
+    throw new Error("min and max must be valid numbers.");
+  }
+
+  if (min > max) {
+    throw new Error("min must be less than or equal to max.");
+  }
 
   const array = [];
 
