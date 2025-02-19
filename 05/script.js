@@ -19,19 +19,22 @@ Student.prototype.addGrade = function (subject, grade) {
   this.grades[subject].push(grade);
 }
 
+// funkcja licząca średnia z przedmiotu lub przedmiotów do dwóch miejsc po przecinku
+function calculateAverage(grades) {
+    const sum = grades.reduce(function(acc, grade) {
+        return acc + grade}, 0);
+    const average = sum / grades.length;
+    return Math.round(average * 100) / 100;
+}
+
 
 // metoda 'getAverageGrade' powinna zwracać średnią ocen z danego przedmiotu, lub ze wszystkich przedmiotów, jesli nie podamy argumentu
 Student.prototype.getAverageGrade = function (subject) {
     if(typeof subject !== 'undefined') {
         const grades = this.grades[subject];
         console.log(grades);
-        const sum = grades.reduce(function(acc, grade) {
-            return acc + grade
-        }, 0);
 
-    const average =  sum / grades.length;
-    return Math.round(average * 100) / 100;
-
+        return calculateAverage(grades)
 
     } else {
         let allGrades = []
@@ -40,12 +43,7 @@ Student.prototype.getAverageGrade = function (subject) {
             allGrades  = allGrades.concat(gradesFromSubject);
         }
 
-        const sum = allGrades.reduce(function(acc, grade) {
-            return acc + grade
-        }, 0);
-
-        const averageAll =  sum / allGrades.length;
-        return Math.round(averageAll * 100) / 100;
+        return calculateAverage(allGrades)
     }
 }
 
