@@ -25,21 +25,6 @@ const even = isEven(sum);
 
 showInfo(sum, even)
 
-function showInfo(par1, par2){
-    switch(par2){
-        case null:
-            console.log("Podany argument " + par1 + " nie jest liczbą");
-            break;
-        case true:
-            console.log("Podany argument " + par1 + " jest parzysty");
-            break;
-        case false:
-            console.log("Podany argument " + par1 + " jest nieparzysty");
-            break;
-        default: alert("Błędne dane")
-                
-    }
-}
 
 function randomNumber(min, max) {
     return Math.round((Math.random() * (max - min)) + min);
@@ -54,4 +39,20 @@ function getSum(num1, num2, num3){
     numbers.sort((a,b) => b - a);
  
     return numbers[0] + numbers[1];
+}
+
+function showInfo(par1, par2){
+    switch(par2){
+        case null:
+            console.log("Podany argument " + par1 + " nie jest liczbą");
+            break;
+        case true:
+            console.log("Podany argument " + par1 + " jest parzysty");
+            break;
+        case false:
+            console.log("Podany argument " + par1 + " jest nieparzysty");
+            break;
+        default: alert("Błędne dane")
+                
+    }
 }
