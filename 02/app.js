@@ -1,35 +1,46 @@
 
 /* rozwiązanie z pętlą for */
-const x = prompt('Podaj liczbę!');
-if(x >= 1 && x <= 9){
-    for(let i = 1; i < 10; i++){
-        const res = x * i;
-        console.log(x + " * " + i + " = " +res); 
-    }
-}
-else{
-    console.log("Przekroczyłeś przedział! ");
-}
+// const x = Number(prompt('Podaj liczbę!'));
+// if(x >= 1 && x <= 9){
+//     for(let i = 1; i < 10; i++){
+//         const res = x * i;
+//         console.log(x + " * " + i + " = " +res); 
+//     }
+// }
+// else{
+//     console.log("Przekroczyłeś przedział! ");
+// }
 
 
 
 /* rozwiązanie z pętlą while  */
 
-const a = prompt("Wpisz podstawę: ");
-let n = prompt("Wpisz wykładnik: ");
-let res = 1;
-let res1 = "";
+const a = Number(prompt("Wpisz podstawę: "));
+const n = Number(prompt("Wpisz wykładnik: "));
 
-while(n > 0){
-    res *= a;
-    if(n === 1){
-        res1 += a + " = " + res;
+let i = 0;
+let result = 1;
+let info = "";
+
+if(a > 0 && n >= 0){
+
+    if(n === 0){
+        console.log("Każda liczba do potęgi 0 daje 1");
     }
     else{
-        res1 += a + " * ";
+        while(i < n){
+            result = result * a;
+        
+            if(i === n - 1){           
+                info += a + " = " + result;        
+            }else{
+                info += a + " * ";
+            }
+            i++;
+        }
+        console.log(info)
     }
-    console.log(res)
-    
-    n--;
 }
-console.log(res1)
+else{
+    console.error("Podałeś błędne liczby")
+}
