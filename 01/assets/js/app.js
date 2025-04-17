@@ -4,75 +4,45 @@ let b = 9;
 console.log(typeof a, typeof b);
 
 const concat = a + b;
-console.log('Wynik konkatenacji:', concat);
-
-if (concat > 20) {
-  console.log('Wynik konkatenacji jest większy od 20');
-} else {
-  console.log('Wynik konkatenacji jest mniejszy od 20');
-}
+// console.log('Wynik konkatenacji:', concat);
 
 a = parseFloat(a);
 
 const add = a + b;
-console.log('Wynik dodawania:', add);
-
-if (add > 20) {
-  console.log('Wynik dodawania jest większy od 20');
-} else {
-  console.log('Wynik dodawania jest mniejszy od 20');
-}
+// console.log('Wynik dodawania:', add);
 
 const substract = a - b;
-console.log('Wynik odejmowania:', substract);
-
-if (substract > 20) {
-  console.log('Wynik odejmowania jest większy od 20');
-} else {
-  console.log('Wynik odejmowania jest mniejszy od 20');
-}
+// console.log('Wynik odejmowania:', substract);
 
 const multipli = a * b;
-console.log('Wynik mnozenia:', multipli);
-
-if (multipli > 20) {
-  console.log('Wynik mnozenia jest większy od 20');
-} else {
-  console.log('Wynik mnozenia jest mniejszy od 20');
-}
+// console.log('Wynik mnozenia:', multipli);
 
 const divide = a / b;
-console.log('Wynik dzielenia:', divide);
-
-if (divide > 20) {
-  console.log('Wynik dzielenia jest większy od 20');
-} else {
-  console.log('Wynik dzielenia jest mniejszy od 20');
-}
+// console.log('Wynik dzielenia:', divide);
 
 const modulo = a % b;
-console.log('wynik reszty z dzielenia:', modulo);
-
-if (modulo > 20) {
-  console.log('Wynik reszty z dzielenia jest większy od 20');
-} else {
-  console.log('Wynik reszty z dzielenia jest mniejszy od 20');
-}
+// console.log('wynik reszty z dzielenia:', modulo);
 
 const inc = ++a;
-console.log('Wynik inkrementacji:', inc);
-
-if (inc > 20) {
-  console.log('Wynik inkrementacji jest większy od 20');
-} else {
-  console.log('Wynik inkrementacji jest mniejszy od 20');
-}
+// console.log('Wynik inkrementacji:', inc);
 
 const dec = --b;
-console.log('Wynik dekremenmtacji:', dec);
+// console.log('Wynik dekremenmtacji:', dec);
 
-if (dec > 20) {
-  console.log('Wynik dekrementacji jest większy od 20');
-} else {
-  console.log('Wynik dekrementacji jest mniejszy od 20');
-}
+const arr = [concat, add, substract, multipli, divide, modulo, inc, dec];
+
+const isBigger = [];
+const isSmaller = [];
+
+const checkResult = arr.map((item) => {
+  if (item > 20) {
+    isBigger.push(item);
+  }
+
+  if (item < 20) {
+    isSmaller.push(item);
+  }
+});
+
+console.log('Wyniki działan większy niz 20', isBigger);
+console.log('Wynik dzialan mniejszy niz 20', isSmaller);
