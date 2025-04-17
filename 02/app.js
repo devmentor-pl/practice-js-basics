@@ -24,7 +24,11 @@ while (counter < n) {
   counter++;
   result = result * a;
 
-  displayString = `${displayString} * ${a}`;
+  if (counter === 1) {
+    displayString = `${a}`;
+  } else {
+    displayString = `${displayString} * ${a}`;
+  }
 }
 
 console.log(`${displayString} = ${result}`);
