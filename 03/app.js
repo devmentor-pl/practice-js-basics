@@ -5,8 +5,6 @@ let a = randomNumber(min, max);
 let b = randomNumber(min, max);
 let c = randomNumber(min, max);
 
-console.log(a, b, c);
-
 function randomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
@@ -38,22 +36,23 @@ const isEven = function (sum) {
 };
 
 const showInfo = (num, bool) => {
-  const isNull = `Podany arguments ${num} nie jest liczbą`;
-  const isTrue = `Podany arguments ${num} jest parzysty`;
-  const isFalse = `Podany arguments ${num} jest nieparzysty`;
-  const errorMessage = 'Something went wrong';
+  const messages = {
+    null: `Podany arguments ${num} nie jest liczbą`,
+    true: `Podany arguments ${num} jest parzysty`,
+    false: `Podany arguments ${num} jest nieparzysty`,
+  };
 
-  const randomBool = bool;
+  const randomBool = messages[bool];
   switch (randomBool) {
     case null:
-      return isNull;
+      return messages[bool];
     case true:
-      return isTrue;
+      return messages[bool];
     case false:
-      return isFalse;
-    default:
-      return errorMessage;
+      return messages[bool];
   }
+
+  return randomBool;
 };
 
 const sum = getSum(a, b, c);
