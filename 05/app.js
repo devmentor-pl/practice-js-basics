@@ -14,33 +14,33 @@ Student.prototype.addGrade = function (subjectName, grade) {
   this.grades[subject].push(grade);
 };
 
+const getAvgCalc = function (gradesArray) {
+  const initVal = 0;
+  const sumWithInit = gradesArray.reduce((acc, curr) => acc + curr, initVal);
+  const avgCalc = sumWithInit / gradesArray.length;
+
+  return avgCalc;
+};
+
 Student.prototype.getAverageGrade = function (gradeKey) {
   const subject = gradeKey;
   const grades = this.grades[subject];
 
-  const initVal = 0;
-  const sumWithInit = grades.reduce((acc, curr) => acc + curr, initVal);
-  const avgSum = sumWithInit / grades.length;
-
-  return avgSum;
-};
-
-Student.prototype.getAverageGrade = function () {
-  const grades = Object.values(this.grades);
+  const gradesVal = Object.values(this.grades);
   const allGrades = [];
 
-  for (let i = 0; i < grades.length; i++) {
-    let grade = grades[i];
+  for (let i = 0; i < gradesVal.length; i++) {
+    let grade = gradesVal[i];
     for (let j = 0; j < grade.length; j++) {
       allGrades.push(grade[j]);
     }
   }
 
-  const initVal = 0;
-  const sumWithInit = allGrades.reduce((acc, curr) => acc + curr, initVal);
-  const avgSum = sumWithInit / allGrades.length;
-
-  return avgSum;
+  if (subject) {
+    return grades;
+  } else {
+    return allGrades;
+  }
 };
 
 const student = new Student('Jan', 'Kowalski');
@@ -48,9 +48,11 @@ const student = new Student('Jan', 'Kowalski');
 student.addGrade('maths', 4);
 student.addGrade('maths', 6);
 student.addGrade('english', 3);
-const avgMath = student.getAverageGrade('maths');
+// const avgMath = student.getAverageGrade('maths');
 const avg = student.getAverageGrade();
+const weird = getAvgCalc(avg);
 
 console.log(student);
 // console.log(avgMath);
 console.log(avg);
+console.log(weird);
