@@ -16,17 +16,15 @@ const getSum = (a, b, c) => {
   b = parseInt(b);
   c = parseInt(c);
 
-  const firstComb = (a > b && b > c) || (a < b && b > c && a > c) ? a + b : null;
-  const secondComb = a > b && c > b ? a + c : null;
-  const thirdComb = b > a && c > a ? b + c : null;
+  const arr = [a, b, c];
 
-  if (firstComb === null && secondComb === null) {
-    return thirdComb;
-  } else if (firstComb === null && thirdComb === null) {
-    return secondComb;
-  } else if (thirdComb === null && secondComb === null) {
-    return firstComb;
-  }
+  const arrSort = arr.sort();
+  const twoBiggest = arrSort.slice(1);
+
+  const initVal = 0;
+  const sumWithInitVal = twoBiggest.reduce((acc, curr) => acc + curr, initVal);
+
+  return sumWithInitVal;
 };
 
 const isEven = function (sum) {
