@@ -37,9 +37,7 @@ const isSmaller = [];
 const checkResult = arr.map((item) => {
   if (item > 20) {
     isBigger.push(item);
-  }
-
-  if (item < 20) {
+  } else if (item < 20) {
     isSmaller.push(item);
   }
 });
