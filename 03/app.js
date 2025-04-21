@@ -43,14 +43,6 @@ const showInfo = (num, bool) => {
   };
 
   const randomBool = messages[bool];
-  switch (randomBool) {
-    case null:
-      return messages[bool];
-    case true:
-      return messages[bool];
-    case false:
-      return messages[bool];
-  }
 
   return randomBool;
 };
