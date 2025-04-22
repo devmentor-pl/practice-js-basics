@@ -22,23 +22,22 @@ Student.prototype.getAverageGrade = function (subject) {
       });
     }
 
-    if (grades.length === 0) {
-      return 0;
-    }
-
-    const sum = grades.reduce(function (acc, curr) {
-      return acc + curr;
-    }, 0);
-    return sum / grades.length;
+    return this.avg(grades);
   }
 
   if (typeof this.grades[subject] === 'undefined') {
     return 0;
   }
 
-  const grades = this.grades[subject];
-  const sum = grades.reduce(function (acc, curr) {
+  return this.avg(this.grades[subject]);
+};
+Student.prototype.avg = function (arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+  const sum = arr.reduce(function (acc, curr) {
     return acc + curr;
   }, 0);
-  return sum / grades.length;
+  return sum / arr.length;
 };
+
