@@ -23,14 +23,20 @@ let result2 = 1
 
 
 let j = 0;
-
-while (j <= n) {
-    if (a <= 9 && a > 0 && n <= 9 && n > 0) {
-        result2 = Math.pow(a, n);
+let str = '';
+if (a <= 9 && a > 0 && n <= 9 && n > 0) {
+    while (j < n) {
         j++;
-    } else {
-        alert('Wybrana liczba nie jest z przedzialu 1-9');
+        if (n === j) {
+            str += a;
+        } else {
+            str += a + '*';
+        }
     }
+    console.log(str + '=' + Math.pow(a, n));
+}
+else {
+    alert('Wybrana liczba nie jest z przedzialu 1-9');
 }
 
-console.log('Wynik ' + a + ' do potegi ' + n + ' = ' + result2);
+
